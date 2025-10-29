@@ -5,14 +5,19 @@ export default function HeroSection() {
   return (
     <section className="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
   {/* Background GIF */}
-      <Image
+      {/* <Image
         src="/images/hero-banner.gif"
         alt="Hero Banner"
         fill
         priority
         className="object-cover opacity-25"
-      />
-
+      /> */}
+  <Image
+          src="/hero-banner.gif"
+          alt="Hero Banner"
+          fill
+          className="object-cover opacity-25"
+        />
       {/* Blue blush overlay */}
       <div className="absolute inset-0 bg-[#0F172A] opacity-[0.23]"></div>
 
