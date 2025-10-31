@@ -15,7 +15,7 @@ export default function WhoWeAreHeroSection() {
   <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full h-full" style={{ paddingTop: '120px', paddingRight: '300px', paddingBottom: '120px', paddingLeft: '300px', gap: '14px' }}>
+      <div className="animate-fade-slide relative z-10 flex flex-col items-center justify-center text-center w-full h-full" style={{ paddingTop: '120px', paddingRight: '300px', paddingBottom: '120px', paddingLeft: '300px', gap: '14px' }}>
         <h1 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">
         Who We Are
         </h1>

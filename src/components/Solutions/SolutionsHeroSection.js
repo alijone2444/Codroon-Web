@@ -14,7 +14,7 @@ const SolutionsHeroSection = () => {
 
   <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
       {/* Content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 animate-fade-slide">
         <h1 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-white mb-6">
           Our Solutions
         </h1>

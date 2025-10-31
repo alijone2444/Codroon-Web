@@ -23,7 +23,7 @@ export default function ContactSection({noThankYou}) {
   };
   return (
     <MarginWrapper top={96} bottom={96}>
-      <div className="w-full max-w-[1908px] mx-auto">
+      <div className="w-full max-w-[1908px] mx-auto ">
         {/* Header Section with Hand Background */}
         {!noThankYou &&   <div className="relative w-full h-[592.35px] px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[350px] py-[120px] flex flex-col gap-[50px] items-center justify-center">
           {/* Background Image */}

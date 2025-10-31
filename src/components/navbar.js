@@ -4,11 +4,20 @@ import { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef(null);
   const resourcesButtonRef = useRef(null);
 
   // ✅ Ensure this only runs on client
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // initialize and listen
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     const handleClickOutside = (event) => {
       if (
         dropdownRef.current &&
@@ -21,7 +30,10 @@ const Navbar = () => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const menuItems = [
@@ -34,7 +46,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      isScrolled ? 'bg-gray-900/60 backdrop-blur border-b border-white/10' : 'bg-transparent'
+    }`}>
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">

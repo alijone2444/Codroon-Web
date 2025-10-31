@@ -85,8 +85,8 @@ export default function CurrentOpeningsSection() {
   ];
 
   return (
-    <section className="w-full bg-[#0F172A] py-[120px]">
-      <div className="container mx-auto px-4">
+    <section className=" w-full bg-[#0F172A] py-[120px]">
+      <div className="container mx-auto px-4 ">
         <div className="max-w-[1595px] mx-auto">
           {/* Header */}
           <div className="mb-[50px] px-[50px]">

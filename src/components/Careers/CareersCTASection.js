@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CareersCTASection() {
   return (
-    <section className="w-full bg-[#0F172A] py-[80px]">
+    <section className="scroll-fade-up  w-full bg-[#0F172A] py-[80px]">
       <div className="container mx-auto px-4">
         <div className="max-w-[1596px] mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-[40px] mb-[50px]">

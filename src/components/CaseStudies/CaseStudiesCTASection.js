@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const CaseStudiesCTASection = () => {
   return (
-    <section className="relative w-full h-[619px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[619px] flex items-center justify-center overflow-hidden ">
       {/* Background Image - brain2 */}
       <Image
         src="/Images/brain2.gif"

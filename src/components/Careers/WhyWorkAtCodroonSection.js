@@ -21,7 +21,7 @@ export default function WhyWorkAtCodroonSection() {
 
   return (
     <MarginWrapper top={90}>
-    <section className="w-full bg-[#0F172A] py-[120px]">
+    <section className="scroll-fade-up  w-full bg-[#0F172A] py-[120px]">
       <div className="container mx-auto px-4">
         <div className="max-w-[1595px] mx-auto">
           {/* Welcome Section */}

@@ -11,7 +11,7 @@ export default function WhyChooseSection() {
 
   return (
     <MarginWrapper top={96} bottom={96}>
-    <div className="w-full max-w-[1597px] mx-auto relative">
+    <div className="w-full max-w-[1597px] mx-auto relative scroll-fade-up">
       {/* Text Container */}
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[300px] py-[120px] flex flex-col gap-[14px] items-center">
         <h2 className="max-w-[997px] font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">

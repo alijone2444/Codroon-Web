@@ -53,7 +53,7 @@ export default function OurSolutionsSection() {
   return (
     <MarginWrapper bottom={96}>
     <HorizontalMarginWrapper left={80} right={80}>
-    <div className="relative w-full max-w-[1596px] mx-auto">
+    <div className="relative w-full max-w-[1596px] mx-auto scroll-fade-up">
       {/* Globe Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <Image

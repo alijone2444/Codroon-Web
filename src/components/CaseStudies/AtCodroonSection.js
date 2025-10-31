@@ -4,7 +4,7 @@ export default function AtCodroonSection() {
   return (
     <MarginWrapper top={96} bottom={96}>
       <HorizontalMarginWrapper left={50} right={50}>
-      <div className="w-full max-w-[1597px] mt-[50px]mx-auto relative">
+      <div className= "scroll-fade-up w-full max-w-[1597px] mt-[50px]mx-auto relative">
         {/* Text Container - Left aligned */}
         <div 
           className="flex flex-col gap-[20px] " 

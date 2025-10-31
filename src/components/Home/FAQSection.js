@@ -53,6 +53,7 @@ export default function FAQSection() {
   return (
     <MarginWrapper top={96} bottom={96}>
       <div className="w-full max-w-[1904px] mx-auto">
+
         {/* Sparkles Background Header */}
         <div className="relative w-full h-[335px] px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[350px] py-[120px] flex flex-col gap-[10px] items-center justify-center">
           {/* Background Image */}
@@ -90,7 +91,8 @@ export default function FAQSection() {
                   {faqs.slice(0, 4).map((faq) => {
                     const isOpen = openFAQ === faq.id;
                     return (
-                      <div key={faq.id} className="flex gap-6 group cursor-pointer items-center" onClick={() => setOpenFAQ(isOpen ? null : faq.id)}>
+                      <div key={faq.id} className={`flex gap-6 group cursor-pointer ${isOpen?"":"items-center"}`} onClick={() => setOpenFAQ(isOpen ? null : faq.id)}>
+                        
                         {/* Number Indicator */}
                         <div
   className={`w-[80px] h-[80px] rounded-[12px] border border-white/20 p-[20px] flex items-center justify-center flex-shrink-0 transition-all duration-300 bg-gradient-to-b from-[#2E2E2E] to-[#1C1C1C]`}
@@ -152,10 +154,10 @@ export default function FAQSection() {
                   {faqs.slice(4, 8).map((faq) => {
                     const isOpen = openFAQ === faq.id;
                     return (
-                      <div key={faq.id} className="flex gap-6 group cursor-pointer items-center" onClick={() => setOpenFAQ(isOpen ? null : faq.id)}>
-                        {/* Number Indicator */}
+             <div key={faq.id} className={`flex gap-6 group cursor-pointer ${isOpen?"":"items-center"}`} onClick={() => setOpenFAQ(isOpen ? null : faq.id)}>
+         {/* Number Indicator */}
                         <div
-  className={`w-[80px] h-[80px] rounded-[12px] border border-white/20 p-[20px] flex items-center justify-center flex-shrink-0 transition-all duration-300 bg-gradient-to-b from-[#2E2E2E] to-[#1C1C1C]`}
+  className={`w-[80px] h-[80px] rounded-[12px] h-full border border-white/20 p-[20px] flex items-center justify-center flex-shrink-0 transition-all duration-300 bg-gradient-to-b from-[#2E2E2E] to-[#1C1C1C]`}
 >
   <span
     className={`w-[40px] h-[40px] font-barlow font-semibold text-[28px] leading-[150%] tracking-[0%] text-center flex items-center justify-center transition-colors duration-300

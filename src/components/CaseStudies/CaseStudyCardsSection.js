@@ -77,7 +77,7 @@ const caseStudies = [
 export default function CaseStudyCardsSection() {
   return (
     <MarginWrapper top={96} bottom={96}>
-      <div className="w-full max-w-[1596px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[50px]">
+      <div className=" w-full max-w-[1596px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[50px]">
         {/* Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[50px] pb-[100px]">
           {caseStudies.map((study, index) => (

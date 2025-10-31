@@ -2,7 +2,7 @@ import "./globals.css";
 import { Barlow, Montserrat } from "next/font/google";
 import Header from "@/components/navbar";
 import Navbar from "@/components/footer";
-
+import RunFadeGlobally from "@/utils/RunFadeGlobally";
 const barlow = Barlow({
   subsets: ["latin"],
   weight: ["400", "500", "600"], // Regular, Medium, SemiBold
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body  className={`${barlow.variable} ${montserrat.variable} antialiased`}>
         <Header />
+        <RunFadeGlobally/>
         <main className="min-h-screen min-w-screen">{children}</main>
         <Navbar/>
       </body>
