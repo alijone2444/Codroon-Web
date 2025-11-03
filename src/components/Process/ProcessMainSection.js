@@ -26,8 +26,7 @@ export default function ProcessMainSection() {
                   lineHeight: '150%', 
                   letterSpacing: '-0.6%' 
                 }}
-              >
-                We follow a structured approach to deliver exceptional digital solutions that exceed expectations and drive business growth.
+              >We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
               </p>
             
             {/* Button */}
@@ -44,7 +43,7 @@ export default function ProcessMainSection() {
                 backgroundColor: '#57BB6D'
               }}
             >
-              Our 8-Step Process
+            Here's an overview of our typical process:
             </button>
         </div>
       </div>

@@ -4,51 +4,51 @@ import MarginWrapper from "@/components/wrappers/sectionWrapper";
 const industries = [
   {
     icon: "industry-item-1",
-    title: "Healthcare & Medical",
+    title: "Travel & Hospitality",
     description:
-      "We develop secure, HIPAA-compliant digital solutions for healthcare providers, including patient management systems, telemedicine platforms, and medical device integrations.",
+      "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions.",
   },
   {
     icon: "industry-item-2",
-    title: "Financial Services",
+    title: "Public Sector",
     description:
-      "Our fintech solutions include banking applications, payment processing systems, investment platforms, and regulatory compliance tools for financial institutions.",
+      "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success.",
   },
   {
     icon: "industry-item-3",
-    title: "E-Commerce & Retail",
+    title: "Retail & CPG",
     description:
-      "We create comprehensive e-commerce platforms, inventory management systems, and customer experience solutions that drive online sales and customer engagement.",
+      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
   },
   {
     icon: "industry-item-4",
-    title: "Education & E-Learning",
+    title: "Oil, Gas & Energy",
     description:
-      "Our educational technology solutions include learning management systems, virtual classrooms, and interactive content platforms for institutions and corporate training.",
+      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
   },
   {
     icon: "industry-item-5",
-    title: "Manufacturing & Logistics",
+    title: "Startups",
     description:
-      "We develop IoT-enabled manufacturing solutions, supply chain management systems, and predictive analytics tools for industrial operations.",
+      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
   },
   {
     icon: "industry-item-6",
-    title: "Real Estate & Property",
+    title: "E-commerce",
     description:
-      "Our real estate solutions include property management systems, virtual tour platforms, and CRM tools for real estate professionals and property developers.",
+      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
   },
   {
     icon: "industry-item-7",
-    title: "Travel & Hospitality",
+    title: "Banking & Fintech",
     description:
-      "We create booking platforms, customer service solutions, and mobile applications that enhance the travel experience for both businesses and travelers.",
+      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
   },
   {
     icon: "industry-item-8",
-    title: "Technology & SaaS",
+    title: "Gaming",
     description:
-      "We build scalable SaaS platforms, API integrations, and cloud-based solutions for technology companies and software-as-a-service providers.",
+      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function IndustriesGridSection() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="flex flex-col gap-8 p-8 md:p-12 border-b border-gray-600 last:border-b-0"
+              className="flex flex-col gap-8 p-8 md:p-12 border-b border-gray-600 "
             >
               {/* Icon and Title Row */}
               <div className="flex items-center gap-5">
@@ -88,7 +88,7 @@ export default function IndustriesGridSection() {
               </div>
 
               {/* Description */}
-              <p className="font-barlow font-normal text-white text-[18px] md:text-[20px] leading-[150%]">
+              <p className="font-barlow font-normal text-[#E6E6E6] text-[18px] md:text-[20px] leading-[150%]">
                 {industry.description}
               </p>
             </div>

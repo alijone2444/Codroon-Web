@@ -25,8 +25,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body  className={`${barlow.variable} ${montserrat.variable} antialiased`}>
         <Header />
+        <main className="min-h-screen min-w-screen">
+        {children}
         <RunFadeGlobally/>
-        <main className="min-h-screen min-w-screen">{children}</main>
+        </main>
         <Navbar/>
       </body>
     </html>

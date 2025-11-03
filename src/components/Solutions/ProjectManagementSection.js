@@ -81,7 +81,7 @@ const ProjectManagementSection = () => {
           <h2 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-white">
             Project Management
           </h2>
-          <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white max-w-4xl">
+          <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-[#E6E6E6] ">
             Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process.
           </p>
           <button className="w-[346px] h-[50px] px-[14px] py-[12px] rounded-[30px] bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200">

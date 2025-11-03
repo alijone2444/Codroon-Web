@@ -10,7 +10,7 @@ import { initScrollFadeObserver } from "@/utils/scrollFadeObserver";
 export default function Home() {
  
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#0F172A]">
       <HeroSection />
       <AIAssistantSection />
       <OurSolutionsSection />

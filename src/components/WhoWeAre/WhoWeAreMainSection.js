@@ -15,14 +15,8 @@ export default function WhoWeAreMainSection() {
         <h2 className="font-barlow font-semibold text-white text-[38px] leading-[150%]">
           About Codroon
         </h2>
-        <p className="font-inter font-normal text-white text-[18px] leading-[150%]">
-          Codroon is a digital product agency that is passionate about crafting
-          exceptional digital experiences. We specialize in design, engineering,
-          and project management, helping businesses thrive in the digital
-          landscape. At Codroon, we follow a structured and collaborative process
-          to ensure the successful delivery of exceptional digital products. Our
-          process combines industry best practices, creative thinking, and a
-          client-centric approach.
+        <p className="font-inter font-normal text-[#E6E6E6] text-[18px] leading-[150%]">
+        Codroon is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At Codroon, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
         </p>
       </div>
 

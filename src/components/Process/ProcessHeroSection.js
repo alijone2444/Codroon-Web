@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProcessHeroSection() {
   return (
-    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
+    <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"
@@ -21,7 +21,7 @@ export default function ProcessHeroSection() {
         </h1>
 
         <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
-          Our proven methodology ensures exceptional results through structured collaboration and innovative problem-solving.
+        At Codroon, we value transparency, collaboration, and delivering exceptional results.
         </p>
       </div>
     </section>

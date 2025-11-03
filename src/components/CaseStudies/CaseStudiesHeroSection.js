@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CaseStudiesHeroSection() {
   return (
-    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
+    <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"

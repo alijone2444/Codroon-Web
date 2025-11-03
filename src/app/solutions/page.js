@@ -7,7 +7,7 @@ import HorizontalMarginWrapper from '@/components/wrappers/horizontalmarginWrapp
 
 export default function SolutionsPage() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#0F172A]">
       <SolutionsHeroSection />
         <HorizontalMarginWrapper left={80} right={80}>
           <DesignSection />

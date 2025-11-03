@@ -28,18 +28,18 @@ const CaseStudiesCTASection = () => {
         />
         
         {/* Heading */}
-        <h2 className="font-barlow font-semibold text-[38px] leading-[100%] tracking-[0%] text-white text-center">
+        <h2 className="font-barlow font-semibold text-[38px] leading-[100%] tracking-[0%] text-white text-center whitespace-nowrap overflow-hidden text-ellipsis">
           Let us Bring your Ideas to Life in the Digital World.
         </h2>
         
         {/* Description */}
-        <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white text-center max-w-4xl">
+        <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-[#E6E6E6] text-center ">
           No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product.
         </p>
         
         {/* Button */}
         <button 
-          className="bg-green-600 hover:bg-green-700 text-white font-barlow font-medium text-[18px] leading-[150%] tracking-[0%] transition-all duration-200 flex items-center justify-center gap-[8px] rounded-[30px]"
+          className="bg-green-600 hover:bg-green-700 text-black font-barlow font-medium text-[18px] leading-[150%] tracking-[0%] transition-all duration-200 flex items-center justify-center gap-[8px] rounded-[30px]"
           style={{ width: '265px', height: '63px', paddingTop: '18px', paddingRight: '34px', paddingBottom: '18px', paddingLeft: '34px' }}
         >
           Start Project

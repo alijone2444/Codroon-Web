@@ -74,7 +74,7 @@ const DesignSection = () => {
   ];
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16 my-16">
       <div className="max-w-[1596px] mx-auto px-[50px]">
         {/* Main Heading */}
         <MarginWrapper bottom={50}>
@@ -83,7 +83,7 @@ const DesignSection = () => {
         </h2>
         
         {/* Description */}
-        <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white mb-8 max-w-4xl">
+        <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-[#E6E6E6] mb-8 ">
           At Codroon, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences.
         </p>
         <button className="w-[346px] h-[50px] px-[14px] py-[12px] rounded-[30px] bg-[#52B069] hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200">

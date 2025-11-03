@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IndustriesHeroSection() {
   return (
-    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
+    <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden top-[100px]" >
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"
@@ -20,8 +20,8 @@ export default function IndustriesHeroSection() {
           Industries
         </h1>
 
-        <p className="font-barlow font-normal text-[20px] leading-[24px] tracking-[-0.6%] text-center text-white">
-          Transform your brand with our innovative digital solutions that captivate and engage your audience.
+        <p className="font-barlow font-normal text-[20px] leading-[24px] tracking-[-0.6%] text-center text-[#E6E6E6]">
+        Transform your brand with our innovative digital solutions that captivate and engage your audience.
         </p>
       </div>
     </section>

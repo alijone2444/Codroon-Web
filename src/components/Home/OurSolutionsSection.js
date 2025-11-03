@@ -44,7 +44,7 @@ export default function OurSolutionsSection() {
       description: "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
     },
     {
-      icon: "/Images/power.png", // Power icon for third column
+      icon: "/Images/Icons/power.png", // Power icon for third column
       title: "Desktop Apps",
       description: "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
     }
@@ -71,8 +71,8 @@ export default function OurSolutionsSection() {
         <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[300px] py-[120px] flex flex-col gap-[14px] items-center">
           <h2 className="max-w-[1328px] font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">
             Our Solutions
-          </h2>
-          <p className="max-w-[1328px] font-barlow font-normal text-[18px] leading-[24px] tracking-[-0.6%] text-center text-white">
+          </h2><p className="max-w-[1328px] font-barlow font-normal text-[18px] leading-[24px] tracking-[-0.6%] text-center text-white whitespace-nowrap overflow-hidden text-ellipsis">
+
             Transform your brand with our innovative digital solutions that captivate and engage your audience.
           </p>
         </div>

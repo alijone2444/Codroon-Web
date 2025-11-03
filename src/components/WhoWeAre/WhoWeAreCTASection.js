@@ -7,14 +7,13 @@ export default function WhoWeAreCTASection() {
       {/* Main Container */}
       <div 
         className="w-full h-[511px] flex flex-col gap-[50px] p-[80px]"
-        style={{ background: 'rgba(128, 128, 128, 0.6)' }}
       >
         {/* First Row */}
         <div className="w-full h-[190px] flex gap-[40px]">
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/codroon-logo.png"
+              src="/cordroon-icon.png"
               alt="Codroon Logo"
               width={120}
               height={120}
@@ -24,23 +23,25 @@ export default function WhoWeAreCTASection() {
           {/* Text Content */}
           <div className="flex-1 flex flex-col justify-center">
             <h3 className="font-barlow font-medium text-white text-[30px] leading-[100%] mb-4">
-              Ready to Start Your Project?
+            Today, Codroon Continues to Thrive as a Leading Digital Product Agency.....
             </h3>
             <p className="font-inter font-normal text-white text-[18px] leading-[150%]">
-              Let's collaborate to bring your vision to life. Our team of experts is ready to help you build innovative solutions that drive your business forward. From concept to deployment, we're with you every step of the way.
+            Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.
             </p>
+          
           </div>
         </div>
 
         {/* Second Row */}
-        <div className="w-full h-[111px] flex items-center justify-between gap-[20px] pt-[24px] pr-[40px] pb-[24px] pl-[40px] border border-gray-600 rounded-[12px]">
+        <div className="w-full h-[111px] flex items-center bg-[#24242433] border border-[#262626] backdrop-blur-[12px] justify-between gap-[20px] pt-[24px] pr-[40px] pb-[24px] pl-[40px] rounded-[12px]">
           {/* Left Section */}
-          <div className="flex-1 flex items-center gap-[20px]">
+          <div className="flex-1 flex items-center gap-[20px] ">
             <div className="font-barlow font-normal text-white text-[20px] leading-[100%]">
-              Ready to collaborate?
+            Welcome to Codroon 
             </div>
-            <div className="font-barlow font-normal text-white text-[20px] leading-[150%]">
-              Let's build something amazing together
+            <div className="font-barlow font-normal text-white text-[20px] leading-[150%] bg-[#4368B126] rounded-[8px] px-[20px] py-[14px]"
+>
+            Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.
             </div>
           </div>
 

@@ -80,10 +80,10 @@ const EngineeringSection = () => {
        
         <MarginWrapper bottom={50}>
         <div className="w-full h-auto pr-[50px]  flex flex-col gap-[30px] mb-16">
-          <h2 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-white">
+          <h2 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-[#E6E6E6]">
             Engineering
           </h2>
-          <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white max-w-4xl">
+          <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white ">
             Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs.
           </p>
           <button className="w-[346px] h-[50px] px-[14px] py-[12px] rounded-[30px] bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200">

@@ -36,12 +36,11 @@ const ProcessCTASection = () => {
         
         {/* Description */}
         <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white text-center max-w-4xl">
-          Ready to transform your ideas into exceptional digital solutions? Let's discuss your project and explore how our proven process can help you achieve your goals.
-        </p>
+        We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.    </p>
         
         {/* Button */}
         <button 
-          className="text-white font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-[8px] rounded-[37px]"
+          className="text-black font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-[8px] rounded-[37px]"
           style={{ 
             width: '232px', 
             height: '63px', 

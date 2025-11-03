@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const SolutionsHeroSection = () => {
   return (
-    <section className="relative w-full h-[558px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden top-[100px]">
       {/* Background Image */}
       <Image
         src="/Images/furisticBusinessScene.jpg"

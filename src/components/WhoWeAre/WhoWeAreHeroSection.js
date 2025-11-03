@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function WhoWeAreHeroSection() {
   return (
-    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
+    <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
       {/* Background Image - same as previous pages */}
       <Image
-        src="/Images/hand.jpg"
+        src="/Images/furisticBusinessScene.jpg"
         alt="Futuristic Business Scene"
         fill
         priority
@@ -21,7 +21,7 @@ export default function WhoWeAreHeroSection() {
         </h1>
 
         <p className="font-barlow font-normal text-[20px] leading-[24px] tracking-[-0.6%] text-center text-white">
-        Turning code into products that wow users and win markets!
+        Welcome to Codroon, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation.
         </p>
       </div>
     </section>

@@ -166,3 +166,11 @@ a:hover {
 }
 
 
+.no-hover-effect,
+.no-hover-effect::before {
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  background: none !important;
+  transition: none !important;
+}
