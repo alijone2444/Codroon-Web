@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import TypewriterText from "../libs/typeWritter";
 export default function WhoWeAreHeroSection() {
   return (
     <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
@@ -20,9 +20,15 @@ export default function WhoWeAreHeroSection() {
         Who We Are
         </h1>
 
-        <p className="font-barlow font-normal text-[20px] leading-[24px] tracking-[-0.6%] text-center text-white">
-        Welcome to Codroon, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation.
-        </p>
+   
+        
+        <TypewriterText
+  text=" Welcome to Codroon, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation."
+  textSize="text-[20px]"
+  textColor="text-white"
+  fontWeight="font-normal"
+  fontName='font-barlow'
+/>
       </div>
     </section>
   );

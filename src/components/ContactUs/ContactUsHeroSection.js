@@ -1,6 +1,7 @@
 
 
 import Image from "next/image";
+import TypewriterText from "../libs/typeWritter";
 
 export default function ContactUsHeroSection() {
   return (
@@ -22,9 +23,13 @@ export default function ContactUsHeroSection() {
         Contact Us
         </h1>
 
-        <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
-        Get in touch with us today and let us help you with any questions or inquiries you may have.
-        </p>
+        <TypewriterText
+  text=" Get in touch with us today and let us help you with any questions or inquiries you may have."
+  textSize="text-[20px]"
+  textColor="text-white"
+  fontWeight="font-normal"
+  fontName='font-barlow'
+/>
       </div>
     </section>
   );

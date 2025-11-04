@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TypewriterText from "../libs/typeWritter";
 
 export default function IndustriesHeroSection() {
   return (
@@ -20,9 +21,15 @@ export default function IndustriesHeroSection() {
           Industries
         </h1>
 
-        <p className="font-barlow font-normal text-[20px] leading-[24px] tracking-[-0.6%] text-center text-[#E6E6E6]">
-        Transform your brand with our innovative digital solutions that captivate and engage your audience.
-        </p>
+  
+        
+        <TypewriterText
+  text="Transform your brand with our innovative digital solutions that captivate and engage your audience."
+  textSize="text-[20px]"
+  textColor="text-white"
+  fontWeight="font-normal"
+  fontName='font-barlow'
+/>
       </div>
     </section>
   );

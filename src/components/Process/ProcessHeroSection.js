@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TypewriterText from "../libs/typeWritter";
 
 export default function ProcessHeroSection() {
   return (
@@ -19,10 +20,14 @@ export default function ProcessHeroSection() {
         <h1 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">
           How We Work
         </h1>
-
-        <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
-        At Codroon, we value transparency, collaboration, and delivering exceptional results.
-        </p>
+        
+        <TypewriterText
+  text="   At Codroon, we value transparency, collaboration, and delivering exceptional results."
+  textSize="text-[20px]"
+  textColor="text-white"
+  fontWeight="font-normal"
+  fontName='font-barlow'
+/>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import TypewriterText from "../libs/typeWritter";
 export default function CaseStudiesHeroSection() {
   return (
     <section className="relative w-full h-[488px] flex items-center justify-center overflow-hidden" style={{ top: '100px' }}>
@@ -20,9 +20,14 @@ export default function CaseStudiesHeroSection() {
           Case Studies
         </h1>
 
-        <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
-          Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.
-        </p>
+        <TypewriterText
+  text="      Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise."
+  textSize="text-[20px]"
+  textColor="text-white"
+  fontWeight="font-normal"
+  fontName='font-barlow'
+/>
+
       </div>
     </section>
   );
