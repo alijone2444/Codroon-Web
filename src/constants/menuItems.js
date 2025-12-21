@@ -30,7 +30,7 @@ export const menuItems = [
     {
       name: 'Resources',
       dropdown: [
-        { label: 'Blog', href: '/blog' },
+        { label: 'Blog', href: '/blogs' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Who We Are', href: '/who-we-are' },
       ],
