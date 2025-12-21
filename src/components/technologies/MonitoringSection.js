@@ -1,8 +1,10 @@
+import Image from "next/image"
+
 const monitoring = [
-  { name: "Sentry", icon: "🔍" },
-  { name: "New Relic", icon: "📊" },
-  { name: "Grafana", icon: "📈" },
-  { name: "Datadog", icon: "🐕" },
+  { name: "Sentry", image: "/Images/technologies/monitor-1.png" },
+  { name: "New Relic", image: "/Images/technologies/monitor-2.png" },
+  { name: "Grafana", image: "/Images/technologies/monitor-3.png" },
+  { name: "Datadog", image: "/Images/technologies/monitor-4.png" },
 ]
 
 export default function MonitoringSection() {
@@ -16,7 +18,14 @@ export default function MonitoringSection() {
               key={tool.name}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{tool.icon}</div>
+              <div className="relative w-20 h-20 mb-4 group-hover:scale-110 transition-transform">
+                <Image
+                  src={tool.image}
+                  alt={tool.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-white text-base font-medium">{tool.name}</h3>
             </div>
           ))}

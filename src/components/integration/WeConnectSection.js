@@ -1,46 +1,48 @@
+import Image from "next/image"
+
 const apiCategories = [
   {
     title: "Payment APIs",
     apis: [
-      { name: "Stripe", subtitle: "Payment APIs", icon: "💳" },
-      { name: "PayPal", subtitle: "Payment APIs", icon: "💰" },
+      { name: "Stripe", subtitle: "Payment APIs", image: "/Images/integrations/stripe-1.png" },
+      { name: "PayPal", subtitle: "Payment APIs", image: "/Images/integrations/payment-2.png" },
     ],
   },
   {
     title: "Communication APIs",
     apis: [
-      { name: "Twilio", subtitle: "Communication APIs", icon: "📞" },
-      { name: "SendGrid", subtitle: "Email APIs", icon: "✉️" },
-      { name: "WhatsApp Business", subtitle: "Message APIs", icon: "💬" },
+      { name: "Twilio", subtitle: "Communication APIs", image: "/Images/integrations/communicate-1.png" },
+      { name: "SendGrid", subtitle: "Email APIs", image: "/Images/integrations/communicate-2.png" },
+      { name: "WhatsApp Business", subtitle: "Message APIs", image: "/Images/integrations/communicate-3.png" },
     ],
   },
   {
     title: "Maps & Geo APIs",
     apis: [
-      { name: "Google Maps", subtitle: "Map APIs", icon: "🗺️" },
-      { name: "Mapbox", subtitle: "Geo APIs", icon: "📍" },
+      { name: "Google Maps", subtitle: "Map APIs", image: "/Images/integrations/map-1.png" },
+      { name: "Mapbox", subtitle: "Geo APIs", image: "/Images/integrations/map-2.png" },
     ],
   },
   {
     title: "CRM APIs",
     apis: [
-      { name: "HubSpot", subtitle: "CRM APIs", icon: "🎯" },
-      { name: "Zoho", subtitle: "CRM APIs", icon: "📊" },
+      { name: "HubSpot", subtitle: "CRM APIs", image: "/Images/integrations/crm-1.png" },
+      { name: "Zoho", subtitle: "CRM APIs", image: "/Images/integrations/crm-2.png" },
     ],
   },
   {
     title: "E-commerce APIs",
     apis: [
-      { name: "Shopify", subtitle: "E-commerce APIs", icon: "🛍️" },
-      { name: "WooCommerce", subtitle: "E-commerce APIs", icon: "🛒" },
+      { name: "Shopify", subtitle: "E-commerce APIs", image: "/Images/integrations/ecommerce-1.png" },
+      { name: "WooCommerce", subtitle: "E-commerce APIs", image: "/Images/integrations/ecommerce-2.png" },
     ],
   },
   {
     title: "Additional APIs",
     apis: [
-      { name: "Automation", subtitle: "Payment APIs", icon: "🤖" },
-      { name: "Banking", subtitle: "Payment APIs", icon: "🏦" },
-      { name: "SMS", subtitle: "Messaging Service", icon: "📱" },
+      { name: "Automation", subtitle: "Payment APIs", image: "/Images/integrations/additional-1.png" },
+      { name: "Banking", subtitle: "Payment APIs", image: "/Images/integrations/additional-2.png" },
+      { name: "SMS", subtitle: "Messaging Service", image: "/Images/integrations/additional-3.png" },
     ],
   },
 ]
@@ -51,6 +53,8 @@ export default function WeConnectSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-white text-4xl font-semibold mb-4">We connect your world</h2>
+          {/* Green divider under heading */}
+          <div className="w-full h-px bg-emerald-500/50 mt-6"></div>
         </div>
 
         <div className="space-y-12">
@@ -64,7 +68,14 @@ export default function WeConnectSection() {
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all cursor-pointer group"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl group-hover:scale-110 transition-transform">{api.icon}</div>
+                      <div className="relative w-12 h-12 flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <Image
+                          src={api.image}
+                          alt={api.name}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                       <div>
                         <h4 className="text-white text-lg font-medium mb-1">{api.name}</h4>
                         <p className="text-gray-400 text-sm">{api.subtitle}</p>

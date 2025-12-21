@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 const integrations = [
-  { name: "Mini-apps", icon: "📱" },
-  { name: "Service widgets", icon: "🧩" },
-  { name: "Micro-services", icon: "⚙️" },
-  { name: "Multi-vendor dashboards", icon: "📊" },
-  { name: "Unified access layer", icon: "🔐" },
+  { name: "Mini-apps", image: "/Images/integrations/super-1.png" },
+  { name: "Service widgets", image: "/Images/integrations/super-2.png" },
+  { name: "Micro-services", image: "/Images/integrations/super-3.png" },
+  { name: "Multi-vendor dashboards", image: "/Images/integrations/super-4.png" },
+  { name: "Unified access layer", image: "/Images/integrations/super-5.png" },
 ]
 
 export default function SuperAppIntegrationsSection() {
@@ -15,13 +17,20 @@ export default function SuperAppIntegrationsSection() {
           <p className="text-gray-400 text-lg">One Platform. Unlimited possibilities</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {integrations.map((integration) => (
             <div
               key={integration.name}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center w-full md:w-[calc(33.333%-1rem)] max-w-[300px]"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{integration.icon}</div>
+              <div className="relative w-20 h-20 mb-4 group-hover:scale-110 transition-transform">
+                <Image
+                  src={integration.image}
+                  alt={integration.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-white text-base font-medium">{integration.name}</h3>
             </div>
           ))}

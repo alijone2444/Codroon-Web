@@ -1,14 +1,26 @@
+import Image from "next/image";
+
 export default function TechStackHeroSection() {
   return (
-    <section className="relative w-full py-20 px-6 overflow-hidden">
-      {/* Background blur effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 to-transparent"></div>
+    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden mb-16" style={{ top: '100px' }}>
+      {/* Background Image */}
+      <Image
+        src="/Images/furisticBusinessScene.jpg"
+        alt="Futuristic Business Scene"
+        fill
+        priority
+        className="object-cover opacity-25"
+      />
+  
+      <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
 
-      <div className="relative max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-semibold leading-none text-center text-white mb-6">
+      {/* Content */}
+      <div className="animate-fade-slide relative z-10 flex flex-col items-center justify-center text-center w-full h-full" style={{ paddingTop: '120px', paddingRight: '300px', paddingBottom: '120px', paddingLeft: '300px', gap: '14px' }}>
+        <h1 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">
           Powering Innovation With A Modern, Scalable Tech Stack
         </h1>
-        <p className="text-xl font-normal leading-relaxed tracking-tight text-center text-gray-300 max-w-3xl mx-auto">
+
+        <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
           We use future-ready technologies that ensure faster development, higher performance, and seamless scalability.
         </p>
       </div>

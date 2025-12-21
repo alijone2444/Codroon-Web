@@ -1,14 +1,16 @@
+import Image from "next/image"
+
 const technologies = [
-  { name: "HTML5", color: "from-orange-500 to-red-500", icon: "📄" },
-  { name: "CSS3", color: "from-blue-500 to-blue-600", icon: "🎨" },
-  { name: "Tailwind CSS", color: "from-cyan-400 to-blue-500", icon: "💨" },
-  { name: "JavaScript", color: "from-yellow-400 to-yellow-500", icon: "JS" },
-  { name: "React", color: "from-cyan-400 to-blue-500", icon: "⚛️" },
-  { name: "Next.js", color: "from-gray-800 to-gray-900", icon: "▲" },
-  { name: "Vue", color: "from-green-400 to-emerald-500", icon: "V" },
-  { name: "React Native", color: "from-cyan-400 to-blue-500", icon: "⚛️" },
-  { name: "Flutter", color: "from-blue-400 to-cyan-400", icon: "🦋" },
-  { name: "Dart", color: "from-cyan-500 to-blue-600", icon: "🎯" },
+  { name: "HTML5", image: "/Images/technologies/frontend-1.png" },
+  { name: "CSS3", image: "/Images/technologies/frontend-2.png" },
+  { name: "Tailwind CSS", image: "/Images/technologies/frontend-3.png" },
+  { name: "JavaScript", image: "/Images/technologies/frontend-4.png" },
+  { name: "React", image: "/Images/technologies/react-js.png" },
+  { name: "Next.js", image: "/Images/technologies/frontend-5.png" },
+  { name: "Vue", image: "/Images/technologies/frontend-6.png" },
+  { name: "React Native", image: "/Images/technologies/frontend-7.png" },
+  { name: "Flutter", image: "/Images/technologies/frontend-9.png" },
+  { name: "Dart", image: "/Images/technologies/frontend-10.png" },
 ]
 
 export default function FrontendTechnologiesSection() {
@@ -22,10 +24,13 @@ export default function FrontendTechnologiesSection() {
               key={tech.name}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
             >
-              <div
-                className={`text-4xl mb-3 bg-gradient-to-br ${tech.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform`}
-              >
-                {tech.icon}
+              <div className="relative w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                <Image
+                  src={tech.image}
+                  alt={tech.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="text-white text-base font-medium">{tech.name}</h3>
             </div>

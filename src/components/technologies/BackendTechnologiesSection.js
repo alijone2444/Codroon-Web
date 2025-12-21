@@ -1,10 +1,12 @@
+import Image from "next/image"
+
 const technologies = [
-  { name: "Node.js", color: "from-green-500 to-green-600", icon: "🟢" },
-  { name: "Express.js", color: "from-gray-600 to-gray-700", icon: "⚡" },
-  { name: "Python", color: "from-blue-400 to-yellow-400", icon: "🐍" },
-  { name: "PHP", color: "from-purple-500 to-indigo-600", icon: "🐘" },
-  { name: "Laravel", color: "from-red-500 to-orange-500", icon: "🔥" },
-  { name: ".NET Blazor", color: "from-purple-600 to-blue-600", icon: "⚡" },
+  { name: "Node.js", image: "/Images/technologies/backend-1.png" },
+  { name: "Express.js", image: "/Images/technologies/backend-2.png" },
+  { name: "Python", image: "/Images/technologies/backend-3.png" },
+  { name: "PHP", image: "/Images/technologies/backend-4.png" },
+  { name: "Laravel", image: "/Images/technologies/backend-5.png" },
+  { name: ".NET Blazor", image: "/Images/technologies/backend-6.png" },
 ]
 
 export default function BackendTechnologiesSection() {
@@ -18,10 +20,13 @@ export default function BackendTechnologiesSection() {
               key={tech.name}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
             >
-              <div
-                className={`text-4xl mb-3 bg-gradient-to-br ${tech.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform`}
-              >
-                {tech.icon}
+              <div className="relative w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                <Image
+                  src={tech.image}
+                  alt={tech.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="text-white text-sm font-medium">{tech.name}</h3>
             </div>

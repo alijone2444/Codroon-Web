@@ -1,12 +1,14 @@
+import Image from "next/image"
+
 const automationTools = [
-  { name: "Make.com", icon: "🔄" },
-  { name: "Zapier", icon: "⚡" },
-  { name: "n8n", icon: "🔗" },
+  { name: "Make.com", image: "/Images/integrations/automate-1.png" },
+  { name: "Zapier", image: "/Images/integrations/automate-2.png" },
+  { name: "n8n", image: "/Images/integrations/automate-3.png" },
 ]
 
 export default function AutomateEverythingSection() {
   return (
-    <section className="w-full py-16 px-6">
+    <section className="w-full py-16 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-white text-4xl font-semibold mb-4">Automate Everything</h2>
@@ -15,13 +17,22 @@ export default function AutomateEverythingSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Horizontal center line - spans from first to last item */}
+          <div className="absolute left-0 top-1/2 h-px bg-emerald-500/50 -translate-y-1/2 z-0 w-full"></div>
           {automationTools.map((tool) => (
             <div
               key={tool.name}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-10 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
             >
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">{tool.icon}</div>
+              <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform">
+                <Image
+                  src={tool.image}
+                  alt={tool.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-white text-2xl font-medium">{tool.name}</h3>
             </div>
           ))}

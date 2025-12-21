@@ -1,18 +1,22 @@
-import IntegrationsHeroSection from "@/components/Integrations/IntegrationsHeroSection"
-import AutomateEverythingSection from "@/components/Integrations/AutomateEverythingSection"
-import AIToolsSection from "@/components/Integrations/AIToolsSection"
-import WeConnectSection from "@/components/Integrations/WeConnectSection"
-import SuperAppIntegrationsSection from "@/components/Integrations/SuperAppIntegrationsSection"
-import IntegrationsCTASection from "@/components/Integrations/IntegrationsCTASection"
+"use client";
+import IntegrationsHeroSection from "@/components/integration/IntegrationsHeroSection"
+import AutomateEverythingSection from "@/components/integration/AutomateEverythingSection"
+import AIToolsSection from "@/components/integration/AIToolsSection"
+import WeConnectSection from "@/components/integration/WeConnectSection"
+import SuperAppIntegrationsSection from "@/components/integration/SuperAppIntegrationsSection"
+import IntegrationsCTASection from "@/components/integration/IntegrationsCTASection"
+import HorizontalMarginWrapper from "@/components/wrappers/horizontalmarginWrapper"
 
 export default function IntegrationsPage() {
   return (
     <div className="w-full bg-[#0F172A]">
       <IntegrationsHeroSection />
-      <AutomateEverythingSection />
-      <AIToolsSection />
-      <WeConnectSection />
-      <SuperAppIntegrationsSection />
+      <HorizontalMarginWrapper left={80} right={80}>
+        <AutomateEverythingSection />
+        <AIToolsSection />
+        <WeConnectSection />
+        <SuperAppIntegrationsSection />
+      </HorizontalMarginWrapper>
       <IntegrationsCTASection />
     </div>
   )

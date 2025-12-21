@@ -7,28 +7,28 @@ const recentPosts = [
     title: "How Businesses Can Leverage Data for Smarter Decisions",
     date: "May 17, 2025",
     author: "By",
-    image: "/business-data-dashboard.png",
+    image: "/Images/blogs/recent-1.png",
   },
   {
     id: 2,
     title: "IT Industry Key Strategies for Business Growth",
     date: "May 17, 2025",
     author: "By",
-    image: "/it-professionals-working.png",
+    image: "/Images/blogs/recent-2.png",
   },
   {
     id: 3,
     title: "Get The Most Out Op The Creativity",
     date: "May 17, 2025",
     author: "By",
-    image: "/creative-team-brainstorming.jpg",
+    image: "/Images/blogs/recent-3.png",
   },
 ]
 
 export default function RecentPostsSection() {
   return (
-    <section className="w-full py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full px-6">
+      <div className="max-w-6xl mx-auto scroll-fade-up">
         <h2 className="text-white text-3xl font-semibold mb-8">Recent Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recentPosts.map((post) => (
@@ -36,13 +36,19 @@ export default function RecentPostsSection() {
               key={post.id}
               className="group bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer"
             >
-              <div className="relative h-52 overflow-hidden">
-                <Image
-                  src={post.image || "/placeholder.svg"}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className="relative h-52 overflow-hidden bg-slate-800/50 flex items-center justify-center">
+                {typeof post.image === 'string' ? (
+                  <Image
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    {post.image}
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-white text-lg font-medium mb-3 group-hover:text-emerald-400 transition-colors">

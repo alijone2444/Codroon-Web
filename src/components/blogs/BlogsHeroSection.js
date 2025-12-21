@@ -1,20 +1,29 @@
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogsHeroSection() {
   return (
-    <section className="relative w-full py-20 px-6 overflow-hidden">
-      {/* Background blur effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 to-transparent"></div>
+    <section className="relative w-full h-[342px] flex items-center justify-center overflow-hidden mb-[100px]" style={{ top: '100px' }} >
+      {/* Background Image */}
+      <Image
+        src="/Images/furisticBusinessScene.jpg"
+        alt="Futuristic Business Scene"
+        fill
+        priority
+        className="object-cover opacity-25"
+      />
+  
+      <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
 
-      <div className="relative max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-semibold leading-none text-center text-white mb-6">Blogs</h1>
-        <p className="text-xl font-normal leading-relaxed tracking-tight text-center text-gray-300 mb-8 max-w-3xl mx-auto">
-          Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our
-          creativity and expertise.
+      {/* Content */}
+      <div className="animate-fade-slide relative z-10 flex flex-col items-center justify-center text-center w-full h-full" style={{ paddingTop: '120px', paddingRight: '300px', paddingBottom: '120px', paddingLeft: '300px', gap: '14px' }}>
+        <h1 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-center text-white">
+          Blogs
+        </h1>
+
+        <p className="font-barlow font-normal text-[20px] leading-[150%] tracking-[-0.6%] text-center text-white">
+          Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.
         </p>
-        <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 rounded-full text-base">
-          Read More
-        </Button>
       </div>
     </section>
   )

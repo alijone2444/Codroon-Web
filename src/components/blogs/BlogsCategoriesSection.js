@@ -2,7 +2,7 @@
 
 import { Search } from "lucide-react"
 import { useState } from "react"
-
+import { categoryCards } from "./constant"
 const categories = [
   "Latest AI trends",
   "Product design insights",
@@ -11,23 +11,18 @@ const categories = [
   "Remote Leadership",
 ]
 
-const categoryCards = [
-  { title: "AI & Automation", icon: "🔲" },
-  { title: "Product Design", icon: "📦" },
-  { title: "Engineering", icon: "🛠️" },
-  { title: "Case Studies", icon: "🧪" },
-  { title: "Tech Culture", icon: "🔧" },
-  { title: "Founders' Insights", icon: "💡" },
-]
+
+
 
 export default function BlogsCategoriesSection() {
   const [searchQuery, setSearchQuery] = useState("")
 
   return (
-    <section className="w-full py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative w-full h-[619px] flex items-center justify-center overflow-hidden ">
+      <div className="max-w-6xl mx-auto ">
         {/* Search Bar */}
-        <div className="bg-gradient-to-r from-teal-900/40 to-teal-800/40 rounded-3xl p-8 mb-16">
+        <div className="rounded-3xl p-8 my-16"  style={{
+      background: 'linear-gradient(135deg, #14243B 0%, #1e3d5c 20%, #0f4d5c 40%, #1a5a6b 60%, #0d4a5a 80%, #14243B 100%)'}}>
           <div className="relative max-w-2xl mx-auto mb-6">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
@@ -56,18 +51,27 @@ export default function BlogsCategoriesSection() {
         {/* Categories */}
         <div className="mb-12">
           <h2 className="text-white text-3xl font-semibold mb-8">Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categoryCards.map((card) => (
-              <div
-                key={card.title}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-emerald-500/50 transition-colors cursor-pointer group"
-              >
-                <div className="text-4xl mb-4 text-emerald-400 group-hover:scale-110 transition-transform">
-                  {card.icon}
+          <div 
+            className="overflow-x-auto pb-4 -mx-6 px-6 scrollbar-hide" 
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
+          >
+            <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
+              {categoryCards.map((card) => (
+                <div
+                  key={card.title}
+                  className="flex-shrink-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-emerald-500/50 transition-colors cursor-pointer group w-[280px]"
+                >
+                  <div className="text-4xl mb-4 text-emerald-400 group-hover:scale-110 transition-transform">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-white text-xl font-medium">{card.title}</h3>
                 </div>
-                <h3 className="text-white text-xl font-medium">{card.title}</h3>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
+import Image from "next/image"
+
 const databases = [
-  { name: "MongoDB", color: "from-green-500 to-emerald-600", icon: "🍃" },
-  { name: "PostgreSQL", color: "from-blue-500 to-blue-600", icon: "🐘" },
-  { name: "Oracle DB", color: "from-red-500 to-orange-500", icon: "🔴" },
-  { name: "SQL / MySQL", color: "from-blue-400 to-cyan-500", icon: "💾" },
-  { name: "Firebase", color: "from-yellow-400 to-orange-500", icon: "🔥" },
-  { name: "Airtable", color: "from-red-400 to-yellow-400", icon: "📊" },
+  { name: "MongoDB", image: "/Images/technologies/db-1.png" },
+  { name: "PostgreSQL", image: "/Images/technologies/db-2.png" },
+  { name: "Oracle DB", image: "/Images/technologies/db-3.png" },
+  { name: "SQL / MySQL", image: "/Images/technologies/db-4.png" },
+  { name: "Firebase", image: "/Images/technologies/db-5.png" },
+  { name: "Airtable", image: "/Images/technologies/db-6.png" },
 ]
 
 export default function DatabasesSection() {
@@ -18,10 +20,13 @@ export default function DatabasesSection() {
               key={db.name}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center"
             >
-              <div
-                className={`text-4xl mb-3 bg-gradient-to-br ${db.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform`}
-              >
-                {db.icon}
+              <div className="relative w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+                <Image
+                  src={db.image}
+                  alt={db.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="text-white text-sm font-medium">{db.name}</h3>
             </div>
