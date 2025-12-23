@@ -24,10 +24,7 @@ export default function ContactSection({ noThankYou }) {
   };
   
   return (
-    <MarginWrapper 
-      top={{ base: 48, md: 64, lg: 96 }}
-      bottom={{ base: 48, md: 64, lg: 96 }}
-    >
+   
       <div className="w-full max-w-[1908px] mx-auto">
         {/* Header Section with Hand Background */}
         {!noThankYou && (
@@ -81,7 +78,7 @@ export default function ContactSection({ noThankYou }) {
         )}
         
         {/* Form Section */}
-        <div className="w-full max-w-[900px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+        <div className={`w-full max-w-[900px] mx-auto px-4 sm:px-6 md:px-8 ${!noThankYou?'py-8 sm:py-12 md:py-16':''}`}>
           <form className="space-y-6 sm:space-y-8">
             {/* Name and Email Fields */}
             <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-[40px]">
@@ -205,6 +202,5 @@ export default function ContactSection({ noThankYou }) {
           </form>
         </div>
       </div>
-    </MarginWrapper>
   );
 }

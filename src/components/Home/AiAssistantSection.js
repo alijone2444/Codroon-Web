@@ -4,8 +4,7 @@ import MarginWrapper from "../wrappers/sectionWrapper";
 
 const AIAssistantSection = () => {
   return (
-    <MarginWrapper top={0} bottom={80} leftRight={30}>
-      <section className="scroll-fade-up relative flex flex-col border-b border-[#262626] items-center justify-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 bg-[#0F172A] overflow-hidden py-8 sm:py-12 md:py-16">
+      <section className="scroll-fade-up relative flex flex-col border-b border-[#262626] items-center justify-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 bg-[#0F172A] overflow-hidden py-10 sm:py-12 md:py-16">
         {/* Gradient Banner - Responsive */}
         <div className="flex items-center justify-center w-full sm:w-[90%] max-w-[902px] h-[60px] sm:h-[70px] md:h-[83px] rounded-[50px] sm:rounded-[80px] md:rounded-[100px] border border-[#52B069] px-4 sm:px-6 md:px-[34px] py-3 sm:py-4 md:py-[20px] bg-gradient-to-r from-[#4490C9] to-[#63DAAC]">
           <h2 className="text-white text-base sm:text-lg md:text-[20px] lg:text-[24px] font-barlow font-semibold tracking-[0.5px] text-center px-2">
@@ -78,7 +77,6 @@ const AIAssistantSection = () => {
   ))}
 </div>
       </section>
-    </MarginWrapper>
   );
 };
 

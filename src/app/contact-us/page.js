@@ -10,22 +10,16 @@ export default function ContactUsPage() {
   return (
     <div className="min-h-screen bg-[#0F172A]">
       <ContactUsHeroSection />
-<MarginWrapper top={96}>
       <OperatingDaysSection />
       <HorizontalMarginWrapper left={50} right={50}>
-      <div className="-mt-[80px]">
   <ContactSection noThankYou={true} />
-</div>
 
-        <div className='px-[80px] pb-[80px]'>
+  </HorizontalMarginWrapper>
         <FAQHeroSection />
-        </div>
         <FAQSection />
         
       <ContactCTASection />
-      </HorizontalMarginWrapper>
       
-      </MarginWrapper>
     </div>
   );
 }
