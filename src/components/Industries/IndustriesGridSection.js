@@ -54,8 +54,8 @@ const industries = [
 
 export default function IndustriesGridSection() {
   return (
-    <MarginWrapper top={0} bottom={96}>
-      <div className="w-full max-w-[1596px] mx-auto px-4">
+    <MarginWrapper top={{ base: 0, md: 0, lg: 0 }} bottom={{ base: 12, md: 16, lg: 24 }}>
+      <div className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Grid Container with vertical divider */}
         <div className="relative grid grid-cols-1 lg:grid-cols-2 border-t border-[#52B069]">
           {/* Vertical green divider - only shows on lg screens and above */}
@@ -65,18 +65,20 @@ export default function IndustriesGridSection() {
             <div
               key={index}
               className={`
-                flex flex-col gap-8 p-4 md:p-12 relative
+                flex flex-col gap-6 sm:gap-7 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 relative
                 ${index % 2 === 0 
                   ? 'lg:border-r lg:border-[#52B069]' // Even items on left column get right border
                   : '' // Odd items on right column get left border
                 }
-               `}
+                ${index < industries.length - 2 ? 'border-b border-[#52B069]' : ''}
+                ${index === industries.length - 2 ? 'border-b border-[#52B069] lg:border-b-0' : ''}
+              `}
             >
               {/* Icon and Title Row */}
-              <div className="flex items-center gap-5">
-                {/* Icon Container */}
+              <div className="flex items-center gap-4 sm:gap-5">
+                {/* Icon Container - Responsive */}
                 <div
-                  className="flex items-center justify-center w-[88px] h-[88px] rounded-[10px] border border-[#2E2E2E]"
+                  className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[88px] lg:h-[88px] rounded-lg sm:rounded-[8px] md:rounded-[10px] border border-[#2E2E2E]"
                   style={{
                     background:
                       "linear-gradient(0deg, rgba(67, 104, 177, 0.1), rgba(67, 104, 177, 0.1)), linear-gradient(229.29deg, rgba(6, 214, 160, 0.2) -68.25%, rgba(6, 214, 160, 0) 32.16%)",
@@ -85,19 +87,20 @@ export default function IndustriesGridSection() {
                   <Image
                     src={`/Images/Icons/${industry.icon}.png`}
                     alt={industry.title}
-                    width={40}
-                    height={40}
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-[40px] lg:h-[40px]"
                   />
                 </div>
 
-                {/* Title */}
-                <h3 className="font-barlow font-medium text-white text-[22px] md:text-[26px] leading-[150%]">
+                {/* Title - Responsive */}
+                <h3 className="font-barlow font-medium text-white text-lg sm:text-xl md:text-[22px] lg:text-[26px] leading-[140%] sm:leading-[150%]">
                   {industry.title}
                 </h3>
               </div>
 
-              {/* Description */}
-              <p className="font-barlow font-normal text-[#E6E6E6] text-[18px] md:text-[20px] leading-[150%]">
+              {/* Description - Responsive */}
+              <p className="font-barlow font-normal text-[#E6E6E6] text-sm sm:text-base md:text-[18px] lg:text-[20px] leading-[140%] sm:leading-[150%]">
                 {industry.description}
               </p>
             </div>
