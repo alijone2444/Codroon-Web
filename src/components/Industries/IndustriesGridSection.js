@@ -56,12 +56,21 @@ export default function IndustriesGridSection() {
   return (
     <MarginWrapper top={0} bottom={96}>
       <div className="w-full max-w-[1596px] mx-auto px-4">
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-gray-600">
+        {/* Grid Container with vertical divider */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 border-t border-[#52B069]">
+          {/* Vertical green divider - only shows on lg screens and above */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#52B069] via-[#52B069] to-[#52B069] -translate-x-1/2"></div>
+          
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="flex flex-col gap-8 p-8 md:p-12 border-b border-gray-600 "
+              className={`
+                flex flex-col gap-8 p-4 md:p-12 relative
+                ${index % 2 === 0 
+                  ? 'lg:border-r lg:border-[#52B069]' // Even items on left column get right border
+                  : '' // Odd items on right column get left border
+                }
+               `}
             >
               {/* Icon and Title Row */}
               <div className="flex items-center gap-5">

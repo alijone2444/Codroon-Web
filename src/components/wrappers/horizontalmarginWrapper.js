@@ -2,6 +2,9 @@
 import React from "react";
 
 const getResponsivePadding = (value, width) => {
+  // 🚫 No padding on mobile
+  if (width < 640) return 0;
+
   if (typeof value === "number") return value;
 
   if (width >= 1280 && value.xl !== undefined) return value.xl;
@@ -11,6 +14,7 @@ const getResponsivePadding = (value, width) => {
 
   return value.base ?? 0;
 };
+
 
 const HorizontalMarginWrapper = ({
   children,
