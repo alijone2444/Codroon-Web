@@ -3,7 +3,7 @@ import TypewriterText from "../libs/typeWritter";
 
 export default function ContactUsHeroSection() {
   return (
-    <section className="relative w-full h-[200px] sm:h-[280px] md:h-[342px] flex items-center justify-center overflow-hidden  mt-[60px] sm:mt-[80px] md:mt-[100px]">
+    <section className="relative w-full h-[200px] sm:h-[280px] md:h-[342px] flex items-center justify-center overflow-hidden mt-[60px] sm:mt-[80px] md:mt-[100px] mb-[100px]">
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/hand.jpg"

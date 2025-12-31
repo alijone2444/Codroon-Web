@@ -30,7 +30,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <nav className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-4 flex justify-between items-center">
         {/* ✅ Logo */}
         <div className="flex items-center cursor-pointer">
           <Link href="/" className="flex items-center no-hover-effect" onClick={() => setIsMobileMenuOpen(false)}>
@@ -40,6 +40,7 @@ const Navbar = () => {
               width={201}
               height={41}
               priority
+              className="w-32 sm:w-40 md:w-48 lg:w-[201px] h-auto"
             />
           </Link>
         </div>
@@ -56,7 +57,7 @@ const Navbar = () => {
               >
                 <Link
                   href={item.href || '#'}
-                  className={`text-white font-heading font-medium text-[18px] leading-[150%] transition-all duration-200 flex items-center gap-2 cursor-pointer px-3 py-2 rounded-md ${
+                  className={`text-white font-heading font-medium text-base md:text-lg lg:text-[18px] leading-[150%] transition-all duration-200 flex items-center gap-2 cursor-pointer px-3 py-2 rounded-md ${
                     openDropdown === item.name
                      ? 'hover:text-[#4368B1] px-3 py-2 rounded-md hover:bg-[#0F172A] hover:shadow-[0_0_10px_#4368B1]'
                       : 'hover:bg-[#4368B1] hover:shadow-[0_0_10px_#4368B1]'
@@ -107,7 +108,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white font-heading font-medium text-[18px] leading-[150%] transition-colors duration-200 hover:text-[#4368B1] px-3 py-2 rounded-md hover:bg-[#0F172A] hover:shadow-[0_0_10px_#4368B1]"
+                className="text-white font-heading font-medium text-base md:text-lg lg:text-[18px] leading-[150%] transition-colors duration-200 hover:text-[#4368B1] px-3 py-2 rounded-md hover:bg-[#0F172A] hover:shadow-[0_0_10px_#4368B1]"
               >
                 {item.name}
               </Link>
@@ -118,7 +119,7 @@ const Navbar = () => {
         {/* ✅ Desktop Contact Us Button */}
         <Link
           href="/contact-us"
-          className="hidden md:flex bg-green-600 hover:bg-green-700 text-white font-heading font-semibold w-[197px] h-[59px] px-[24px] py-[16px] rounded-[57px] text-lg items-center justify-center gap-[8px] transition-all duration-200 font-barlow cursor-pointer"
+          className="hidden md:flex bg-green-600 hover:bg-green-700 text-white font-heading font-semibold w-auto md:w-[197px] h-10 sm:h-12 md:h-14 lg:h-[59px] px-4 sm:px-6 md:px-[24px] py-2 sm:py-3 md:py-[16px] rounded-[57px] text-xs sm:text-sm md:text-base lg:text-lg items-center justify-center gap-[8px] transition-all duration-200 font-barlow cursor-pointer"
         >
           Contact Us
         </Link>
@@ -146,18 +147,18 @@ const Navbar = () => {
       {/* Overlay: Click to close menu */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black opacity-50 z-[9998] md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         ></div>
       )}
 
       {/* Sidebar Panel */}
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-[#0F172A] shadow-lg z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 left-0 h-screen w-64 bg-[#0F172A] shadow-lg z-[9999] transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-4 border-b border-gray-700 flex justify-between items-center">
+        <div className="p-4 border-b border-gray-700 flex justify-between items-center flex-shrink-0">
           <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
               src="/codroon-logo.png"
@@ -178,7 +179,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="p-4 overflow-y-auto h-full">
+        <div className="p-4 overflow-y-auto flex-1">
           <ul className="space-y-4">
             {menuItems.map((item) => (
               <li key={item.name} className="border-b border-gray-700 pb-2">

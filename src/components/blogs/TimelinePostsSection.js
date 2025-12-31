@@ -18,7 +18,7 @@ const timelinePosts = [
 
 export default function TimelinePostsSection() {
   return (
-    <section className="w-full my-16 py-16 px-6 bg-[#0f1729]">
+    <section className="w-full my-8 sm:my-12 md:my-16 py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-[#0f1729]">
       <div className="max-w-6xl mx-auto">
         <div className="relative">
           {/* Vertical Line with Glow Effect - Centered */}
@@ -67,7 +67,7 @@ export default function TimelinePostsSection() {
           </div>
 
           {/* Timeline Entries */}
-          <div className="relative w-full space-y-32">
+          <div className="relative w-full space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
             {timelinePosts.map((post, index) => {
               const isFirst = index === 0
 
@@ -77,9 +77,9 @@ export default function TimelinePostsSection() {
                     <>
                       {/* First Entry: Content card on LEFT, Node on vertical line, Date on RIGHT */}
                       {/* Left side content */}
-                      <div className="flex-1 flex justify-end items-center pr-8 relative z-[30]">
-                        <div className="flex items-center gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group">
-                          <div className="relative w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
+                      <div className="flex-1 flex justify-end items-center pr-4 sm:pr-6 md:pr-8 relative z-[30]">
+                        <div className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-3 sm:p-4 md:p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group">
+                          <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
                             <Image
                               src={post.image || "/placeholder.svg"}
                               alt={post.title}
@@ -87,11 +87,11 @@ export default function TimelinePostsSection() {
                               className="object-cover group-hover:scale-110 transition-transform duration-300"
                             />
                           </div>
-                          <div className="flex-1">
-                            <h3 className="text-white text-lg font-medium mb-2 leading-tight group-hover:text-[#57BB6D] transition-colors">
+                          <div className="flex-1 text-center md:text-left">
+                            <h3 className="text-white text-sm sm:text-base md:text-lg font-medium mb-1 sm:mb-1 md:mb-2 leading-tight group-hover:text-[#57BB6D] transition-colors">
                               {post.title}
                             </h3>
-                            <p className="text-slate-400 text-sm leading-relaxed">{post.description}</p>
+                            <p className="text-slate-400 text-xs sm:text-xs md:text-sm leading-relaxed">{post.description}</p>
                           </div>
                         </div>
                       </div>
@@ -99,17 +99,17 @@ export default function TimelinePostsSection() {
                       {/* Center: Connection node on vertical line with horizontal lines extending from it */}
                       <div className="flex-shrink-0 relative z-[20] flex items-center">
                         {/* Horizontal line to left (content card) - extends to connect */}
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
+                        <div className="absolute right-2 sm:right-2 md:right-3 top-1/2 -translate-y-1/2 w-12 sm:w-16 md:w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
                         {/* Node */}
-                        <div className="w-6 h-6 rounded-full bg-[#57BB6D] shadow-lg shadow-[#57BB6D]/50 relative z-[30]"></div>
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#57BB6D] shadow-lg shadow-[#57BB6D]/50 relative z-[30]"></div>
                         {/* Horizontal line to right (date) - extends to connect */}
-                        <div className="absolute left-3 top-1/2 -translate-y-1/2 w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
+                        <div className="absolute left-2 sm:left-2 md:left-3 top-1/2 -translate-y-1/2 w-12 sm:w-16 md:w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
                       </div>
 
                       {/* Right side: Date */}
-                      <div className="flex-1 flex justify-start items-center pl-8 relative z-[30]">
-                        <div className="bg-[#57BB6D] text-white rounded-full w-24 h-24 flex items-center justify-center font-semibold text-xs text-center shadow-lg shadow-[#57BB6D]/50">
-                          <span className="leading-tight px-2">{post.date}</span>
+                      <div className="flex-1 flex justify-start items-center pl-4 sm:pl-6 md:pl-8 relative z-[30]">
+                        <div className="bg-[#57BB6D] text-white rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center font-semibold text-[9px] sm:text-[10px] md:text-xs text-center shadow-lg shadow-[#57BB6D]/50">
+                          <span className="leading-tight px-1 sm:px-1 md:px-2">{post.date}</span>
                         </div>
                       </div>
                     </>
@@ -117,26 +117,26 @@ export default function TimelinePostsSection() {
                     <>
                       {/* Subsequent Entries: Date on LEFT, Node on vertical line, Content card on RIGHT */}
                       {/* Left side: Date */}
-                      <div className="flex-1 flex justify-end items-center pr-8 relative z-[30]">
-                        <div className="bg-[#57BB6D] text-white rounded-full w-24 h-24 flex items-center justify-center font-semibold text-xs text-center shadow-lg shadow-[#57BB6D]/50">
-                          <span className="leading-tight px-2">{post.date}</span>
+                      <div className="flex-1 flex justify-end items-center pr-4 sm:pr-6 md:pr-8 relative z-[30]">
+                        <div className="bg-[#57BB6D] text-white rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center font-semibold text-[9px] sm:text-[10px] md:text-xs text-center shadow-lg shadow-[#57BB6D]/50">
+                          <span className="leading-tight px-1 sm:px-1 md:px-2">{post.date}</span>
                         </div>
                       </div>
 
                       {/* Center: Connection node on vertical line with horizontal lines extending from it */}
                       <div className="flex-shrink-0 relative z-[20] flex items-center">
                         {/* Horizontal line to left (date) - extends to connect */}
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
+                        <div className="absolute right-2 sm:right-2 md:right-3 top-1/2 -translate-y-1/2 w-12 sm:w-16 md:w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
                         {/* Node */}
-                        <div className="w-6 h-6 rounded-full bg-[#57BB6D] shadow-lg shadow-[#57BB6D]/50 relative z-[30]"></div>
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#57BB6D] shadow-lg shadow-[#57BB6D]/50 relative z-[30]"></div>
                         {/* Horizontal line to right (content card) - extends to connect */}
-                        <div className="absolute left-3 top-1/2 -translate-y-1/2 w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
+                        <div className="absolute left-2 sm:left-2 md:left-3 top-1/2 -translate-y-1/2 w-12 sm:w-16 md:w-20 h-0.5 bg-[#57BB6D] z-[2]"></div>
                       </div>
 
                       {/* Right side content */}
-                      <div className="flex-1 flex justify-start items-center pl-8 relative z-[30]">
-                        <div className="flex items-center gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group">
-                          <div className="relative w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
+                      <div className="flex-1 flex justify-start items-center pl-4 sm:pl-6 md:pl-8 relative z-[30]">
+                        <div className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-3 sm:p-4 md:p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group">
+                          <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
                             <Image
                               src={post.image || "/placeholder.svg"}
                               alt={post.title}
@@ -144,11 +144,11 @@ export default function TimelinePostsSection() {
                               className="object-cover group-hover:scale-110 transition-transform duration-300"
                             />
                           </div>
-                          <div className="flex-1">
-                            <h3 className="text-white text-lg font-medium mb-2 leading-tight group-hover:text-[#57BB6D] transition-colors">
+                          <div className="flex-1 text-center md:text-left">
+                            <h3 className="text-white text-sm sm:text-base md:text-lg font-medium mb-1 sm:mb-1 md:mb-2 leading-tight group-hover:text-[#57BB6D] transition-colors">
                               {post.title}
                             </h3>
-                            <p className="text-slate-400 text-sm leading-relaxed">{post.description}</p>
+                            <p className="text-slate-400 text-xs sm:text-xs md:text-sm leading-relaxed">{post.description}</p>
                           </div>
                         </div>
                       </div>

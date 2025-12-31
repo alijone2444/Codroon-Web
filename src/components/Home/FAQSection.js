@@ -85,7 +85,7 @@ export default function FAQSection() {
 >
           <div className="flex flex-col lg:flex-row">
               {/* Left Column */}
-              <div className="w-full lg:w-1/2 px-0 lg:px-4 xl:px-8 py-8 sm:py-12 md:py-16">
+              <div className="w-full lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-4 xl:px-8 py-8 sm:py-12 md:py-16">
                 <div className="space-y-4 sm:space-y-6">
                   {faqs.slice(0, 4).map((faq) => {
                     const isOpen = openFAQ === faq.id;
@@ -143,7 +143,7 @@ export default function FAQSection() {
               </div>
 
               {/* Right Column */}
-              <div className="w-full lg:w-1/2 px-0 lg:px-4 xl:px-8 py-8 sm:py-12 md:py-16 border-t border-white/20 lg:border-t-0 lg:border-l border-white/20">
+              <div className="w-full lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-4 xl:px-8 py-8 sm:py-12 md:py-16 border-t border-white/20 lg:border-t-0 lg:border-l border-white/20">
                 <div className="space-y-4 sm:space-y-6">
                   {faqs.slice(4, 8).map((faq) => {
                     const isOpen = openFAQ === faq.id;

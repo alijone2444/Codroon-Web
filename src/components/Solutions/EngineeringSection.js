@@ -74,29 +74,29 @@ const EngineeringSection = () => {
   ];
 
   return (
-    <section className="w-full py-16">
-      <div className="max-w-[1595px] mx-auto px-[50px]">
+    <section className="w-full py-8 sm:py-12 md:py-16">
+      <div className="max-w-[1595px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px]">
         {/* Main Heading and Description Container */}
        
         <MarginWrapper bottom={50}>
-        <div className="w-full h-auto pr-[50px]  flex flex-col gap-[30px] mb-16">
-          <h2 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-[#E6E6E6]">
+        <div className="w-full h-auto pr-0 sm:pr-4 md:pr-6 lg:pr-[50px] flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] mb-12 sm:mb-14 md:mb-16">
+          <h2 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#E6E6E6]">
             Engineering
           </h2>
-          <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-white ">
+          <p className="font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-white">
             Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs.
           </p>
-          <button className="w-[346px] h-[50px] px-[14px] py-[12px] rounded-[30px] bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200">
+          <button className="w-full sm:w-auto sm:max-w-[346px] h-10 sm:h-12 md:h-14 lg:h-[50px] px-4 sm:px-6 md:px-[14px] py-2 sm:py-3 md:py-[12px] rounded-[30px] bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200 text-sm sm:text-base md:text-lg">
             Our engineering services include
           </button>
         </div>
         </MarginWrapper>
         {/* Web Development Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8 w-[1595px] h-[34px] ">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             Web Development
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {webDevCards.map((card, index) => (
               <ServiceCard
                 key={index}
@@ -109,11 +109,11 @@ const EngineeringSection = () => {
         </div>
 
         {/* Mobile App Development Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8 w-[1595px] h-[34px]">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             Mobile App Development
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {mobileAppCards.map((card, index) => (
               <ServiceCard
                 key={index}
@@ -126,11 +126,11 @@ const EngineeringSection = () => {
         </div>
 
         {/* Custom Software Development Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8 w-[1595px] h-[34px] ">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             Custom Software Development
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {customDevCards.map((card, index) => (
               <ServiceCard
                 key={index}

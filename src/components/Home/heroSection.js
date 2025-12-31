@@ -4,7 +4,7 @@ import TypewriterText from "../libs/typeWritter";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mb-[100px]">
       {/* Background GIF */}
       <Image
         src="/hero-banner.gif"

@@ -27,16 +27,16 @@ const recentPosts = [
 
 export default function RecentPostsSection() {
   return (
-    <section className="w-full px-6">
+    <section className="w-full px-4 sm:px-6 py-8 sm:py-12 md:py-16">
       <div className="max-w-6xl mx-auto scroll-fade-up">
-        <h2 className="text-white text-3xl font-semibold mb-8">Recent Posts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-7 md:mb-8 leading-[110%] sm:leading-[100%]">Recent Posts</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {recentPosts.map((post) => (
             <div
               key={post.id}
               className="group bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all cursor-pointer"
             >
-              <div className="relative h-52 overflow-hidden bg-slate-800/50 flex items-center justify-center">
+              <div className="relative h-40 sm:h-44 md:h-52 overflow-hidden bg-slate-800/50 flex items-center justify-center">
                 {typeof post.image === 'string' ? (
                   <Image
                     src={post.image || "/placeholder.svg"}
@@ -50,14 +50,14 @@ export default function RecentPostsSection() {
                   </div>
                 )}
               </div>
-              <div className="p-6">
-                <h3 className="text-white text-lg font-medium mb-3 group-hover:text-emerald-400 transition-colors">
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-white text-base sm:text-lg font-medium mb-2 sm:mb-2 md:mb-3 group-hover:text-emerald-400 transition-colors leading-[110%] sm:leading-[100%]">
                   {post.title}
                 </h3>
-                <div className="flex items-center justify-between text-gray-400 text-sm">
+                <div className="flex items-center justify-between text-gray-400 text-xs sm:text-sm">
                   <span>{post.date}</span>
                   <span>{post.author}</span>
-                  <ArrowUpRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
               </div>
             </div>

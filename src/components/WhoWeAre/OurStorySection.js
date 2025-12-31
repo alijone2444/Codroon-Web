@@ -27,10 +27,10 @@ const storyCards = [
 export default function OurStorySection() {
   return (
     <MarginWrapper top={96} bottom={96}>
-      <div className="w-full max-w-[1596px] mx-auto px-4">
+      <div className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Section Title */}
         <h2 
-          className="font-barlow font-semibold text-[38px] leading-[150%] mb-16"
+          className="font-barlow font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[38px] leading-[140%] sm:leading-[150%] mb-8 sm:mb-12 md:mb-16"
           style={{ color: '#57BB6D' }}
         >
           Our Story
@@ -41,31 +41,31 @@ export default function OurStorySection() {
           {storyCards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col gap-8 p-8 md:p-12 border-b border-gray-600 last:border-b-0"
+              className="flex flex-col gap-6 sm:gap-7 md:gap-8 p-6 sm:p-8 md:p-12 border-b border-gray-600 last:border-b-0"
             >
               {/* Number and Title Row */}
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-4 sm:gap-5">
                 {/* Number */}
                 <div
-                  className="flex items-center justify-center w-[88px] h-[88px] rounded-[10px] border border-[#2E2E2E]"
+                  className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[88px] lg:h-[88px] rounded-lg sm:rounded-[8px] md:rounded-[10px] border border-[#2E2E2E]"
                   style={{
                     background:
                       "linear-gradient(0deg, rgba(67, 104, 177, 0.1), rgba(67, 104, 177, 0.1)), linear-gradient(229.29deg, rgba(6, 214, 160, 0.2) -68.25%, rgba(6, 214, 160, 0) 32.16%)",
                   }}
                 >
-                  <span className="font-barlow font-semibold text-white text-[24px]">
+                  <span className="font-barlow font-semibold text-white text-lg sm:text-xl md:text-2xl lg:text-[24px]">
                     {card.number}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-barlow font-medium text-white text-[22px] md:text-[26px] leading-[150%]">
+                <h3 className="font-barlow font-medium text-white text-lg sm:text-xl md:text-[22px] lg:text-[26px] leading-[140%] sm:leading-[150%]">
                   {card.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="font-barlow font-normal text-white text-[18px] md:text-[20px] leading-[150%]">
+              <p className="font-barlow font-normal text-white text-sm sm:text-base md:text-[18px] lg:text-[20px] leading-[140%] sm:leading-[150%]">
                 {card.description}
               </p>
             </div>

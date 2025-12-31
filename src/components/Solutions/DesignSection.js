@@ -74,28 +74,28 @@ const DesignSection = () => {
   ];
 
   return (
-    <section className="w-full py-16 my-16">
-      <div className="max-w-[1596px] mx-auto px-[50px]">
+    <section className="w-full py-8 sm:py-12 md:py-16 my-8 sm:my-12 md:my-16">
+      <div className="max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px]">
         {/* Main Heading */}
         <MarginWrapper bottom={50}>
-        <h2 className="font-barlow font-semibold text-[48px] leading-[100%] tracking-[0%] text-white mb-6">
+        <h2 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%] text-white mb-4 sm:mb-5 md:mb-6">
           Design
         </h2>
         
         {/* Description */}
-        <p className="font-barlow font-normal text-[18px] leading-[150%] tracking-[-0.6%] text-[#E6E6E6] mb-8 ">
+        <p className="font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-[#E6E6E6] mb-6 sm:mb-7 md:mb-8">
           At Codroon, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences.
         </p>
-        <button className="w-[346px] h-[50px] px-[14px] py-[12px] rounded-[30px] bg-[#52B069] hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200">
+        <button className="w-full sm:w-auto sm:max-w-[346px] h-10 sm:h-12 md:h-14 lg:h-[50px] px-4 sm:px-6 md:px-[14px] py-2 sm:py-3 md:py-[12px] rounded-[30px] bg-[#52B069] hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200 text-sm sm:text-base md:text-lg">
         Our design services include:
           </button>
           </MarginWrapper>
         {/* UX Design Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             User Experience (UX) Design
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {uxDesignCards.map((card, index) => (
               <ServiceCard
                 key={index}
@@ -108,11 +108,11 @@ const DesignSection = () => {
         </div>
 
         {/* UI Design Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             User Interface (UI) Design
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {uiDesignCards.map((card, index) => (
               <ServiceCard
                 key={index}
@@ -125,11 +125,11 @@ const DesignSection = () => {
         </div>
 
         {/* Branding Subsection */}
-        <div className="mb-16">
-          <h3 className="font-barlow font-medium text-[28px] leading-[100%] tracking-[0%] text-[#98989A] mb-8">
+        <div className="mb-12 sm:mb-14 md:mb-16">
+          <h3 className="font-barlow font-medium text-xl sm:text-2xl md:text-3xl lg:text-[28px] leading-[110%] sm:leading-[100%] tracking-[0%] text-[#98989A] mb-6 sm:mb-7 md:mb-8">
             Branding and Identity
           </h3>
-          <div className="w-full h-[278px] border-t border-b border-gray-700 flex justify-center items-center">
+          <div className="w-full min-h-[250px] sm:min-h-[300px] md:h-[278px] border-t border-b border-gray-700 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-6 md:gap-0">
             {brandingCards.map((card, index) => (
               <ServiceCard
                 key={index}

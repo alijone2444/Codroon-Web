@@ -133,9 +133,9 @@ export default function InfrastructureSection() {
     <div
       key={item.id}
       id={item.id}
-      className="bg-gradient-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center w-[140px] mb-6"
+      className="bg-gradient-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm border border-slate-700/50 rounded-lg sm:rounded-xl md:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-6 hover:border-emerald-500/50 transition-all cursor-pointer group flex flex-col items-center justify-center text-center w-[70px] xs:w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px] mb-3 sm:mb-4 md:mb-5 lg:mb-6"
     >
-      <div className="relative w-16 h-16 mb-3 group-hover:scale-110 transition-transform">
+      <div className="relative w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-1 sm:mb-2 md:mb-3 group-hover:scale-110 transition-transform">
         <Image
           src={item.image}
           alt={item.name}
@@ -143,16 +143,16 @@ export default function InfrastructureSection() {
           className="object-contain"
         />
       </div>
-      <h3 className="text-white text-sm font-medium leading-tight">{item.name}</h3>
+      <h3 className="text-white text-[10px] xs:text-xs sm:text-sm font-medium leading-tight">{item.name}</h3>
     </div>
   )
 
   return (
-    <section className="w-full py-16 px-6">
+    <section className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-white text-3xl font-semibold mb-12 text-center">Infrastructure Built for Scale</h2>
+        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold mb-8 sm:mb-10 md:mb-12 text-center">Infrastructure Built for Scale</h2>
 
-        <div ref={containerRef} className="relative min-h-[700px] flex items-center justify-center">
+        <div ref={containerRef} className="relative min-h-[300px] xs:min-h-[350px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[650px] xl:min-h-[700px] flex items-center justify-center overflow-x-auto">
           {/* Glowing connecting lines */}
           <svg 
             className="absolute inset-0 w-full h-full pointer-events-none" 
@@ -201,7 +201,9 @@ export default function InfrastructureSection() {
               
               // Normalize and scale the perpendicular vector
               const length = Math.sqrt(perpX * perpX + perpY * perpY)
-              const curveAmount = 80 // Adjust this to control curve intensity
+              // Responsive curve amount - smaller on mobile, based on container width
+              const containerWidth = containerRef.current?.getBoundingClientRect().width || 0
+              const curveAmount = containerWidth < 640 ? 30 : containerWidth < 1024 ? 50 : 80
               const controlX = midX + (perpX / length) * curveAmount
               const controlY = midY + (perpY / length) * curveAmount
 
@@ -223,7 +225,7 @@ export default function InfrastructureSection() {
           </svg>
 
           {/* 4 Column Layout */}
-          <div className="relative flex gap-8 items-center justify-center z-10">
+          <div className="relative flex flex-wrap sm:flex-nowrap gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-center justify-center z-10">
             {/* Column 1 - 2 items */}
             <div className="flex flex-col items-center justify-center">
               {infrastructure.column1.map(renderItem)}
