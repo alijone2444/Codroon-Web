@@ -2,7 +2,7 @@ import Image from "next/image";
 import TypewriterText from "../libs/typeWritter";
 export default function WhoWeAreHeroSection() {
   return (
-    <section className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:h-[488px] flex items-center justify-center overflow-hidden mb-[100px]" style={{ top: '100px' }}>
+    <section className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:h-[488px] flex items-center justify-center overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"

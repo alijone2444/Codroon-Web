@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BlogsHeroSection() {
   return (
-    <section className="relative w-full min-h-[300px] sm:min-h-[350px] md:min-h-[342px] lg:h-[342px] flex items-center justify-center overflow-hidden mb-12 sm:mb-16 md:mb-20 lg:mb-[100px]" style={{ top: '100px' }} >
+    <section className="relative w-full min-h-[300px] sm:min-h-[350px] md:min-h-[342px] lg:h-[342px] flex items-center justify-center overflow-hidden mb-[100px]" style={{ top: '100px' }} >
       {/* Background Image */}
       <Image
         src="/Images/furisticBusinessScene.jpg"

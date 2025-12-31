@@ -3,7 +3,7 @@ import TypewriterText from "../libs/typeWritter";
 
 export default function IndustriesHeroSection() {
   return (
-    <section className="relative w-full h-[200px] sm:h-[320px] md:h-[400px] lg:h-[488px] flex items-center justify-center overflow-hidden  mb-[100px]" style={{top:'100px'}}>
+    <section className="relative w-full h-[200px] sm:h-[320px] md:h-[400px] lg:h-[488px] flex items-center justify-center overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"

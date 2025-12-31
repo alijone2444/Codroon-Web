@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IntegrationsHeroSection() {
   return (
-    <section className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:h-[342px] flex items-center justify-center overflow-hidden mb-[100px]" style={{ top: '100px' }}>
+    <section className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:h-[342px] flex items-center justify-center overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
       {/* Background Image */}
       <Image
         src="/Images/furisticBusinessScene.jpg"
