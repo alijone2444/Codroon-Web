@@ -34,7 +34,7 @@ export default function TechStackCTASection() {
         </h2>
         
         {/* Description */}
-        <p className="font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-[#E6E6E6] text-center max-w-[90vw] sm:max-w-[80vw] md:max-w-4xl">
+        <p className="font-barlow font-normal text-base sm:text-lg md:text-xl lg:text-[22px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-[#E6E6E6] text-center max-w-[90vw] sm:max-w-[80vw] md:max-w-4xl">
           We use future-ready technologies that ensure faster development, higher performance, and seamless scalability.
         </p>
         

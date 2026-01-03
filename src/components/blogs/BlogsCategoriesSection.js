@@ -12,7 +12,7 @@ const categories = [
   "Remote Leadership",
 ]
 
-export default function BlogsCategoriesSection() {
+export default function BlogsCategoriesSection({ selectedCategory, onCategorySelect }) {
   const [searchQuery, setSearchQuery] = useState("")
 
   return (
@@ -123,31 +123,37 @@ export default function BlogsCategoriesSection() {
             }}
           >
             <div className="flex gap-4 sm:gap-5 md:gap-6 min-w-max">
-              {categoryCards.map((card) => (
-                <div
-                  key={card.title}
-                  className="
-                    flex-shrink-0
-                    w-[180px] sm:w-[220px] md:w-[260px] lg:w-[280px]
-                    bg-gradient-to-br from-slate-800/50 to-slate-900/50
-                    backdrop-blur-sm
-                    border border-slate-700/50
-                    rounded-2xl
-                    p-4 sm:p-6 md:p-8
-                    cursor-pointer
-                    transition-all
-                    hover:border-emerald-500/50
-                    group
-                  "
-                >
-                  <div className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-3 md:mb-4 text-emerald-400 group-hover:scale-110 transition-transform">
-                    {card.icon}
+              {categoryCards.map((card) => {
+                const isSelected = selectedCategory === card.title;
+                return (
+                  <div
+                    key={card.title}
+                    onClick={() => onCategorySelect(isSelected ? null : card.title)}
+                    className={`
+                      flex-shrink-0
+                      w-[180px] sm:w-[220px] md:w-[260px] lg:w-[280px]
+                      bg-gradient-to-br from-slate-800/50 to-slate-900/50
+                      backdrop-blur-sm
+                      border rounded-2xl
+                      p-4 sm:p-6 md:p-8
+                      cursor-pointer
+                      transition-all
+                      group
+                      ${isSelected 
+                        ? 'border-[#57BB6D] bg-[#57BB6D]/10' 
+                        : 'border-slate-700/50 hover:border-emerald-500/50'
+                      }
+                    `}
+                  >
+                    <div className={`text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-3 md:mb-4 group-hover:scale-110 transition-transform ${isSelected ? 'text-[#57BB6D]' : 'text-emerald-400'}`}>
+                      {card.icon}
+                    </div>
+                    <h3 className={`text-sm sm:text-base md:text-xl font-medium leading-[110%] sm:leading-[100%] ${isSelected ? 'text-[#57BB6D]' : 'text-white'}`}>
+                      {card.title}
+                    </h3>
                   </div>
-                  <h3 className="text-white text-sm sm:text-base md:text-xl font-medium leading-[110%] sm:leading-[100%]">
-                    {card.title}
-                  </h3>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

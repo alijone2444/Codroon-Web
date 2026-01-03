@@ -6,18 +6,18 @@ export default function WhoWeAreMainSection() {
     <div
       className="w-full max-w-[1596px] mx-auto 
                  border border-[#262626] 
-                 pt-8 sm:pt-12 md:pt-16 lg:pt-[100px] 
+                 pt-8 sm:pt-12 md:pt-16 lg:pt-16 
                  px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[150px]
-                 pb-8 sm:pb-12 md:pb-16 lg:pb-[100px]
+                 pb-8 sm:pb-12 md:pb-16 lg:pb-16
                  flex flex-col lg:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-[100px]"
       style={{ height: "fit-content" }}
     >
       {/* Left Section */}
       <div className="flex flex-col justify-center align-center gap-4 sm:gap-5 md:gap-6 lg:gap-[20px] w-full lg:w-[598px]">
-        <h2 className="font-barlow font-semibold text-white text-2xl sm:text-3xl md:text-4xl lg:text-[38px] leading-[140%] sm:leading-[150%]">
+        <h2 className="font-barlow font-semibold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[140%] sm:leading-[150%]">
           About Codroon
         </h2>
-        <p className="font-inter font-normal text-[#E6E6E6] text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%]">
+        <p className="font-inter font-normal text-[#E6E6E6] text-base sm:text-lg md:text-xl lg:text-[22px] leading-[140%] sm:leading-[150%]">
         Codroon is a digital product agency that is passionate about crafting exceptional digital experiences. We specialize in design, engineering, and project management, helping businesses thrive in the digital landscape. At Codroon, we follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
         </p>
       </div>

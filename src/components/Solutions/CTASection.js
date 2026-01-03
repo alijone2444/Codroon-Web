@@ -28,8 +28,8 @@ const CTASection = () => {
         />
         
         {/* Heading */}
-        <h2 className="font-barlow font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[38px] leading-[110%] sm:leading-[100%] tracking-[0%] text-white text-center">
-          Let us Bring your Ideas to Life in the Digital World.
+        <h2 className="font-barlow font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%] text-white text-center">
+          Let us bring your ideas to life in the digital world.
         </h2>
         
         {/* Description */}

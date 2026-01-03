@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import TypewriterText from "../libs/typeWritter";
 
 export default function HeroSection() {
   return (
@@ -31,18 +30,10 @@ export default function HeroSection() {
           Where Code Becomes Conscious
         </h1>
         
-        {/* Typewriter with responsive text size */}
-        <TypewriterText
-          text={[
-            "Turning code into products that wow users and win markets!",
-            "Innovate. Create. Inspire.",
-            "Let's build something amazing together.",
-          ]}
-          textSize="text-lg sm:text-xl md:text-2xl lg:text-[32px]"
-          textColor="text-white"
-          fontWeight="font-normal"
-          fontName="font-montserrat"
-        />
+        {/* Subtitle text */}
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-white font-normal font-montserrat">
+          Turning code into products that wow users and win markets!
+        </p>
 
         {/* Buttons Container - Responsive layout */}
         <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">

@@ -81,115 +81,62 @@ export default function CaseStudyCardsSection() {
         {/* Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-[50px] pb-12 sm:pb-16 md:pb-20 lg:pb-[100px]">
           {caseStudies.map((study, index) => (
-         <div
-         key={index}
-         className="bg-[#0F172A] rounded-[12px] w-full h-auto overflow-hidden flex flex-col"
-       >
-       
+            <div
+              key={index}
+              className="bg-[#0F172A] rounded-[12px] w-full h-auto overflow-hidden flex flex-col"
+            >
               {/* Category Header */}
-              <div className="border-y border-white/10 py-6 sm:py-7 md:py-8 lg:py-[30px]">
+              <div className="border-y border-white/10 py-6 sm:py-7 md:py-8 lg:py-[30px] px-4 sm:px-6">
                 <h3 className="font-barlow font-medium text-sm sm:text-base md:text-lg lg:text-[20px] leading-[140%] sm:leading-[150%] text-[#98989A]">
                   {study.category}
                 </h3>
               </div>
 
-              {/* Different layout for first card */}
-              {index === 0 ? (
-                <>
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-4 sm:mb-5 md:mb-[20px]">
-                    <div className="pt-2 sm:pt-[10px]">
-                      <h4 className="font-barlow font-medium text-lg sm:text-xl md:text-2xl lg:text-[24px] text-white leading-[140%] sm:leading-[150%] tracking-tight">
-                        {study.projectName}
-                      </h4>
+              {/* Image */}
+              <div className="flex justify-center py-4 sm:py-5 md:py-[20px] px-4 sm:px-6">
+                <Image
+                  src="/Images/laptop.jpg"
+                  alt="Project Preview"
+                  width={698}
+                  height={423}
+                  className="rounded-[12px] object-cover w-full h-auto"
+                />
+              </div>
 
-                      <a
-                        href={study.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-[#14243B] rounded-[8px] text-white px-3 sm:px-4 md:px-[14px] py-2 sm:py-2.5 md:py-[10px] text-xs sm:text-sm md:text-base lg:text-[18px] font-barlow mt-2 sm:mt-[10px] break-all"
-                      >
-                        {study.website}
-                      </a>
-                    </div>
+              {/* Project Info */}
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-4 sm:mb-5 md:mb-[20px] px-4 sm:px-6">
+                <div>
+                  <h4 className="font-barlow font-medium text-lg sm:text-xl md:text-2xl lg:text-[24px] text-white leading-[140%] sm:leading-[150%] tracking-tight">
+                    {study.projectName}
+                  </h4>
 
-                    <div className="bg-[#14243B] rounded-[8px] w-10 h-10 sm:w-12 sm:h-12 md:w-[54px] md:h-[54px] flex items-center justify-center p-2 sm:p-[10px] flex-shrink-0">
-                      <Image
-                        src="/Images/Icons/top-right-arrow.png"
-                        alt="External Link"
-                        width={28}
-                        height={28}
-                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
-                      />
-                    </div>
-                  </div>
+                  <a
+                    href={study.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#14243B] rounded-[8px] text-white px-3 sm:px-4 md:px-[14px] py-2 sm:py-2.5 md:py-[10px] text-xs sm:text-sm md:text-base lg:text-[18px] font-barlow mt-2 sm:mt-[10px] break-all"
+                  >
+                    {study.website}
+                  </a>
+                </div>
 
-                  {/* Image */}
-                  <div className="flex justify-center py-4 sm:py-5 md:py-[20px]">
-                    <Image
-                      src="/Images/laptop.jpg"
-                      alt="Project Preview"
-                      width={698}
-                      height={423}
-                      className="rounded-[12px] object-cover w-full h-auto"
-                    />
-                  </div>
+                <div className="bg-[#14243B] rounded-[8px] w-10 h-10 sm:w-12 sm:h-12 md:w-[54px] md:h-[54px] flex items-center justify-center p-2 sm:p-[10px] flex-shrink-0">
+                  <Image
+                    src="/Images/Icons/top-right-arrow.png"
+                    alt="External Link"
+                    width={28}
+                    height={28}
+                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                  />
+                </div>
+              </div>
 
-                  {/* Description */}
-                  <div className="">
-                    <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[18px] text-[#E6E6E6] leading-[140%] sm:leading-[150%]">
-                      {study.description}
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Image first */}
-                  <div className="flex justify-center py-4 sm:py-5 md:py-[20px]">
-                    <Image
-                      src="/Images/laptop.jpg"
-                      alt="Project Preview"
-                      width={698}
-                      height={423}
-                      className="rounded-[12px] object-cover w-full h-auto"
-                    />
-                  </div>
-
-                  {/* Project Info below */}
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-4 sm:mb-5 md:mb-[20px]">
-                    <div>
-                      <h4 className="font-barlow font-medium text-lg sm:text-xl md:text-2xl lg:text-[24px] text-white leading-[140%] sm:leading-[150%] tracking-tight">
-                        {study.projectName}
-                      </h4>
-
-                      <a
-                        href={study.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-[#14243B] rounded-[8px] text-white px-3 sm:px-4 md:px-[14px] py-2 sm:py-2.5 md:py-[10px] text-xs sm:text-sm md:text-base lg:text-[18px] font-barlow mt-2 sm:mt-[10px] break-all"
-                      >
-                        {study.website}
-                      </a>
-                    </div>
-
-                    <div className="bg-[#14243B] rounded-[8px] w-10 h-10 sm:w-12 sm:h-12 md:w-[54px] md:h-[54px] flex items-center justify-center p-2 sm:p-[10px] flex-shrink-0">
-                      <Image
-                        src="/Images/Icons/top-right-arrow.png"
-                        alt="External Link"
-                        width={28}
-                        height={28}
-                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <div className="">
-                    <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[18px] text-white leading-[140%] sm:leading-[150%]">
-                      {study.description}
-                    </p>
-                  </div>
-                </>
-              )}
+              {/* Description */}
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[18px] text-[#E6E6E6] leading-[140%] sm:leading-[150%]">
+                  {study.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

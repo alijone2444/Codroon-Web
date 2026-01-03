@@ -17,11 +17,11 @@ export default function BlogsHeroSection() {
 
       {/* Content */}
       <div className="animate-fade-slide relative z-10 flex flex-col items-center justify-center text-center w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[300px] py-12 sm:py-16 md:py-20 lg:py-[120px] gap-3 sm:gap-4 md:gap-[14px]">
-        <h1 className="font-barlow font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%] text-center text-white">
+        <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] sm:leading-[100%] tracking-[0%] text-center text-white">
           Blogs
         </h1>
 
-        <p className="font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[20px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-center text-white">
+        <p className="font-barlow font-normal text-base sm:text-lg md:text-xl lg:text-[28px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-center text-white">
           Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.
         </p>
       </div>

@@ -103,7 +103,7 @@ const Footer = () => {
                 href="tel:+919991323306"
                 className="text-sm sm:text-base md:text-[18px] font-[400] font-heading leading-[140%] sm:leading-[150%] text-white hover:text-[#06D6A0] transition-colors duration-300 whitespace-nowrap"
               >
-                +91 99913 23 306
+               +92 334 0991483
               </a>
             </div>
 

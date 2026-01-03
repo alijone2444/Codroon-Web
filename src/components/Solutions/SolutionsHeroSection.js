@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import TypewriterText from "../libs/typeWritter";
 const SolutionsHeroSection = () => {
   return (
     <section className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:h-[488px] flex items-center justify-center overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
@@ -19,13 +18,9 @@ const SolutionsHeroSection = () => {
           Our Solutions
         </h1>
 
-        <TypewriterText
-  text="  Transform your brand with our innovative digital solutions that captivate and engage your audience."
-  textSize="text-sm sm:text-base md:text-lg lg:text-[20px]"
-  textColor="text-white"
-  fontWeight="font-normal"
-  fontName='font-barlow'
-/>
+        <p className="text-sm sm:text-base md:text-lg lg:text-[20px] text-white font-normal font-barlow">
+          Transform your brand with our innovative digital solutions that captivate and engage your audience.
+        </p>
       </div>
     </section>
   );

@@ -2,20 +2,21 @@ import MarginWrapper from "@/components/wrappers/sectionWrapper";
 
 export default function ProcessMainSection() {
   return (
-    <MarginWrapper top={96} bottom={96}>
-      <div className="w-full max-w-[1597px] mx-auto relative px-4 sm:px-6 md:px-8">
+    <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-32">
+      <MarginWrapper top={0} bottom={96}>
+        <div className="w-full max-w-[1597px] mx-auto relative px-4 sm:px-6 md:px-8">
         {/* Main Container */}
         <div 
-          className="flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] pl-0 sm:pl-4 md:pl-6 lg:pl-[30px]" 
+          className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] text-center" 
           
         >
               <h2 
-                className="font-barlow font-semibold text-left text-white mt-4 sm:mt-5 md:mt-6 lg:mt-[20px] text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%]"
+                className="font-barlow font-semibold text-center text-white mt-0 text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-[110%] sm:leading-[100%] tracking-[0%]"
               >
                 At Codroon
               </h2>
               <p 
-                className="font-barlow font-normal text-left text-white text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%]"
+                className="font-barlow font-normal text-center text-white text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%]"
               >We follow a structured and collaborative process to ensure the successful delivery of exceptional digital products. Our process combines industry best practices, creative thinking, and a client-centric approach.
               </p>
             
@@ -26,10 +27,11 @@ export default function ProcessMainSection() {
                 backgroundColor: '#57BB6D'
               }}
             >
-            Here's an overview of our typical process:
+            Here's an overview of our typical process
             </button>
         </div>
       </div>
     </MarginWrapper>
+    </div>
   );
 }
