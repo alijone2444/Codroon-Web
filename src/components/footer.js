@@ -18,14 +18,14 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 border-b border-gray-700 pb-6 sm:pb-8">
           
           {/* Logo */}
-          <div className="mb-4 sm:mb-6 lg:mb-0">
+          <div className="mb-4 sm:mb-6 lg:mb-0 flex justify-center lg:justify-start w-full lg:w-auto">
             <Image
               src="/codroon-logo.png"
               alt="Codroon Logo"
-              width={120}
-              height={25}
-              className="w-auto h-auto sm:w-40 md:w-[201px]"
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 160px, 201px"
+              width={360}
+              height={75}
+              className="w-[360px] h-auto sm:w-40 md:w-[201px]"
+              sizes="(max-width: 640px) 360px, (max-width: 768px) 160px, 201px"
             />
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
           </nav>
 
           {/* Social Links */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-start gap-3 sm:gap-4 w-full lg:w-auto">
             <span className="font-barlow font-[500] text-sm sm:text-base md:text-[18px] leading-[150%] tracking-[0] text-gray-400 whitespace-nowrap">
               Stay Connected
             </span>
