@@ -74,9 +74,9 @@ export default function TimelinePostsSection({ selectedCategory }) {
             <p className="text-white/60 text-lg">No posts found for this category.</p>
           </div>
         ) : (
-          <div className="relative">
-            {/* Vertical Line with Glow Effect - Centered */}
-            <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-[1]">
+        <div className="relative">
+          {/* Vertical Line with Glow Effect - Centered */}
+          <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-[1]">
             <svg width="133" height="589" viewBox="0 0 133 589" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-auto">
               <g filter="url(#filter0_dddddd_1508_279)">
                 <line x1="66.4066" y1="65.9066" x2="66.4066" y2="522.907" stroke="#57BB6D"/>
@@ -120,8 +120,8 @@ export default function TimelinePostsSection({ selectedCategory }) {
             </svg>
           </div>
 
-            {/* Timeline Entries */}
-            <div className="relative w-full space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
+          {/* Timeline Entries */}
+          <div className="relative w-full space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
               {filteredPosts.map((post, index) => {
               const isFirst = index === 0
 
@@ -220,9 +220,9 @@ export default function TimelinePostsSection({ selectedCategory }) {
                   )}
                 </div>
               )
-              })}
-            </div>
+            })}
           </div>
+        </div>
         )}
       </div>
     </section>

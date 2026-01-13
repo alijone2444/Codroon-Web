@@ -112,7 +112,7 @@ export default function RecentPostsSection({ selectedCategory, onClearFilter }) 
             <p className="text-white/60 text-lg">No posts found for this category.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {filteredPosts.map((post) => (
             <Link
               key={post.id}
@@ -150,7 +150,7 @@ export default function RecentPostsSection({ selectedCategory, onClearFilter }) 
               </div>
             </Link>
           ))}
-          </div>
+        </div>
         )}
       </div>
     </section>

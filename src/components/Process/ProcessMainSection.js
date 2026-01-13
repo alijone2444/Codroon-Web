@@ -4,7 +4,7 @@ export default function ProcessMainSection() {
   return (
     <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-32">
       <MarginWrapper top={0} bottom={96}>
-        <div className="w-full max-w-[1597px] mx-auto relative px-4 sm:px-6 md:px-8">
+      <div className="w-full max-w-[1597px] mx-auto relative px-4 sm:px-6 md:px-8">
         {/* Main Container */}
         <div 
           className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] text-center" 
