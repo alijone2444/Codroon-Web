@@ -1,47 +1,75 @@
 import BlogDetailPage from '@/components/blogs/BlogDetailPage';
+import blogsData from '@/constants/blogs.json';
 
-// Default blog post - all blog detail pages will show this content
-const defaultBlogPost = {
-  title: 'IT Consulting',
-  date: 'January 10, 2025',
-  author: 'Codroon',
-  heroImage: '/Images/blogs/blog-hero-1.png',
-  content: [
-    {
-      type: 'paragraph',
-      text: "IT consulting involves evaluating a company's existing technology infrastructure, identifying inefficiencies, and recommending solutions to enhance productivity, security, and scalability. Whether an organization is looking to migrate to the cloud, automate workflows, improve cybersecurity, or integrate AI-driven solutions, an experienced IT consultant provides strategic guidance, implementation support, and ongoing optimization."
-    },
-    {
-      type: 'paragraph',
-      text: "At Codroon, our IT consulting services go beyond just recommendations. We work closely with businesses to design, develop, and implement robust technology strategies that align with their long-term goals. With an expert team of IT specialists, we provide customized solutions that improve performance, reduce costs, and enhance operational efficiency. IT consulting plays a crucial role in helping organizations navigate technological challenges, optimize processes, and implement solutions that drive growth."
-    },
-    {
-      type: 'paragraph',
-      text: "In the ever-evolving digital landscape, businesses must adopt innovative technologies to remain competitive, efficient, and secure. IT consulting plays a crucial role in helping organizations navigate technological challenges, optimize processes, and implement solutions that drive growth. At Codroon, we offer expert IT consulting services tailored to the unique needs of businesses across various industries. From IT infrastructure planning and cloud computing to cybersecurity and software development, we help businesses embrace digital transformation while ensuring seamless operations. IT consulting involves evaluating a company's existing technology infrastructure, identifying inefficiencies."
-    },
-    {
-      type: 'quote',
-      quote: "We develop long-term IT strategies that align with business, ensuring scalability, agility, and future-readiness.",
-      author: 'Olivia Bennett',
-      role: 'Top Author'
-    },
-    {
-      type: 'image',
-      src: '/Images/blogs/blog-hero-2.png',
-      alt: 'IT Consulting Partnership'
-    },
-    {
-      type: 'paragraph',
-      text: "Based on the findings from the assessment, our IT consultants develop a customized IT roadmap that aligns with business goals. Whether it's migrating to cloud-based solutions, upgrading IT security, or integrating automation tools, we design a solution that improves efficiency and supports long-term growth."
-    },
-    {
-      type: 'paragraph',
-      text: "We implement the recommended solutions, ensuring smooth integration with minimal disruption to business operations. From deploying new software and cloud solutions to securing IT networks."
+// Helper function to add quote sections randomly to content
+function addQuoteSections(content) {
+  const newContent = [];
+  const paragraphs = content
+    .map((item, index) => ({ item, index, type: item.type }))
+    .filter(({ type }) => type === 'paragraph');
+  
+  // Select 1-2 paragraphs to convert to quotes (prefer longer, meaningful ones)
+  const numQuotes = Math.min(Math.floor(Math.random() * 2) + 1, Math.max(1, Math.floor(paragraphs.length / 3)));
+  const selectedIndices = new Set();
+  
+  // Prefer paragraphs that are substantial (at least 100 chars) and not headings
+  const substantialParagraphs = paragraphs
+    .filter(({ item }) => item.text && item.text.length > 100 && !item.text.endsWith(':'))
+    .map(({ index }) => index);
+  
+  const candidates = substantialParagraphs.length > 0 ? substantialParagraphs : paragraphs.map(({ index }) => index);
+  
+  while (selectedIndices.size < numQuotes && selectedIndices.size < candidates.length) {
+    const randomIndex = candidates[Math.floor(Math.random() * candidates.length)];
+    selectedIndices.add(randomIndex);
+  }
+  
+  content.forEach((item, index) => {
+    if (item.type === 'paragraph' && selectedIndices.has(index)) {
+      // Convert paragraph to quote - use first sentence or first 120-180 chars
+      const text = item.text;
+      let quoteText = text;
+      
+      // Try to find a good sentence break
+      const sentenceEnd = text.match(/[.!?]\s/);
+      if (sentenceEnd && sentenceEnd.index && sentenceEnd.index < 200) {
+        quoteText = text.substring(0, sentenceEnd.index + 1);
+      } else if (text.length > 180) {
+        // Find last space before 180 chars
+        const cutPoint = text.lastIndexOf(' ', 180);
+        quoteText = text.substring(0, cutPoint > 120 ? cutPoint : 180) + '...';
+      }
+      
+      newContent.push({
+        type: 'quote',
+        quote: quoteText,
+        author: 'By Codroon',
+        role: 'Top Author'
+      });
+    } else {
+      newContent.push(item);
     }
-  ]
-};
+  });
+  
+  return newContent;
+}
 
-export default function BlogPostPage({ params }) {
-  // Always show the default blog post regardless of slug
-  return <BlogDetailPage post={defaultBlogPost} />;
+export default async function BlogPostPage({ params }) {
+  // In Next.js 16+, params is async and needs to be awaited
+  const { slug } = await params;
+  
+  // Find blog by slug
+  const blog = blogsData.find(b => b.slug === slug);
+  
+  if (!blog) {
+    // Fallback to first blog if not found
+    const fallbackBlog = blogsData[0];
+    const contentWithQuotes = addQuoteSections(fallbackBlog.content);
+    return <BlogDetailPage post={{ ...fallbackBlog, content: contentWithQuotes }} />;
+  }
+  
+  // Add quote sections to content
+  const contentWithQuotes = addQuoteSections(blog.content);
+  
+  return <BlogDetailPage post={{ ...blog, content: contentWithQuotes }} />;
 }

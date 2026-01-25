@@ -44,7 +44,7 @@ export async function POST(request) {
     /*
     const emailService = require('your-email-service');
     await emailService.send({
-      to: 'hello@codroon.com',
+      to: 'info@codroon.com',
       from: 'noreply@codroon.com',
       subject: `New Contact Form Submission from ${fullName}`,
       html: `

@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import Typewriter from "@/components/libs/typewriter";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mb-[100px]">
+    <section className="relative w-full h-screen flex items-start justify-start overflow-hidden mb-[100px]">
       {/* Background GIF */}
       <Image
         src="/hero-banner.gif"
@@ -15,69 +17,64 @@ export default function HeroSection() {
       {/* Blue blush overlay */}
       <div className="absolute inset-0 bg-[#0F172A] opacity-[0.23]"></div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 w-full h-auto min-h-[686px] gap-6 sm:gap-8 md:gap-[50px] animate-fade-slide py-8 sm:py-0">
-        {/* Responsive Heading */}
+      {/* Content - Left Aligned */}
+      <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left px-4 sm:px-6 md:px-8 lg:px-12 w-full h-auto min-h-[686px] gap-6 sm:gap-8 md:gap-[50px] py-8 sm:py-0">
+        {/* Responsive Heading with Typewriter */}
         <h1
-          className="mx-auto text-center font-heading font-semibold 
+          className="font-heading font-semibold 
                      text-4xl sm:text-5xl md:text-6xl lg:text-[68px] 
                      leading-tight sm:leading-snug md:leading-[100%]
                      tracking-[0px] text-transparent bg-clip-text 
                      bg-[linear-gradient(to_right,#00E6A8,#00AEEF,#0070F3,#00AEEF,#00E6A8)]
                      bg-[length:200%_auto] animate-gradient 
-                     max-w-[90vw] lg:max-w-[1200px] font-barlow px-4"
+                     max-w-[90vw] lg:max-w-[1200px] font-barlow animate-slide-in-left"
         >
-          Where Code Becomes Conscious
+          <Typewriter text="Building the Future with" speed={50} />
         </h1>
         
-        {/* Subtitle text */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-white font-normal font-montserrat">
-          Turning code into products that wow users and win markets!
+        {/* Subtitle text - slides in from left */}
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-white font-normal font-montserrat max-w-[90vw] lg:max-w-[800px] animate-slide-in-left-delay-1">
+          Delivering AI-powered, SaaS-driven, and vibe-coded solutions that transform ideas into future-ready digital experiences.
         </p>
 
-        {/* Buttons Container - Responsive layout */}
-        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
-          {/* View Solutions Button */}
+        {/* Buttons Container - Left aligned, one by one */}
+        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
+          {/* View Solutions Button - First */}
           <Link
-            href="#"
-            className="
-              relative cursor-pointer text-[#4368B1] border border-[#4368B1]
-              px-4 sm:px-5 md:px-6 py-3 sm:py-3 rounded-full 
-              font-montserrat font-semibold 
-              text-base sm:text-lg md:text-[18px] 
-              leading-[100%] w-full sm:w-auto text-center
-              transition-all duration-500 ease-out
-              hover:bg-[#4368B1] hover:text-white hover:shadow-[0_0_20px_3px_rgba(67,104,177,0.6)]
-              hover:scale-[1.03] active:scale-[0.98]
-            "
-          >
-            <span className="relative z-10">View Solutions</span>
-            <span
-              className="absolute inset-0 rounded-full opacity-40 blur-md bg-[#4368B1]
-                         transition-all duration-700 group-hover:opacity-70 group-hover:blur-lg"
-            ></span>
-          </Link>
-
-          {/* Get Started Button */}
-          <Link
-            href="#"
+            href="/case-studies"
             className="
               relative inline-flex items-center justify-center cursor-pointer
-              bg-[#4368B1] text-white rounded-full border border-transparent
+              bg-transparent text-white rounded-full border border-white
               px-4 sm:px-5 md:px-6 py-3 sm:py-3 
               font-montserrat font-semibold 
               text-base sm:text-lg md:text-[18px] 
               leading-[100%] w-full sm:w-auto
               transition-all duration-500 ease-out
-              hover:bg-[#33558F] hover:shadow-[0_0_25px_4px_rgba(67,104,177,0.6)]
+              hover:bg-white/10 hover:shadow-[0_0_25px_4px_rgba(255,255,255,0.3)]
               hover:scale-[1.03] active:scale-[0.98]
+              animate-slide-in-left-delay-2
             "
           >
-            <span className="relative z-10">Get Started</span>
-            <span
-              className="absolute inset-0 rounded-full bg-[#4368B1] opacity-40 blur-md
-                         transition-all duration-700 hover:opacity-70 hover:blur-lg"
-            ></span>
+            <span className="relative z-10">Explore our services</span>
+          </Link>
+
+          {/* Get Started Button - Second */}
+          <Link
+            href="/contact-us"
+            className="
+              relative inline-flex items-center justify-center cursor-pointer
+              bg-transparent text-white rounded-full border border-white
+              px-4 sm:px-5 md:px-6 py-3 sm:py-3 
+              font-montserrat font-semibold 
+              text-base sm:text-lg md:text-[18px] 
+              leading-[100%] w-full sm:w-auto
+              transition-all duration-500 ease-out
+              hover:bg-white/10 hover:shadow-[0_0_25px_4px_rgba(255,255,255,0.3)]
+              hover:scale-[1.03] active:scale-[0.98]
+              animate-slide-in-left-delay-3
+            "
+          >
+            <span className="relative z-10">Schedule A Call</span>
           </Link>
         </div>
       </div>

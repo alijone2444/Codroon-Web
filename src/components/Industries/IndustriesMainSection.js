@@ -9,9 +9,6 @@ export default function IndustriesMainSection() {
           <h2 className="font-barlow font-semibold text-white text-xl sm:text-2xl md:text-3xl lg:text-[36px] xl:text-[48px] leading-[110%] sm:leading-[100%]">
             Industries We Empower
           </h2>
-          <p className="font-barlow font-normal text-[#E6E6E6] text-sm sm:text-base md:text-[18px] lg:text-[20px] leading-[140%] sm:leading-[150%] max-w-[90%] sm:max-w-[80%] md:max-w-3xl mx-auto">
-            Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results.
-          </p>
         </div>
       </div>
     </MarginWrapper>

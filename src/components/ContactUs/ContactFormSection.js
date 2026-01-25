@@ -140,7 +140,7 @@ export default function ContactFormSection() {
         <div className="flex justify-center pt-4 sm:pt-6">
           <button
             type="submit"
-            className="bg-[#57BB6D] hover:bg-[#4A9B5A] text-white font-barlow font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-colors duration-300 w-full sm:w-auto text-sm sm:text-base"
+            className="bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-colors duration-300 w-full sm:w-auto text-sm sm:text-base"
           >
             Submit
           </button>

@@ -39,7 +39,7 @@ const CTASection = () => {
         
         {/* Button */}
         <button 
-          className="w-full sm:w-auto sm:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:px-[34px] py-2 sm:py-3 md:py-4 lg:py-[18px] rounded-[30px] bg-green-600 hover:bg-green-700 text-black font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-[8px] text-sm sm:text-base md:text-lg"
+          className="w-full sm:w-auto sm:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:px-[34px] py-2 sm:py-3 md:py-4 lg:py-[18px] rounded-[30px] bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-[8px] text-sm sm:text-base md:text-lg"
         >
           Start Project
         </button>

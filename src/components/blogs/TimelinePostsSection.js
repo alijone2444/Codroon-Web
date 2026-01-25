@@ -1,70 +1,35 @@
 import Image from "next/image"
 import Link from "next/link"
-
-const timelinePosts = [
-  {
-    date: "OCT 26, 2024",
-    title: "Quantum Computing: A Practical Guide for Business Leaders",
-    description: "Understanding the potential impact and preparing your organization for the quantum revolution.",
-    image: "/Images/blogs/blogs-date-1.png",
-    category: "AI & Automation",
-    slug: "quantum-computing-guide",
-  },
-  {
-    date: "OCT 24, 2024",
-    title: "Modern UI/UX Design Principles for 2025",
-    description: "Exploring the latest design trends and best practices for creating exceptional user experiences.",
-    image: "/Images/blogs/blogs-date-section-2.png",
-    category: "Product Design",
-    slug: "ui-ux-design-principles",
-  },
-  {
-    date: "OCT 22, 2024",
-    title: "Building Robust Backend Systems: A Developer's Guide",
-    description: "Key strategies and technologies for creating scalable and maintainable backend architectures.",
-    image: "/Images/blogs/blogs-date-1.png",
-    category: "Engineering",
-    slug: "robust-backend-systems",
-  },
-  {
-    date: "OCT 20, 2024",
-    title: "Success Story: E-commerce Platform Transformation",
-    description: "How we helped a retail company increase online sales by 300% through digital transformation.",
-    image: "/Images/blogs/blogs-date-section-2.png",
-    category: "Case Studies",
-    slug: "ecommerce-platform-transformation",
-  },
-  {
-    date: "OCT 18, 2024",
-    title: "Fostering Innovation in Tech Teams",
-    description: "Creating a culture of creativity and continuous learning in software development organizations.",
-    image: "/Images/blogs/blogs-date-1.png",
-    category: "Tech Culture",
-    slug: "innovation-tech-teams",
-  },
-  {
-    date: "OCT 16, 2024",
-    title: "Founder's Perspective: Building a Digital Agency",
-    description: "Insights and lessons learned from building Codroon from the ground up.",
-    image: "/Images/blogs/blogs-date-section-2.png",
-    category: "Founders' Insights",
-    slug: "founders-perspective-digital-agency",
-  },
-  {
-    date: "OCT 14, 2024",
-    title: "Automation Tools That Transform Workflows",
-    description: "Discover the automation solutions that can streamline your business processes and boost productivity.",
-    image: "/Images/blogs/blogs-date-1.png",
-    category: "AI & Automation",
-    slug: "automation-tools-workflows",
-  },
-]
-
+import blogsData from "@/constants/blogs.json"
+import { encodeImagePath } from "@/utils/imageHelper"
 
 export default function TimelinePostsSection({ selectedCategory }) {
+  // Get blogs from rank 10 onwards (remaining blogs in tree structure)
+  const remainingBlogs = blogsData
+    .filter(blog => blog.rank >= 10)
+    .sort((a, b) => a.rank - b.rank)
+    .map(blog => {
+      // Get first paragraph as description
+      const firstParagraph = blog.content.find(item => item.type === 'paragraph');
+      const description = firstParagraph?.text?.substring(0, 150) + '...' || blog.title;
+      
+      // Format date to uppercase format
+      const dateObj = new Date(blog.date);
+      const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+      
+      return {
+        date: formattedDate,
+        title: blog.title,
+        description: description,
+        image: blog.heroImage || "/Images/laptop.jpg",
+        category: blog.category,
+        slug: blog.slug,
+      };
+    });
+
   const filteredPosts = selectedCategory 
-    ? timelinePosts.filter(post => post.category === selectedCategory)
-    : timelinePosts;
+    ? remainingBlogs.filter(post => post.category === selectedCategory)
+    : remainingBlogs;
 
   return (
     <section className="w-full my-8 sm:my-12 md:my-16 py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-[#0f1729]">
@@ -135,10 +100,14 @@ export default function TimelinePostsSection({ selectedCategory }) {
                         <Link href={`/blogs/${post.slug || 'it-consulting'}`} className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-3 sm:p-4 md:p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group block">
                           <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
                             <Image
-                              src={post.image || "/placeholder.svg"}
+                              src={encodeImagePath(post.image) || "/Images/laptop.jpg"}
                               alt={post.title}
                               fill
                               className="object-cover group-hover:scale-110 transition-transform duration-300"
+                              unoptimized
+                              onError={(e) => {
+                                e.target.src = "/Images/laptop.jpg";
+                              }}
                             />
                           </div>
                           <div className="flex-1 text-center md:text-left">
@@ -197,10 +166,14 @@ export default function TimelinePostsSection({ selectedCategory }) {
                         <Link href={`/blogs/${post.slug || 'it-consulting'}`} className="flex flex-col md:flex-row items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-3 sm:p-4 md:p-6 hover:border-[#57BB6D]/50 transition-all duration-300 cursor-pointer group block">
                           <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700/50">
                             <Image
-                              src={post.image || "/placeholder.svg"}
+                              src={encodeImagePath(post.image) || "/Images/laptop.jpg"}
                               alt={post.title}
                               fill
                               className="object-cover group-hover:scale-110 transition-transform duration-300"
+                              unoptimized
+                              onError={(e) => {
+                                e.target.src = "/Images/laptop.jpg";
+                              }}
                             />
                           </div>
                           <div className="flex-1 text-center md:text-left">

@@ -119,7 +119,7 @@ export default function ContactSection({ noThankYou }) {
               
               {/* Start Project Button */}
               <div className="flex justify-center px-4">
-                <button className="w-full max-w-[232px] cursor-pointer h-[50px] sm:h-[56px] md:h-[63px] bg-[#06D6A0] text-black font-barlow font-medium rounded-[37px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px] flex items-center justify-center gap-2 hover:bg-[#05C191] transition-colors text-sm sm:text-base md:text-lg">
+                <button className="w-full max-w-[232px] cursor-pointer h-[50px] sm:h-[56px] md:h-[63px] bg-green-600 hover:bg-green-700 text-white font-barlow font-medium rounded-[37px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px] flex items-center justify-center gap-2 transition-colors text-sm sm:text-base md:text-lg">
                   Start Project
                 </button>
               </div>
@@ -248,7 +248,7 @@ export default function ContactSection({ noThankYou }) {
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full max-w-[254px] h-[50px] sm:h-[56px] md:h-[63px] bg-[#06D6A0] text-black font-barlow font-medium rounded-[30px] px-6 sm:px-8 md:px-[44px] py-3 sm:py-4 md:py-[18px] flex items-center justify-center gap-2 hover:bg-[#05C191] transition-colors text-sm sm:text-base md:text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full max-w-[254px] h-[50px] sm:h-[56px] md:h-[63px] bg-green-600 hover:bg-green-700 text-white font-barlow font-medium rounded-[30px] px-6 sm:px-8 md:px-[44px] py-3 sm:py-4 md:py-[18px] flex items-center justify-center gap-2 transition-colors text-sm sm:text-base md:text-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>

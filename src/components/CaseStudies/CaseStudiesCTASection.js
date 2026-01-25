@@ -39,7 +39,7 @@ const CaseStudiesCTASection = () => {
         
         {/* Button */}
         <button 
-          className="bg-green-600 hover:bg-green-700 text-black font-barlow font-semibold text-xs sm:text-sm md:text-base lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[0%] transition-all duration-200 flex items-center justify-center gap-2 sm:gap-[8px] rounded-[30px] w-full sm:w-auto min-w-[200px] sm:min-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px]"
+          className="bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold text-xs sm:text-sm md:text-base lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[0%] transition-all duration-200 flex items-center justify-center gap-2 sm:gap-[8px] rounded-[30px] w-full sm:w-auto min-w-[200px] sm:min-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px]"
         >
           Start Project
         </button>

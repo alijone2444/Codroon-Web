@@ -39,10 +39,7 @@ const IndustriesCTASection = () => {
         
         {/* Button */}
         <button 
-          className="text-black font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-2 rounded-[30px] hover:bg-[#57BB6D] active:scale-95 w-full max-w-[200px] sm:max-w-[230px] md:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8"
-          style={{ 
-            backgroundColor: '#44915C'
-          }}
+          className="bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold transition-all duration-200 flex items-center justify-center gap-2 rounded-[30px] active:scale-95 w-full max-w-[200px] sm:max-w-[230px] md:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8"
         >
           <span className="text-xs sm:text-sm md:text-base lg:text-lg">Start Project</span>
         </button>

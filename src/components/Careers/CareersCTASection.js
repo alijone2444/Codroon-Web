@@ -41,7 +41,7 @@ export default function CareersCTASection() {
               </div>
             </div>
             
-            <button className="bg-[#57BB6D] hover:bg-[#4A9B5A] text-[#1A1A1A] font-barlow font-medium text-[18px] leading-[150%] px-[34px] py-[18px] rounded-[30px] transition-colors duration-200">
+            <button className="bg-green-600 hover:bg-green-700 text-white font-barlow font-medium text-[18px] leading-[150%] px-[34px] py-[18px] rounded-[30px] transition-colors duration-200">
               Start Project
             </button>
           </div>

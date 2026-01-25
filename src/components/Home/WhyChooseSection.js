@@ -43,9 +43,6 @@ export default function WhyChooseSection() {
           <h2 className="w-full font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight sm:leading-snug md:leading-[100%] tracking-[0%] text-center text-white px-2">
             Why Choose Codroon?
           </h2>
-          <p className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[997px] font-barlow font-normal text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-normal md:leading-[24px] tracking-[-0.6%] text-center text-white px-2">
-            Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results.
-          </p>
         </div>
 
         {/* Solar System Area - Responsive */}

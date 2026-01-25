@@ -101,9 +101,6 @@ export default function OurSolutionsSection() {
               <h2 className="w-full font-barlow font-semibold text-3xl sm:text-4xl md:text-[48px] leading-tight sm:leading-snug md:leading-[100%] tracking-[0%] text-center text-white px-2">
                 Our Solutions
               </h2>
-              <p className="w-full font-barlow font-normal text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-normal md:leading-[24px] tracking-[-0.6%] text-center text-white">
-                Transform your brand with our innovative digital solutions that captivate and engage your audience.
-              </p>
             </div>
 
             {/* Grid Container - Responsive */}

@@ -81,10 +81,10 @@ const Footer = () => {
                 <Mail size={16} className="text-[#06D6A0] flex-shrink-0" />
               </div>
               <a
-                href="mailto:hello@Codroon.com"
+                href="mailto:info@codroon.com"
                 className="text-sm sm:text-base md:text-[18px] font-[400] font-heading leading-[140%] sm:leading-[150%] text-white hover:text-[#06D6A0] transition-colors duration-300 break-all md:break-normal"
               >
-                hello@Codroon.com
+                info@codroon.com
               </a>
             </div>
 

@@ -2,23 +2,29 @@
 import Image from "next/image";
 import { Calendar, User } from "lucide-react";
 import BlogDetailSidebar from "./BlogDetailSidebar";
+import Typewriter from "@/components/libs/typewriter";
+import { encodeImagePath } from "@/utils/imageHelper";
 
 export default function BlogDetailPage({ post }) {
   return (
     <div className="w-full bg-[#0F172A] min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden mb-[100px]">
+      <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-start justify-start overflow-hidden mb-[100px]">
         <Image
-          src={post.heroImage}
+          src={encodeImagePath(post.heroImage) || "/Images/laptop.jpg"}
           alt={post.title}
           fill
           className="object-cover opacity-25"
           priority
+          unoptimized
+          onError={(e) => {
+            e.target.src = "/Images/laptop.jpg";
+          }}
         />
         <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] text-white mb-4">
-            {post.title}
+        <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-[120px]">
+          <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] text-white mb-4 max-w-[90vw] lg:max-w-[1000px] animate-slide-in-left">
+            <Typewriter text={post.title} speed={50} />
           </h1>
         </div>
       </section>
@@ -68,10 +74,10 @@ export default function BlogDetailPage({ post }) {
                       </p>
                       <div className="ml-[160px]">
                         <p className="font-barlow font-extrabold text-lg text-[#44915C] mb-1">
-                          {item.author}
+                          {item.author || 'By Codroon'}
                         </p>
                         <p className="font-barlow font-normal text-base text-[#1A1A1A]">
-                          {item.role}
+                          {item.role || 'Top Author'}
                         </p>
                       </div>
                     </div>
@@ -82,13 +88,28 @@ export default function BlogDetailPage({ post }) {
                   return (
                     <div key={index} className="my-8 rounded-[15px] overflow-hidden">
                       <Image
-                        src={item.src}
-                        alt={item.alt}
+                        src={encodeImagePath(item.src) || "/Images/laptop.jpg"}
+                        alt={item.alt || post.title}
                         width={810}
                         height={400}
                         className="w-full h-auto object-cover"
+                        unoptimized
+                        onError={(e) => {
+                          e.target.src = "/Images/laptop.jpg";
+                        }}
                       />
                     </div>
+                  );
+                }
+                
+                if (item.type === 'heading') {
+                  return (
+                    <h2
+                      key={index}
+                      className="font-barlow font-semibold text-xl sm:text-2xl md:text-3xl text-white leading-[110%] mt-8 mb-4"
+                    >
+                      {item.text}
+                    </h2>
                   );
                 }
                 

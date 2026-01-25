@@ -33,7 +33,7 @@ const Navbar = () => {
       <nav className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-4 flex justify-between items-center">
         {/* ✅ Logo */}
         <div className="flex items-center cursor-pointer">
-          <Link href="/" className="flex items-center no-hover-effect" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center no-hover-effect animate-logo" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
               src="/codroon-logo.png"
               alt="Codroon Logo"
@@ -119,9 +119,10 @@ const Navbar = () => {
         {/* ✅ Desktop Contact Us Button */}
         <Link
           href="/contact-us"
-          className="hidden md:flex bg-green-600 hover:bg-green-700 text-white font-heading font-semibold w-auto md:w-[197px] h-10 sm:h-12 md:h-14 lg:h-[59px] px-4 sm:px-6 md:px-[24px] py-2 sm:py-3 md:py-[16px] rounded-[57px] text-xs sm:text-sm md:text-base lg:text-lg items-center justify-center gap-[8px] transition-all duration-200 font-barlow cursor-pointer"
+          className="hidden md:flex ripple-button bg-green-600 hover:bg-green-700 text-white font-heading font-semibold w-auto px-4 sm:px-5 md:px-6 h-8 sm:h-9 md:h-10 rounded-full text-xs sm:text-sm md:text-base items-center justify-center transition-all duration-200 font-barlow cursor-pointer relative"
+          style={{ zIndex: 10 }}
         >
-          Contact Us
+          <span className="relative" style={{ zIndex: 20 }}>Contact</span>
         </Link>
 
         {/* ✅ Mobile Menu Hamburger Icon (Visible only on mobile)[citation:9] */}
@@ -220,10 +221,11 @@ const Navbar = () => {
             <li className="pt-4">
               <Link
                 href="/contact-us"
-                className="block bg-green-600 hover:bg-green-700 text-white text-center font-barlow font-semibold py-3 px-4 rounded-[57px] transition-all duration-200"
+                className="block ripple-button bg-green-600 hover:bg-green-700 text-white text-center font-barlow font-semibold py-2.5 px-4 rounded-full text-sm transition-all duration-200 relative"
+                style={{ zIndex: 10 }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact Us
+                <span className="relative" style={{ zIndex: 20 }}>Contact</span>
               </Link>
             </li>
           </ul>

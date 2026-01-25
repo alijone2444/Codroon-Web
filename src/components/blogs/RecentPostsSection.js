@@ -1,95 +1,27 @@
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-
-const recentPosts = [
-  {
-    id: 1,
-    title: "How Businesses Can Leverage Data for Smarter Decisions",
-    date: "May 17, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-1.png",
-    category: "AI & Automation",
-    slug: "data-driven-decisions",
-  },
-  {
-    id: 2,
-    title: "IT Industry Key Strategies for Business Growth",
-    date: "May 17, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-2.png",
-    category: "Engineering",
-    slug: "it-strategies-growth",
-  },
-  {
-    id: 3,
-    title: "Get The Most Out Op The Creativity",
-    date: "May 17, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-3.png",
-    category: "Product Design",
-    slug: "creativity-tips",
-  },
-  {
-    id: 4,
-    title: "Building Scalable Web Applications with Modern Frameworks",
-    date: "May 15, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-1.png",
-    category: "Engineering",
-    slug: "scalable-web-applications",
-  },
-  {
-    id: 5,
-    title: "The Future of Mobile App Development: Trends and Best Practices",
-    date: "May 12, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-2.png",
-    category: "Product Design",
-    slug: "mobile-app-development",
-  },
-  {
-    id: 6,
-    title: "AI-Powered Automation: Transforming Business Operations",
-    date: "May 10, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-3.png",
-    category: "AI & Automation",
-    slug: "ai-powered-automation",
-  },
-  {
-    id: 7,
-    title: "User Experience Design: Creating Intuitive Digital Products",
-    date: "May 8, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-1.png",
-    category: "Product Design",
-    slug: "user-experience-design",
-  },
-  {
-    id: 8,
-    title: "Case Study: Successful Digital Transformation Journey",
-    date: "May 5, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-2.png",
-    category: "Case Studies",
-    slug: "digital-transformation-case-study",
-  },
-  {
-    id: 9,
-    title: "Tech Culture: Building High-Performance Development Teams",
-    date: "May 3, 2025",
-    author: "By",
-    image: "/Images/blogs/recent-3.png",
-    category: "Tech Culture",
-    slug: "tech-culture-development-teams",
-  },
-]
+import blogsData from "@/constants/blogs.json"
+import { encodeImagePath } from "@/utils/imageHelper"
 
 export default function RecentPostsSection({ selectedCategory, onClearFilter }) {
+  // Get top 9 blogs (ranks 1-9)
+  const top9Blogs = blogsData
+    .filter(blog => blog.rank <= 9)
+    .sort((a, b) => a.rank - b.rank)
+    .map(blog => ({
+      id: blog.id,
+      title: blog.title,
+      date: blog.date,
+      author: blog.author,
+      image: blog.heroImage || "/Images/laptop.jpg",
+      category: blog.category,
+      slug: blog.slug,
+    }));
+
   const filteredPosts = selectedCategory 
-    ? recentPosts.filter(post => post.category === selectedCategory)
-    : recentPosts;
+    ? top9Blogs.filter(post => post.category === selectedCategory)
+    : top9Blogs;
 
   return (
     <section className="w-full px-4 sm:px-6 py-8 sm:py-12 md:py-16">
@@ -122,14 +54,24 @@ export default function RecentPostsSection({ selectedCategory, onClearFilter }) 
               <div className="relative h-40 sm:h-44 md:h-52 overflow-hidden bg-slate-800/50 flex items-center justify-center">
                 {typeof post.image === 'string' ? (
                   <Image
-                    src={post.image || "/placeholder.svg"}
+                    src={encodeImagePath(post.image) || "/Images/laptop.jpg"}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    unoptimized
+                    onError={(e) => {
+                      e.target.src = "/Images/laptop.jpg";
+                    }}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    {post.image}
+                    <Image
+                      src="/Images/laptop.jpg"
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
                   </div>
                 )}
               </div>

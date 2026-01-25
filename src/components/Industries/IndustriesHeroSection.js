@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
+import Typewriter from "@/components/libs/typewriter";
 
 export default function IndustriesHeroSection() {
   return (
-    <section className="relative w-full h-[200px] sm:h-[320px] md:h-[400px] lg:h-[488px] flex items-center justify-center overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
+    <section className="relative w-full h-[200px] sm:h-[320px] md:h-[400px] lg:h-[488px] flex items-start justify-start overflow-hidden mb-[100px] top-[80px] md:top-[100px]">
       {/* Background Image - same as previous pages */}
       <Image
         src="/Images/furisticBusinessScene.jpg"
@@ -14,17 +16,12 @@ export default function IndustriesHeroSection() {
 
       <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
 
-      {/* Content */}
-      <div className="animate-fade-slide relative z-10 flex flex-col items-center justify-center text-center w-full h-full px-4 sm:px-6 md:px-8 lg:px-0 py-16 sm:py-20 md:py-24 lg:py-0 gap-3 sm:gap-4 md:gap-[14px]">
-        <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] sm:leading-[100%] text-center text-white">
-          Industries
+      {/* Content - Left Aligned */}
+      <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-[120px] gap-3 sm:gap-4 md:gap-[14px]">
+        <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] sm:leading-[100%] text-white animate-slide-in-left">
+          <Typewriter text="Industries" speed={100} />
         </h1>
 
-        <div className="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[600px]">
-          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] text-white font-normal font-barlow">
-            Transform your brand with our innovative digital solutions that captivate and engage your audience.
-          </p>
-        </div>
       </div>
     </section>
   );

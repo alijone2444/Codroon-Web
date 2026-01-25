@@ -10,43 +10,43 @@ export default function FAQSection() {
   const faqs = [
     {
       id: "01",
-      question: "What services does Codroon provide?",
-      answer: "Codroon offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+      question: "What services does Codroon offer?",
+      answer: "Codroon specializes in AI-driven solutions, custom software development, and scalable digital platforms. We help businesses across Texas and the U.S. streamline operations, automate workflows, and accelerate digital transformation with intelligent technology."
     },
     {
       id: "02", 
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary depending on scope and complexity. Simple websites typically take 2-4 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation."
+      question: "Does Codroon provide software development in Texas?",
+      answer: "Yes — Codroon offers end-to-end software development services in Texas, including web apps, AI integrations, and cloud-based platforms. Our Texas-based clients benefit from fast delivery, clear communication, and enterprise-grade scalability."
     },
     {
       id: "03",
-      question: "Do you work with international clients?",
-      answer: "Yes, we work with clients worldwide. Our team is experienced in remote collaboration and can accommodate different time zones to ensure smooth communication throughout the project."
+      question: "How does Codroon use AI to help businesses grow?",
+      answer: "We use artificial intelligence and machine learning to analyze business data, automate repetitive tasks, and create predictive tools that support smarter business decisions. The result? Higher productivity and measurable business growth."
     },
     {
       id: "04",
-      question: "What technologies do you use?",
-      answer: "We use modern, industry-standard technologies including React, Next.js, Node.js, Python, and various cloud platforms. Our tech stack is chosen based on project requirements and scalability needs."
+      question: "How quickly can Codroon deliver a project?",
+      answer: "Speed is one of our core values. Depending on project complexity, MVPs (Minimum Viable Products) can be delivered within 2–6 weeks. We prioritize rapid development without compromising quality, using agile methods to iterate fast and deliver impact."
     },
     {
       id: "05",
-      question: "How do you handle project communication?",
-      answer: "We maintain regular communication through scheduled meetings, project management tools, and direct communication channels. You'll have dedicated points of contact throughout the project lifecycle."
+      question: "Can Codroon help startups and small businesses?",
+      answer: "Absolutely. Codroon partners with startups and small-to-medium businesses across Texas and the U.S. We design flexible engagement models and scalable solutions that grow with your business."
     },
     {
       id: "06",
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Pricing depends on project scope, timeline, and specific requirements."
+      question: "How can I get a quote for my project?",
+      answer: "You can get an instant quote and requirement document directly through our AI-powered website assistant, Just enter your project details — our system will generate everything you need within minutes."
     },
     {
       id: "07",
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer post-launch support and maintenance packages. This includes bug fixes, updates, security patches, and feature enhancements to keep your project running smoothly."
+      question: "Where is Codroon located?",
+      answer: "Codroon operates across the United States (with a strong presence in Texas) and South Asia. Our distributed model allows us to deliver top-tier talent and around-the-clock productivity to clients worldwide."
     },
     {
       id: "08",
-      question: "Can you help with existing projects?",
-      answer: "Absolutely! We can help improve, maintain, or add new features to existing projects. We'll analyze your current setup and provide recommendations for optimization and enhancement."
+      question: "Why choose Codroon over other software companies?",
+      answer: "Codroon stands out for its focus, speed, and impact. We don't just build software — we deliver measurable business outcomes. With deep AI expertise and an execution-first mindset, we help businesses move faster and smarter."
     }
   ];
 
@@ -71,9 +71,6 @@ export default function FAQSection() {
   <h2 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight sm:leading-snug md:leading-[100%] tracking-[0%] text-white mb-3 sm:mb-4 md:mb-[10px]">
     Frequently Asked Questions
   </h2>
-  <p className="font-barlow font-normal text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-normal md:leading-[150%] tracking-[-0.6%] text-white max-w-[90vw] sm:max-w-[80vw] md:max-w-none mx-auto">
-    Still you have any questions? Contact our Team via hello@Codroon.com
-  </p>
 </div>
         </div>
 

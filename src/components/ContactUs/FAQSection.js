@@ -10,43 +10,43 @@ export default function FAQSection() {
   const faqs = [
     {
       id: "01",
-      question: "What services does Codroon provide?",
-      answer: "Codroon offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+      question: "What services does Codroon offer?",
+      answer: "Codroon specializes in AI-driven solutions, custom software development, and scalable digital platforms. We help businesses across Texas and the U.S. streamline operations, automate workflows, and accelerate digital transformation with intelligent technology."
     },
     {
       id: "02", 
-      question: "How can Codroon help my business?",
-      answer: "We help businesses transform their digital presence through innovative solutions. Our services include custom web development, mobile applications, UI/UX design, and digital strategy consulting to drive growth and improve user engagement."
+      question: "Does Codroon provide software development in Texas?",
+      answer: "Yes — Codroon offers end-to-end software development services in Texas, including web apps, AI integrations, and cloud-based platforms. Our Texas-based clients benefit from fast delivery, clear communication, and enterprise-grade scalability."
     },
     {
       id: "03",
-      question: "What industries does Codroon work with?",
-      answer: "We work across various industries including healthcare, financial services, e-commerce, education, manufacturing, real estate, travel, and technology. Our diverse experience allows us to understand unique industry challenges and deliver tailored solutions."
+      question: "How does Codroon use AI to help businesses grow?",
+      answer: "We use artificial intelligence and machine learning to analyze business data, automate repetitive tasks, and create predictive tools that support smarter business decisions. The result? Higher productivity and measurable business growth."
     },
     {
       id: "04",
-      question: "How long does it take to complete a project with Codroon?",
-      answer: "Project timelines vary based on scope and complexity. Simple websites typically take 2-4 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation and maintain regular communication throughout the project."
+      question: "How quickly can Codroon deliver a project?",
+      answer: "Speed is one of our core values. Depending on project complexity, MVPs (Minimum Viable Products) can be delivered within 2–6 weeks. We prioritize rapid development without compromising quality, using agile methods to iterate fast and deliver impact."
     },
     {
       id: "05",
-      question: "Do you offer ongoing support and maintenance after the project is completed?",
-      answer: "Yes, we offer comprehensive post-launch support and maintenance packages. This includes bug fixes, security updates, performance optimization, feature enhancements, and technical support to keep your project running smoothly."
+      question: "Can Codroon help startups and small businesses?",
+      answer: "Absolutely. Codroon partners with startups and small-to-medium businesses across Texas and the U.S. We design flexible engagement models and scalable solutions that grow with your business."
     },
     {
       id: "06",
-      question: "Can you work with existing design or development frameworks?",
-      answer: "Absolutely! We can work with your existing frameworks, codebases, and design systems. Our team is experienced with various technologies and can integrate seamlessly with your current infrastructure while improving and extending functionality."
+      question: "How can I get a quote for my project?",
+      answer: "You can get an instant quote and requirement document directly through our AI-powered website assistant, Just enter your project details — our system will generate everything you need within minutes."
     },
     {
       id: "07",
-      question: "How involved will I be in the project development process?",
-      answer: "We believe in collaborative development. You'll be involved in key decision-making processes, regular progress reviews, and feedback sessions. We maintain transparent communication and provide regular updates to ensure the project aligns with your vision."
+      question: "Where is Codroon located?",
+      answer: "Codroon operates across the United States (with a strong presence in Texas) and South Asia. Our distributed model allows us to deliver top-tier talent and around-the-clock productivity to clients worldwide."
     },
     {
       id: "08",
-      question: "Can you help with website or app maintenance and updates?",
-      answer: "Yes, we provide comprehensive maintenance services including regular updates, security patches, performance monitoring, content updates, and feature additions. Our maintenance packages ensure your digital assets remain secure, fast, and up-to-date."
+      question: "Why choose Codroon over other software companies?",
+      answer: "Codroon stands out for its focus, speed, and impact. We don't just build software — we deliver measurable business outcomes. With deep AI expertise and an execution-first mindset, we help businesses move faster and smarter."
     }
   ];
 
