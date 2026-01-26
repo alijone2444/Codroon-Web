@@ -26,6 +26,11 @@
         "text": "Both platforms promise developer velocity, but they get there through very different philosophies."
       },
       {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Emergent Labs vs Lovable AI — I Tried Both So You Don’t Have To.jpeg",
+        "alt": "Emergent Labs vs Lovable AI — I Tried Both So You Don’t Have To"
+      },
+      {
         "type": "paragraph",
         "text": "Lovable runs on a fairly opinionated stack. Its core is a managed Node.js + PostgreSQL combo, with a proprietary orchestration layer that handles deploys and scale. Think “Heroku meets Firebase,” but with more abstraction. It’s optimized for quick starts — the kind of thing where you can have a working prototype by lunch."
       },
@@ -152,11 +157,6 @@
       {
         "type": "paragraph",
         "text": "Verdict: If you care about debugging, scaling, and sleeping through the night — Emergent wins."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Emergent Labs vs Lovable AI — I Tried Both So You Don’t Have To.jpeg",
-        "alt": "Emergent Labs vs Lovable AI — I Tried Both So You Don’t Have To"
       }
     ]
   },
@@ -185,6 +185,11 @@
       {
         "type": "paragraph",
         "text": "A Quick Look Back: Cursor Changed the Game"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Antigravity Google vs Cursor AI The Future of Coding Feels Different Now.jpeg",
+        "alt": "Antigravity Google vs Cursor AI: The Future of Coding Feels Different Now"
       },
       {
         "type": "paragraph",
@@ -341,11 +346,6 @@
       {
         "type": "paragraph",
         "text": "If you haven’t tried either, start with Cursor to understand the baseline, then take Antigravity for a spin.\nYou’ll feel the difference immediately — not in what you type, but in how inspired you feel typing it."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Antigravity Google vs Cursor AI The Future of Coding Feels Different Now.jpeg",
-        "alt": "Antigravity Google vs Cursor AI: The Future of Coding Feels Different Now"
       }
     ]
   },
@@ -374,6 +374,11 @@
       {
         "type": "paragraph",
         "text": "At first glance, Stitch looks like a stripped-down design editor with AI baked in. But that description doesn’t do it justice. It’s less like Figma, more like a prompt-based design environment."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Stitch by Google and Figma What It Gets Right (and Where It’s Just Fine.jpeg",
+        "alt": "Stitch by Google and Figma: What It Gets Right (and Where It’s Just Fine)"
       },
       {
         "type": "paragraph",
@@ -558,11 +563,6 @@
       {
         "type": "paragraph",
         "text": "In the end, Stitch isn’t competing with designers. It’s helping the rest of us think visually again. And that’s something I didn’t realize I’d been missing until I tried it."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Stitch by Google and Figma What It Gets Right (and Where It’s Just Fine.jpeg",
-        "alt": "Stitch by Google and Figma: What It Gets Right (and Where It’s Just Fine)"
       }
     ]
   },
@@ -853,6 +853,11 @@
         "text": "Make is polished. It’s designed for non-technical users who want things to “just work.” Its visual flow builder is intuitive — you drag, drop, and link modules like building Lego. Need to push a Slack message when a Google Sheet updates? Done in two clicks."
       },
       {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Why Developers Are Moving from Make to n8n (and When You Shouldn’t).jpeg",
+        "alt": "Why Developers Are Moving from Make to n8n (and When You Shouldn’t)"
+      },
+      {
         "type": "paragraph",
         "text": "n8n, by contrast, feels more like an engineer’s playground. It’s visual too, but it assumes you’re comfortable thinking in logic, JSON, and APIs. It doesn’t hide complexity; it exposes it. That’s both its charm and its challenge."
       },
@@ -951,11 +956,6 @@
       {
         "type": "paragraph",
         "text": "Because in automation, just like in engineering, power comes from choice."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Why Developers Are Moving from Make to n8n (and When You Shouldn’t).jpeg",
-        "alt": "Why Developers Are Moving from Make to n8n (and When You Shouldn’t)"
       }
     ]
   },
@@ -984,6 +984,11 @@
       {
         "type": "heading",
         "text": "Shopify: The Clean, Reliable Gallery"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Custom eCommerce vs Shopify & WordPress Choosing the Right Canvas for Your Store.jpeg",
+        "alt": "Custom eCommerce vs Shopify & WordPress: Choosing the Right Canvas for Your Store"
       },
       {
         "type": "paragraph",
@@ -1080,11 +1085,6 @@
       {
         "type": "paragraph",
         "text": "Because at the end of the day, technology should serve your story — not steal the spotlight."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Custom eCommerce vs Shopify & WordPress Choosing the Right Canvas for Your Store.jpeg",
-        "alt": "Custom eCommerce vs Shopify & WordPress: Choosing the Right Canvas for Your Store"
       }
     ]
   },
@@ -1096,7 +1096,7 @@
     "date": "January 17, 2025",
     "author": "By Codroon",
     "category": "DEVELOPMENT",
-    "heroImage": "/Images/laptop.jpg",
+    "heroImage": "/Blogs_Header_Pics/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
     "content": [
       {
         "type": "paragraph",
@@ -1113,6 +1113,11 @@
       {
         "type": "paragraph",
         "text": "Every scalable platform starts with understanding why it exists. Too many teams jump into frameworks before defining what success looks like."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Title How We Build Scalable SaaS Platforms at Codroon (and Why It Works).jpeg",
+        "alt": "How We Build Scalable SaaS Platforms at Codroon (and Why It Works)"
       },
       {
         "type": "heading",
@@ -1281,11 +1286,6 @@
       {
         "type": "paragraph",
         "text": "It’s not glamorous, but it’s reliable.\nAnd reliability, at scale, is what users remember."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Title How We Build Scalable SaaS Platforms at Codroon (and Why It Works).jpeg",
-        "alt": "How We Build Scalable SaaS Platforms at Codroon (and Why It Works)"
       }
     ]
   },
@@ -1314,6 +1314,11 @@
       {
         "type": "paragraph",
         "text": "At Codroon, our guiding principle has always been clarity over complexity. We believe the best software isn’t just innovative — it’s understood by everyone who uses it."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
+        "alt": "Inside Codroon: The Texas Software Studio That Builds With Purpose"
       },
       {
         "type": "paragraph",
@@ -1486,11 +1491,6 @@
       {
         "type": "paragraph",
         "text": "And that’s what keeps Codroon human, even in an AI-driven world."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
-        "alt": "Inside Codroon: The Texas Software Studio That Builds With Purpose"
       }
     ]
   },
@@ -1502,7 +1502,7 @@
     "date": "January 19, 2025",
     "author": "By Codroon",
     "category": "CODROON Blogs",
-    "heroImage": "/Images/laptop.jpg",
+    "heroImage": "/Blogs_Header_Pics/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
     "content": [
       {
         "type": "paragraph",
@@ -1519,6 +1519,11 @@
       {
         "type": "paragraph",
         "text": "At Codroon, we’ve never thought of ourselves as just a “software agency.” We’re a studio — a team that designs, engineers, and deploys software products with a craftsman’s mindset. Being based in Texas shaped that identity more than we realized."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/The Rise of Texas Tech What Makes Codroon’s Studio Approach Stand Out.png",
+        "alt": "The Rise of Texas Tech: What Makes Codroon’s Studio Approach Stand Out"
       },
       {
         "type": "paragraph",
@@ -1575,11 +1580,6 @@
       {
         "type": "paragraph",
         "text": "The Texas tech scene isn’t rising — it’s already here.\nAnd Codroon is proud to be building right in the middle of it."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/The Rise of Texas Tech What Makes Codroon’s Studio Approach Stand Out.png",
-        "alt": "The Rise of Texas Tech: What Makes Codroon’s Studio Approach Stand Out"
       }
     ]
   },
@@ -1591,7 +1591,7 @@
     "date": "January 20, 2025",
     "author": "By Codroon",
     "category": "DEVELOPMENT",
-    "heroImage": "/Images/laptop.jpg",
+    "heroImage": "/Blogs_Header_Pics/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
     "content": [
       {
         "type": "paragraph",
@@ -1608,6 +1608,11 @@
       {
         "type": "heading",
         "text": "The Maintenance Trap"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Title The Hidden Costs of Bad Code (and How We Avoid Them at Codroon).jpeg",
+        "alt": "The Hidden Costs of Bad Code (and How We Avoid Them at Codroon)"
       },
       {
         "type": "paragraph",
@@ -1716,11 +1721,6 @@
       {
         "type": "paragraph",
         "text": "Bad code might save you a sprint — but good code saves you a company."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Title The Hidden Costs of Bad Code (and How We Avoid Them at Codroon).jpeg",
-        "alt": "The Hidden Costs of Bad Code (and How We Avoid Them at Codroon)"
       }
     ]
   },
@@ -1732,7 +1732,7 @@
     "date": "January 21, 2025",
     "author": "By Codroon",
     "category": "DEVELOPMENT",
-    "heroImage": "/Images/laptop.jpg",
+    "heroImage": "/Blogs_Header_Pics/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
     "content": [
       {
         "type": "paragraph",
@@ -1749,6 +1749,11 @@
       {
         "type": "paragraph",
         "text": "Startups often plan tech stacks like they’re building for eternity. The reality is, your first product version needs to survive six months, not six years."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Choosing the Right Tech Stack for Your Startup Lessons from Codroon.jpeg",
+        "alt": "Choosing the Right Tech Stack for Your Startup: Lessons from Codroon"
       },
       {
         "type": "paragraph",
@@ -1849,11 +1854,6 @@
       {
         "type": "paragraph",
         "text": "Because in the long run, technology doesn’t make your startup succeed — people do."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Choosing the Right Tech Stack for Your Startup Lessons from Codroon.jpeg",
-        "alt": "Choosing the Right Tech Stack for Your Startup: Lessons from Codroon"
       }
     ]
   },
@@ -1882,6 +1882,11 @@
       {
         "type": "paragraph",
         "text": "Designing for Flow"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Is Vibe Coding Safe The Hidden Discipline Behind Flow-Based Development.png",
+        "alt": "Is Vibe Coding Safe? The Hidden Discipline Behind Flow-Based Development"
       },
       {
         "type": "paragraph",
@@ -2030,11 +2035,6 @@
       {
         "type": "paragraph",
         "text": "Vibe coding isn’t a rebellion—it’s a reminder that engineering is still an art form."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Is Vibe Coding Safe The Hidden Discipline Behind Flow-Based Development.png",
-        "alt": "Is Vibe Coding Safe? The Hidden Discipline Behind Flow-Based Development"
       }
     ]
   },
@@ -2063,6 +2063,11 @@
       {
         "type": "paragraph",
         "text": "Auto SEO is the new frontier where generative AI tools — ChatGPT, Gemini, DeepSeek, Claude, take your pick — don’t just help you write content; they help you become findable. They do this by learning who you are, semantically speaking."
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Auto SEO Explained How AI Learns Who You Are (and Markets You Better).jpeg",
+        "alt": "Auto SEO Explained: How AI Learns Who You Are (and Markets You Better)"
       },
       {
         "type": "paragraph",
@@ -2155,11 +2160,6 @@
       {
         "type": "paragraph",
         "text": "That’s not gaming the system — that’s finally working with it."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Auto SEO Explained How AI Learns Who You Are (and Markets You Better).jpeg",
-        "alt": "Auto SEO Explained: How AI Learns Who You Are (and Markets You Better)"
       }
     ]
   },
@@ -2188,6 +2188,11 @@
       {
         "type": "paragraph",
         "text": "The Web Has Fewer Walls"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Title Why Mobile App Development Isn’t as AI-Driven as the Web (Yet).jpeg",
+        "alt": "Why Mobile App Development Isn’t as AI-Driven as the Web (Yet)"
       },
       {
         "type": "paragraph",
@@ -2260,11 +2265,6 @@
       {
         "type": "paragraph",
         "text": "Until then, the web can keep sprinting ahead — because for mobile, we’re still teaching the machines what good feels like."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Title Why Mobile App Development Isn’t as AI-Driven as the Web (Yet).jpeg",
-        "alt": "Why Mobile App Development Isn’t as AI-Driven as the Web (Yet)"
       }
     ]
   },
@@ -2408,7 +2408,7 @@
     "date": "January 26, 2025",
     "author": "By Codroon",
     "category": "DEVELOPMENT",
-    "heroImage": "/Images/laptop.jpg",
+    "heroImage": "/Blogs_Header_Pics/Inside Codroon The Texas Software Studio That Builds With Purpose.png",
     "content": [
       {
         "type": "paragraph",
@@ -2425,6 +2425,11 @@
       {
         "type": "heading",
         "text": "Start With Domain Clarity"
+      },
+      {
+        "type": "image",
+        "src": "/Blogs_Inside_Images/Designing APIs That Scale Lessons from Codroon’s Engineering Team.jpeg",
+        "alt": "Designing APIs That Scale: Lessons from Codroon’s Engineering Team"
       },
       {
         "type": "paragraph",
@@ -2549,11 +2554,6 @@
       {
         "type": "paragraph",
         "text": "Clarity scales. And in 2026, that’s the real mark of great engineering."
-      },
-      {
-        "type": "image",
-        "src": "/Blogs_Inside_Images/Designing APIs That Scale Lessons from Codroon’s Engineering Team.jpeg",
-        "alt": "Designing APIs That Scale: Lessons from Codroon’s Engineering Team"
       }
     ]
   }

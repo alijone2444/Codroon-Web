@@ -1,82 +1,126 @@
-import React from "react";
+'use client';
+import React, { useEffect, useRef, useState } from "react";
 import { Paperclip, ArrowUp } from "lucide-react";
 import MarginWrapper from "../wrappers/sectionWrapper";
 
 const AIAssistantSection = () => {
-  return (
-      <section className="scroll-fade-up relative flex flex-col border-b border-[#262626] items-center justify-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 bg-[#0F172A] overflow-hidden py-10 sm:py-12 md:py-16">
-        {/* Gradient Banner - Responsive */}
-        <div className="flex items-center justify-center w-full sm:w-[90%] max-w-[902px] h-[60px] sm:h-[70px] md:h-[83px] rounded-[50px] sm:rounded-[80px] md:rounded-[100px] border border-[#52B069] px-4 sm:px-6 md:px-[34px] py-3 sm:py-4 md:py-[20px] bg-gradient-to-r from-[#4490C9] to-[#63DAAC]">
-          <h2 className="text-white text-base sm:text-lg md:text-[20px] lg:text-[24px] font-barlow font-semibold tracking-[0.5px] text-center px-2">
-            Your Project, Your Vision – Powered by AI
-          </h2>
-        </div>
+  const sectionRef = useRef(null);
+  const bannerRef = useRef(null);
+  const searchRef = useRef(null);
+  const buttonsRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-        {/* Search Bar - Responsive */}
-        <div className="relative mt-8 sm:mt-12 md:mt-[83px] bg-[#00000040] flex items-center justify-between w-full sm:w-[90%] lg:w-[80%] max-w-[1200px] h-[60px] sm:h-[70px] md:h-[82px] rounded-[30px] sm:rounded-[40px] md:rounded-[48px] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[21px] overflow-hidden animated-border">
-          {/* Left: Input */}
-          <input
-            type="text"
-            placeholder="Use our AI assistant to create a requirement document in minutes and get instant quotes."
-            className="flex-1 text-white placeholder-gray-400 focus:outline-none text-sm sm:text-base md:text-[16px] lg:text-[18px] bg-transparent z-[1] pr-2 sm:pr-4"
-          />
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-          {/* Right: Icon Container - Responsive */}
-          {/* Right: Icon Container */}
-{/* Right: Icon Container */}
-<div className="flex items-center gap-3 sm:gap-[10px]">
-  {/* Attachment Button */}
-  <button 
-    className="group p-2 rounded-lg hover:bg-[#52B069] transition-colors duration-200"
-    aria-label="Attach file"
-  >
-    <Paperclip size={20} className="w-5 h-5 sm:w-6 sm:h-6 text-[#52B069] group-hover:text-white transition-colors duration-200" />
-  </button>
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-  {/* Send Button */}
-  <button 
-    className="group p-2 rounded-lg hover:bg-[#52B069] transition-colors duration-200"
-    aria-label="Send message"
-  >
-    <ArrowUp size={20} className="w-5 h-5 sm:w-6 sm:h-6 text-[#52B069] group-hover:text-white transition-colors duration-200" />
-  </button>
-</div>
-        </div>
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
-        {/* Buttons Row - Responsive */}
-       {/* Buttons Row - Responsive */}
-<div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-[16px] mt-4 sm:mt-6 md:mt-[30px] w-full max-w-[95vw] sm:max-w-[90vw] lg:max-w-[1061px] flex-wrap px-2 sm:px-0 overflow-x-hidden">
-  {[
+  const buttonLabels = [
     "Article",
     "Weather",
-    "Sport", 
+    "Sport",
     "Press",
     "Food",
     "Plants",
     "Suggest Something",
-  ].map((item) => (
-    <button
-      key={item}
-      className={`
-        ${item !== "Suggest Something"
-          ? "w-[100px] xs:w-[110px] sm:w-[120px] md:w-[126px]"
-          : "w-[180px] sm:w-[220px] md:w-[250px] lg:w-[295px]"
-        }
-        min-w-[80px] xs:min-w-[90px] sm:min-w-[100px]
-        cursor-pointer h-[36px] sm:h-[38px] md:h-[40px] 
-        rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
-        bg-[#00000040] border border-[#52B069] text-[#52B069] 
-        text-xs sm:text-sm md:text-[16px] font-barlow
-        hover:bg-[#52B069] hover:text-white 
-        transition-colors duration-300 flex-shrink-0
-        px-2 sm:px-3
-      `}
+  ];
+
+  return (
+    <section
+      ref={sectionRef}
+      className="scroll-fade-up relative flex flex-col border-b border-[#262626] items-center justify-center w-full max-w-[1920px] mx-auto px-4 sm:px-6 bg-[#0F172A] overflow-hidden py-10 sm:py-12 md:py-16"
     >
-      {item}
-    </button>
-  ))}
-</div>
-      </section>
+      {/* Gradient Banner - Responsive with glow animation */}
+      <div
+        ref={bannerRef}
+        className={`flex items-center justify-center w-full sm:w-[90%] max-w-[902px] h-[60px] sm:h-[70px] md:h-[83px] rounded-[50px] sm:rounded-[80px] md:rounded-[100px] border border-[#52B069] px-4 sm:px-6 md:px-[34px] py-3 sm:py-4 md:py-[20px] bg-gradient-to-r from-[#4490C9] to-[#63DAAC] reveal-fade-up animate-glow-pulse ${isVisible ? 'reveal-visible' : ''}`}
+      >
+        <h2 className="text-white text-base sm:text-lg md:text-[20px] lg:text-[24px] font-barlow font-semibold tracking-[0.5px] text-center px-2">
+          Your Project, Your Vision – Powered by AI
+        </h2>
+      </div>
+
+      {/* Search Bar - Responsive with border glow animation */}
+      <div
+        ref={searchRef}
+        className={`relative mt-8 sm:mt-12 md:mt-[83px] bg-[#00000040] flex items-center justify-between w-full sm:w-[90%] lg:w-[80%] max-w-[1200px] h-[60px] sm:h-[70px] md:h-[82px] rounded-[30px] sm:rounded-[40px] md:rounded-[48px] px-4 sm:px-6 md:px-[27px] py-3 sm:py-4 md:py-[21px] overflow-hidden animated-border reveal-fade-up stagger-2 ${isVisible ? 'reveal-visible' : ''}`}
+      >
+        {/* Left: Input */}
+        <input
+          type="text"
+          placeholder="Use our AI assistant to create a requirement document in minutes and get instant quotes."
+          className="flex-1 text-white placeholder-gray-400 focus:outline-none text-sm sm:text-base md:text-[16px] lg:text-[18px] bg-transparent z-[1] pr-2 sm:pr-4"
+        />
+
+        {/* Right: Icon Container - Responsive with hover effects */}
+        <div className="flex items-center gap-3 sm:gap-[10px]">
+          {/* Attachment Button */}
+          <button
+            className="group p-2 rounded-lg hover:bg-[#52B069] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(82,176,105,0.5)]"
+            aria-label="Attach file"
+          >
+            <Paperclip size={20} className="w-5 h-5 sm:w-6 sm:h-6 text-[#52B069] group-hover:text-white transition-all duration-300 group-hover:rotate-12" />
+          </button>
+
+          {/* Send Button */}
+          <button
+            className="group p-2 rounded-lg hover:bg-[#52B069] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(82,176,105,0.5)]"
+            aria-label="Send message"
+          >
+            <ArrowUp size={20} className="w-5 h-5 sm:w-6 sm:h-6 text-[#52B069] group-hover:text-white transition-all duration-300 group-hover:-translate-y-1" />
+          </button>
+        </div>
+      </div>
+
+      {/* Buttons Row - Responsive with staggered animations */}
+      <div
+        ref={buttonsRef}
+        className={`flex items-center justify-center gap-2 sm:gap-3 md:gap-[16px] mt-4 sm:mt-6 md:mt-[30px] w-full max-w-[95vw] sm:max-w-[90vw] lg:max-w-[1061px] flex-wrap px-2 sm:px-0 overflow-x-hidden reveal-fade-up stagger-3 ${isVisible ? 'reveal-visible' : ''}`}
+      >
+        {buttonLabels.map((item, index) => (
+          <button
+            key={item}
+            className={`
+              ${item !== "Suggest Something"
+                ? "w-[100px] xs:w-[110px] sm:w-[120px] md:w-[126px]"
+                : "w-[180px] sm:w-[220px] md:w-[250px] lg:w-[295px]"
+              }
+              min-w-[80px] xs:min-w-[90px] sm:min-w-[100px]
+              cursor-pointer h-[36px] sm:h-[38px] md:h-[40px] 
+              rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
+              bg-[#00000040] border border-[#52B069] text-[#52B069] 
+              text-xs sm:text-sm md:text-[16px] font-barlow
+              hover:bg-[#52B069] hover:text-white 
+              transition-all duration-300 flex-shrink-0
+              px-2 sm:px-3
+              hover:scale-105 hover:shadow-[0_0_20px_rgba(82,176,105,0.3)]
+              reveal-fade-up ${isVisible ? 'reveal-visible' : ''}
+            `}
+            style={{ transitionDelay: `${0.4 + index * 0.05}s` }}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+    </section>
   );
 };
 

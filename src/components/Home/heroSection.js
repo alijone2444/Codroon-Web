@@ -29,7 +29,7 @@ export default function HeroSection() {
                      bg-[length:200%_auto] animate-gradient 
                      max-w-[90vw] lg:max-w-[1200px] font-barlow animate-slide-in-left"
         >
-          <Typewriter text="Building the Future with" speed={50} />
+          <Typewriter text="Where Code Becomes Conscious" speed={50} />
         </h1>
         
         {/* Subtitle text - slides in from left */}

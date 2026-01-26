@@ -32,6 +32,23 @@ const popularTags = [
 export default function BlogDetailSidebar() {
   return (
     <div className="space-y-6">
+      {/* Popular Tags */}
+      <div className="bg-[#161616] rounded-[15px] p-5">
+        <h3 className="font-barlow font-extrabold text-xl text-white mb-6">
+          Popular Tags
+        </h3>
+        <div className="flex flex-wrap gap-3">
+          {popularTags.map((tag, index) => (
+            <button
+              key={index}
+              className="px-5 py-2 bg-[#161616] border border-[#EAEBEE] rounded-[40px] text-[#74787C] font-barlow text-sm hover:border-[#57BB6D] hover:text-[#57BB6D] transition-colors"
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Recent Posts */}
       <div className="bg-[#161616] rounded-[15px] p-5">
         <h3 className="font-barlow font-extrabold text-xl text-white mb-6">
@@ -70,23 +87,6 @@ export default function BlogDetailSidebar() {
                 {post.title}
               </h4>
             </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Popular Tags */}
-      <div className="bg-[#161616] rounded-[15px] p-5">
-        <h3 className="font-barlow font-extrabold text-xl text-white mb-6">
-          Popular Tags
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {popularTags.map((tag, index) => (
-            <button
-              key={index}
-              className="px-5 py-2 bg-[#161616] border border-[#EAEBEE] rounded-[40px] text-[#74787C] font-barlow text-sm hover:border-[#57BB6D] hover:text-[#57BB6D] transition-colors"
-            >
-              {tag}
-            </button>
           ))}
         </div>
       </div>
