@@ -73,7 +73,7 @@ export default function IntegrationsCTASection() {
         <div className={`reveal-fade-up stagger-4 ${isVisible ? 'reveal-visible' : ''}`}>
           <Link
             href="/contact-us"
-            className="btn-shine w-full sm:w-auto min-w-[200px] sm:min-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px] rounded-[30px] bg-green-600 hover:bg-green-700 text-black font-barlow font-semibold text-xs sm:text-sm md:text-base lg:text-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-[8px] hover:shadow-[0_0_30px_rgba(82,176,105,0.4)] hover:scale-[1.02]"
+            className="ripple-button animate-glow-pulse w-full sm:w-auto min-w-[200px] sm:min-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-6 sm:px-8 md:px-[34px] py-3 sm:py-4 md:py-[18px] rounded-[30px] bg-gradient-to-r from-[#52B069] to-[#3a8b4f] border-2 border-[#52B069] text-white font-barlow font-semibold text-xs sm:text-sm md:text-base lg:text-lg transition-all duration-500 flex items-center justify-center gap-2 sm:gap-[8px] hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)] hover:scale-[1.05]"
           >
             Contact us today
           </Link>

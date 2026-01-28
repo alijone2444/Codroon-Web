@@ -71,8 +71,7 @@ const ProcessCTASection = () => {
         {/* Button with shine */}
         <div className={`reveal-fade-up stagger-4 ${isVisible ? 'reveal-visible' : ''}`}>
           <button
-            className="btn-shine text-black font-barlow font-semibold transition-all duration-300 flex items-center justify-center gap-[8px] rounded-[37px] w-full sm:w-auto sm:max-w-[232px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:pt-[18px] lg:pr-[34px] lg:pb-[18px] lg:pl-[34px] text-sm sm:text-base md:text-lg hover:shadow-[0_0_30px_rgba(6,214,160,0.4)] hover:scale-[1.02]"
-            style={{ backgroundColor: '#06D6A0' }}
+            className="ripple-button animate-glow-pulse text-white font-barlow font-semibold transition-all duration-500 flex items-center justify-center gap-[8px] rounded-[37px] w-full sm:w-auto sm:max-w-[232px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:pt-[18px] lg:pr-[34px] lg:pb-[18px] lg:pl-[34px] text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#52B069] to-[#3a8b4f] border-2 border-[#52B069] hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)] hover:scale-[1.05]"
           >
             Get Started
           </button>

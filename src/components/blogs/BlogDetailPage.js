@@ -125,6 +125,19 @@ export default function BlogDetailPage({ post }) {
                 );
               }
 
+              if (item.type === 'code') {
+                return (
+                  <pre
+                    key={index}
+                    className="bg-[#1E293B] border border-[#334155] rounded-lg p-4 sm:p-6 overflow-x-auto my-6"
+                  >
+                    <code className="font-mono text-sm sm:text-base text-[#E2E8F0] whitespace-pre-wrap">
+                      {item.text}
+                    </code>
+                  </pre>
+                );
+              }
+
               return null;
             })}
           </div>

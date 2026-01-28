@@ -45,8 +45,7 @@ export default function ProcessMainSection() {
             {/* Button with glow */}
             <div className={`reveal-fade-up stagger-3 ${isVisible ? 'reveal-visible' : ''}`}>
               <button
-                className="btn-shine text-white font-barlow font-semibold transition-all duration-300 flex items-center justify-center rounded-[30px] w-full sm:w-auto sm:max-w-[420px] h-10 sm:h-12 md:h-14 lg:h-[50px] px-4 sm:px-6 md:px-[14px] py-2 sm:py-3 md:py-[12px] gap-2 sm:gap-[10px] hover:shadow-[0_0_30px_rgba(87,187,109,0.4)] hover:scale-[1.02]"
-                style={{ backgroundColor: '#57BB6D' }}
+                className="ripple-button animate-glow-pulse text-white font-barlow font-semibold transition-all duration-500 flex items-center justify-center rounded-[30px] w-full sm:w-auto sm:max-w-[420px] h-10 sm:h-12 md:h-14 lg:h-[50px] px-4 sm:px-6 md:px-[14px] py-2 sm:py-3 md:py-[12px] gap-2 sm:gap-[10px] bg-gradient-to-r from-[#52B069] to-[#3a8b4f] border-2 border-[#52B069] hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)] hover:scale-[1.05]"
               >
                 Here's an overview of our typical process
               </button>

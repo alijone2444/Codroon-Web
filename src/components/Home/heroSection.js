@@ -13,7 +13,7 @@ export default function HeroSection() {
         fill
         className="object-cover opacity-25"
       />
-      
+
       {/* Blue blush overlay */}
       <div className="absolute inset-0 bg-[#0F172A] opacity-[0.23]"></div>
 
@@ -31,7 +31,7 @@ export default function HeroSection() {
         >
           <Typewriter text="Where Code Becomes Conscious" speed={50} />
         </h1>
-        
+
         {/* Subtitle text - slides in from left */}
         <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-white font-normal font-montserrat max-w-[90vw] lg:max-w-[800px] animate-slide-in-left-delay-1">
           Delivering AI-powered, SaaS-driven, and vibe-coded solutions that transform ideas into future-ready digital experiences.
@@ -41,18 +41,21 @@ export default function HeroSection() {
         <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
           {/* View Solutions Button - First */}
           <Link
-            href="/case-studies"
+            href="/our-solutions"
             className="
+              ripple-button
               relative inline-flex items-center justify-center cursor-pointer
-              bg-transparent text-white rounded-full border border-white
+              bg-gradient-to-r from-[#52B069] to-[#3a8b4f] text-white rounded-full 
+              border-2 border-[#52B069]
               px-4 sm:px-5 md:px-6 py-3 sm:py-3 
               font-montserrat font-semibold 
               text-base sm:text-lg md:text-[18px] 
               leading-[100%] w-full sm:w-auto
               transition-all duration-500 ease-out
-              hover:bg-white/10 hover:shadow-[0_0_25px_4px_rgba(255,255,255,0.3)]
-              hover:scale-[1.03] active:scale-[0.98]
-              animate-slide-in-left-delay-2
+              hover:from-[#5ec878] hover:to-[#52B069]
+              hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)]
+              hover:scale-[1.05] active:scale-[0.98]
+              animate-glow-pulse
             "
           >
             <span className="relative z-10">Explore our services</span>
@@ -62,16 +65,19 @@ export default function HeroSection() {
           <Link
             href="/contact-us"
             className="
+              ripple-button
               relative inline-flex items-center justify-center cursor-pointer
-              bg-transparent text-white rounded-full border border-white
+              bg-transparent text-[#52B069] rounded-full 
+              border-2 border-[#52B069]
               px-4 sm:px-5 md:px-6 py-3 sm:py-3 
               font-montserrat font-semibold 
               text-base sm:text-lg md:text-[18px] 
               leading-[100%] w-full sm:w-auto
               transition-all duration-500 ease-out
-              hover:bg-white/10 hover:shadow-[0_0_25px_4px_rgba(255,255,255,0.3)]
-              hover:scale-[1.03] active:scale-[0.98]
-              animate-slide-in-left-delay-3
+              hover:bg-[#52B069]/10
+              hover:shadow-[0_0_30px_6px_rgba(82,176,105,0.4)]
+              hover:scale-[1.05] active:scale-[0.98]
+              border-glow
             "
           >
             <span className="relative z-10">Schedule A Call</span>

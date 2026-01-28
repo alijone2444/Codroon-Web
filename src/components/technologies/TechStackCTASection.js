@@ -73,7 +73,7 @@ export default function TechStackCTASection() {
         <div className={`reveal-fade-up stagger-4 ${isVisible ? 'reveal-visible' : ''}`}>
           <Link
             href="/contact-us"
-            className="btn-shine w-full sm:w-auto sm:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:px-[34px] py-2 sm:py-3 md:py-4 lg:py-[18px] rounded-[30px] bg-green-600 hover:bg-green-700 text-black font-barlow font-semibold transition-all duration-300 flex items-center justify-center gap-[8px] text-sm sm:text-base md:text-lg hover:shadow-[0_0_30px_rgba(82,176,105,0.4)] hover:scale-[1.02]"
+            className="ripple-button animate-glow-pulse w-full sm:w-auto sm:max-w-[265px] h-10 sm:h-12 md:h-14 lg:h-[63px] px-4 sm:px-6 md:px-8 lg:px-[34px] py-2 sm:py-3 md:py-4 lg:py-[18px] rounded-[30px] bg-gradient-to-r from-[#52B069] to-[#3a8b4f] border-2 border-[#52B069] text-white font-barlow font-semibold transition-all duration-500 flex items-center justify-center gap-[8px] text-sm sm:text-base md:text-lg hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)] hover:scale-[1.05]"
           >
             Request A Quote
           </Link>
