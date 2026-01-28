@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
+import clientPromise from '@/lib/mongodb';
 
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { fullName, email, services, budget, message } = body;
+    const { fullName, email, contactReasons, budget, message } = body;
 
     // Validate required fields
     if (!fullName || !email || !message) {
@@ -22,55 +23,47 @@ export async function POST(request) {
       );
     }
 
-    // Here you can:
-    // 1. Save to database
-    // 2. Send email using a service (SendGrid, Resend, Nodemailer, etc.)
-    // 3. Send to a CRM (HubSpot, Salesforce, etc.)
-    // 4. Send to a webhook (Zapier, Make, etc.)
+    // Connect to MongoDB
+    const client = await clientPromise;
+    const db = client.db('codroon');
+    const collection = db.collection('contact_submissions');
 
-    // For now, we'll log the data and return success
-    // In production, replace this with actual email sending or database storage
-    console.log('Contact Form Submission:', {
+    // Create submission document
+    const submission = {
       fullName,
       email,
-      services,
-      budget,
+      contactReasons: contactReasons || [],
+      budget: budget || 0,
       message,
-      timestamp: new Date().toISOString(),
-    });
+      submittedAt: new Date(),
+      status: 'new',
+      ipAddress: request.headers.get('x-forwarded-for') || 'unknown',
+      userAgent: request.headers.get('user-agent') || 'unknown',
+    };
 
-    // TODO: Replace with actual email sending service
-    // Example with a service like Resend or SendGrid:
-    /*
-    const emailService = require('your-email-service');
-    await emailService.send({
-      to: 'info@codroon.com',
-      from: 'noreply@codroon.com',
-      subject: `New Contact Form Submission from ${fullName}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Services:</strong> ${services.join(', ') || 'None selected'}</p>
-        <p><strong>Budget:</strong> $${budget.toLocaleString()}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `
+    // Insert into database
+    const result = await collection.insertOne(submission);
+
+    console.log('Contact form saved to MongoDB:', {
+      id: result.insertedId,
+      email,
+      timestamp: submission.submittedAt,
     });
-    */
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Form submitted successfully' 
+      {
+        success: true,
+        message: 'Form submitted successfully',
+        id: result.insertedId.toString()
       },
       { status: 200 }
     );
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to submit form. Please try again.' },
       { status: 500 }
     );
   }
 }
+

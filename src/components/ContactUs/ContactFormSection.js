@@ -10,6 +10,8 @@ export default function ContactFormSection() {
     budget: 3000,
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,13 +30,61 @@ export default function ContactFormSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          contactReasons: [],
+          budget: 3000,
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        console.error('Form submission error:', data.error);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="w-full max-w-[800px] mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+      {/* Success Message */}
+      {submitStatus === 'success' && (
+        <div className="mb-6 p-4 bg-green-600/20 border border-green-500 rounded-lg text-green-400 text-center">
+          <p className="font-barlow font-semibold text-lg">Thank you for your message!</p>
+          <p className="text-sm mt-1">We'll get back to you within 24 hours.</p>
+        </div>
+      )}
+
+      {/* Error Message */}
+      {submitStatus === 'error' && (
+        <div className="mb-6 p-4 bg-red-600/20 border border-red-500 rounded-lg text-red-400 text-center">
+          <p className="font-barlow font-semibold">Something went wrong. Please try again.</p>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
         {/* Full Name */}
         <div>
@@ -47,6 +97,7 @@ export default function ContactFormSection() {
             value={formData.fullName}
             onChange={handleInputChange}
             placeholder="Type here"
+            required
             className="w-full px-4 py-3 sm:py-4 bg-[#1E293B] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#57BB6D] text-sm sm:text-base"
           />
         </div>
@@ -62,6 +113,7 @@ export default function ContactFormSection() {
             value={formData.email}
             onChange={handleInputChange}
             placeholder="Type here"
+            required
             className="w-full px-4 py-3 sm:py-4 bg-[#1E293B] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#57BB6D] text-sm sm:text-base"
           />
         </div>
@@ -132,6 +184,7 @@ export default function ContactFormSection() {
             onChange={handleInputChange}
             placeholder="Type here"
             rows={4}
+            required
             className="w-full px-4 py-3 bg-[#1E293B] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#57BB6D] resize-none text-sm sm:text-base min-h-[120px] sm:min-h-[150px]"
           />
         </div>
@@ -140,9 +193,11 @@ export default function ContactFormSection() {
         <div className="flex justify-center pt-4 sm:pt-6">
           <button
             type="submit"
-            className="bg-green-600 hover:bg-green-700 text-white font-barlow font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-colors duration-300 w-full sm:w-auto text-sm sm:text-base"
+            disabled={isSubmitting}
+            className={`ripple-button animate-glow-pulse text-white font-barlow font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-all duration-500 w-full sm:w-auto text-sm sm:text-base bg-gradient-to-r from-[#52B069] to-[#3a8b4f] border-2 border-[#52B069] hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)] hover:scale-[1.05] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+              }`}
           >
-            Submit
+            {isSubmitting ? 'Submitting...' : 'Submit'}
           </button>
         </div>
       </form>

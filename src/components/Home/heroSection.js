@@ -63,7 +63,9 @@ export default function HeroSection() {
 
           {/* Get Started Button - Second */}
           <Link
-            href="/contact-us"
+            href={process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               ripple-button
               relative inline-flex items-center justify-center cursor-pointer
