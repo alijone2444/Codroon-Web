@@ -2,6 +2,8 @@
 import Image from "next/image";
 import MarginWrapper from "@/components/wrappers/sectionWrapper";
 import { useState, useEffect, useRef } from "react";
+import { X, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 import BudgetSlider from "../common/slider";
 import { menuItems } from "@/constants/menuItems";
 
@@ -92,7 +94,7 @@ export default function ContactSection({ noThankYou }) {
         setFormData({ fullName: '', email: '', message: '' });
         setSelectedServices([]);
         setBudget(3000);
-        setTimeout(() => setSubmitStatus(null), 5000);
+        // Removed the setTimeout to keep the modal open until user closes it
       } else {
         setSubmitStatus('error');
       }
@@ -105,7 +107,55 @@ export default function ContactSection({ noThankYou }) {
   };
 
   return (
-    <div ref={sectionRef} className="w-full max-w-[1908px] mx-auto">
+    <div ref={sectionRef} className="w-full max-w-[1908px] mx-auto relative">
+      {/* Success Modal */}
+      {submitStatus === 'success' && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+          <div className="bg-[#1E293B] border border-[#57BB6D] rounded-2xl p-6 sm:p-8 md:p-10 max-w-md w-full relative shadow-[0_0_50px_rgba(87,187,109,0.2)] animate-scale-in">
+            <button
+              onClick={() => setSubmitStatus(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#57BB6D]/20 rounded-full flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#57BB6D]" />
+              </div>
+
+              <h3 className="font-barlow font-bold text-2xl sm:text-3xl text-white mb-2">
+                Message Sent!
+              </h3>
+
+              <p className="font-barlow text-gray-300 mb-8 leading-relaxed">
+                Thank you for reaching out. We've received your message and will get back to you within 24 hours.
+              </p>
+
+              <div className="w-full space-y-4">
+                <div className="bg-[#0F172A] rounded-xl p-4 border border-gray-800">
+                  <p className="text-sm text-gray-400 mb-3">Want to discuss your project right now?</p>
+                  <Link
+                    href={process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full bg-[#57BB6D] hover:bg-[#469e59] text-white font-barlow font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                  >
+                    Schedule A Call
+                  </Link>
+                </div>
+
+                <button
+                  onClick={() => setSubmitStatus(null)}
+                  className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Header Section with Hand Background */}
       {!noThankYou && (
         <div
@@ -165,12 +215,6 @@ export default function ContactSection({ noThankYou }) {
         ref={formRef}
         className={`w-full max-w-[900px] mx-auto px-4 sm:px-6 md:px-8 ${!noThankYou ? 'mt-12 sm:mt-16 md:mt-20 lg:mt-24 py-8 sm:py-12 md:py-16' : 'py-8 sm:py-12 md:py-16'}`}
       >
-        {/* Success/Error Messages with animations */}
-        {submitStatus === 'success' && (
-          <div className="mb-6 p-4 bg-[#57BB6D]/20 border border-[#57BB6D] rounded-[8px] text-[#57BB6D] text-center font-barlow animate-fade-slide">
-            Thank you! Your message has been sent successfully. We'll get back to you soon.
-          </div>
-        )}
         {submitStatus === 'error' && (
           <div className="mb-6 p-4 bg-red-500/20 border border-red-500 rounded-[8px] text-red-400 text-center font-barlow animate-fade-slide">
             Something went wrong. Please try again later or contact us directly.

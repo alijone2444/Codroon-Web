@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react';
+import { X, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -69,12 +71,54 @@ export default function ContactFormSection() {
   };
 
   return (
-    <div className="w-full max-w-[800px] mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+    <div className="w-full max-w-[800px] mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6 relative">
       {/* Success Message */}
+      {/* Success Modal */}
       {submitStatus === 'success' && (
-        <div className="mb-6 p-4 bg-green-600/20 border border-green-500 rounded-lg text-green-400 text-center">
-          <p className="font-barlow font-semibold text-lg">Thank you for your message!</p>
-          <p className="text-sm mt-1">We'll get back to you within 24 hours.</p>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+          <div className="bg-[#1E293B] border border-[#57BB6D] rounded-2xl p-6 sm:p-8 md:p-10 max-w-md w-full relative shadow-[0_0_50px_rgba(87,187,109,0.2)] animate-scale-in">
+            <button
+              onClick={() => setSubmitStatus(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#57BB6D]/20 rounded-full flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-[#57BB6D]" />
+              </div>
+
+              <h3 className="font-barlow font-bold text-2xl sm:text-3xl text-white mb-2">
+                Message Sent!
+              </h3>
+
+              <p className="font-barlow text-gray-300 mb-8 leading-relaxed">
+                Thank you for reaching out. We've received your message and will get back to you within 24 hours.
+              </p>
+
+              <div className="w-full space-y-4">
+                <div className="bg-[#0F172A] rounded-xl p-4 border border-gray-800">
+                  <p className="text-sm text-gray-400 mb-3">Want to discuss your project right now?</p>
+                  <Link
+                    href={process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full bg-[#57BB6D] hover:bg-[#469e59] text-white font-barlow font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                  >
+                    Schedule A Call
+                  </Link>
+                </div>
+
+                <button
+                  onClick={() => setSubmitStatus(null)}
+                  className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
