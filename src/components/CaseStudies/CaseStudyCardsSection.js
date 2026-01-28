@@ -84,10 +84,10 @@ export default function CaseStudyCardsSection() {
       "Brickly": "/Case_Studies/brickly (2).png",
       "Healvision": "/Case_Studies/healvision.png",
       "Profound Aminos Mobile App": "/Case_Studies/profoundaminos.png",
-      "Decipher Engine": "/Images/laptop.jpg", // fallback
-      "DataVaultix": "/Images/laptop.jpg", // fallback
-      "Akaunting Cloud": "/Images/laptop.jpg", // fallback
-      "Acquix AI": "/Images/laptop.jpg", // fallback
+      "Decipher Engine": "/Case_Studies/Decipher.png",
+      "DataVaultix": "/Case_Studies/DataVaultix.png",
+      "Akaunting Cloud": "/Case_Studies/Akaunting.png",
+      "Acquix AI": "/Case_Studies/Acquix.png"
     };
     return imageMap[projectName] || "/Images/laptop.jpg";
   };
@@ -101,7 +101,7 @@ export default function CaseStudyCardsSection() {
             // Ensure URL has protocol
             const websiteUrl = study.website.startsWith('http') ? study.website : `https://${study.website}`;
             const imagePath = getImagePath(study.projectName);
-            
+
             return (
               <a
                 key={index}
