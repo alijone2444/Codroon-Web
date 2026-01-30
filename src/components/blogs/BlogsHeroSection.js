@@ -14,17 +14,17 @@ export default function BlogsHeroSection() {
         priority
         className="object-cover opacity-25"
       />
-  
+
       <div className="absolute inset-0 bg-indigo-900/70 mix-blend-multiply" />
 
       {/* Content - Left Aligned */}
       <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left w-full h-full px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-[120px] gap-3 sm:gap-4 md:gap-[14px]">
         <h1 className="font-barlow font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[110%] sm:leading-[100%] tracking-[0%] text-white animate-slide-in-left">
-          <Typewriter text="Blogs" speed={100} />
+          <Typewriter text="Codroon Blogs" speed={100} />
         </h1>
 
         <p className="font-barlow font-normal text-base sm:text-lg md:text-xl lg:text-[28px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-white max-w-[90vw] lg:max-w-[800px] animate-slide-in-left-delay-1">
-          Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise.
+          Practical insights on building, scaling, and maintaining modern digital products.
         </p>
       </div>
     </section>

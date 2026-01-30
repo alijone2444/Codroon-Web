@@ -8,49 +8,49 @@ const industries = [
     icon: "industry-item-1",
     title: "Travel & Hospitality",
     description:
-      "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions.",
+      "We help travel and hospitality brands build fast, reliable digital platforms for booking, operations, and customer engagement. Codroon modernizes legacy platforms, integrates third-party services, and delivers experiences that improve journeys for users while supporting long-term business growth.",
   },
   {
     icon: "industry-item-2",
     title: "Public Sector",
     description:
-      "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success.",
+      "We build secure, accessible digital solutions for public sector organizations with complex requirements. Codroon partners with public sector teams to design platforms that improve service delivery, streamline processes, and support transparency at scale.",
   },
   {
     icon: "industry-item-3",
-    title: "Retail & CPG",
+    title: "Retail, Commerce & Consumer Brands",
     description:
-      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
+      "We help retail and consumer brands create digital platforms that convert and scale. Codroon works with teams to modernize systems, integrate services, and build solutions that support revenue growth and operational efficiency.",
   },
   {
     icon: "industry-item-4",
-    title: "Oil, Gas & Energy",
+    title: "Energy, Infrastructure & Industrial Tech",
     description:
-      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
+      "We build robust digital solutions for energy and industrial organizations operating in complex environments. Codroon delivers platforms and automation that improve visibility, streamline operations, and scale with evolving infrastructure needs.",
   },
   {
     icon: "industry-item-5",
-    title: "Startups",
+    title: "eCommerce",
     description:
-      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
+      "We develop high-performance eCommerce platforms designed for speed, scalability, and conversion. Codroon helps brands optimize storefronts, checkout flows, and backend systems to drive revenue and improve customer experience.",
   },
   {
     icon: "industry-item-6",
-    title: "E-commerce",
+    title: "Startups",
     description:
-      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
+      "We help startups move from idea to production without unnecessary complexity. Codroon partners with founders to design and build scalable products that are maintainable, investor-ready, and built for growth.",
   },
   {
     icon: "industry-item-7",
     title: "Banking & Fintech",
     description:
-      "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.",
+      "We build secure, scalable digital solutions for banking and fintech organizations. Codroon supports financial teams with custom platforms and integrations designed for reliability, security, and long-term growth.",
   },
   {
     icon: "industry-item-8",
     title: "Gaming",
     description:
-      "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.",
+      "We develop high-performance gaming systems with a focus on stability and player experience. Codroon works with gaming teams to build technology that supports engagement, growth, and production-ready performance.",
   },
 ];
 

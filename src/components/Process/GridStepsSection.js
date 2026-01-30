@@ -30,8 +30,8 @@ export default function GridStepsSection({ data }) {
   }, []);
 
   return (
-    <MarginWrapper top={0} bottom={96}>
-      <div ref={sectionRef} className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8">
+    <MarginWrapper top={80} bottom={96}>
+      <div id="process-steps" ref={sectionRef} className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8 scroll-mt-24">
         {/* Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
           {data.map((step, index) => (

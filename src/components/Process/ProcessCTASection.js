@@ -63,10 +63,6 @@ const ProcessCTASection = () => {
           Thank you for your interest in Codroon
         </h2>
 
-        {/* Description */}
-        <p className={`font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-white text-center max-w-[90vw] sm:max-w-[80vw] md:max-w-4xl reveal-fade-up stagger-3 ${isVisible ? 'reveal-visible' : ''}`}>
-          We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.
-        </p>
 
         {/* Button with shine */}
         <div className={`reveal-fade-up stagger-4 ${isVisible ? 'reveal-visible' : ''}`}>

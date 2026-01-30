@@ -195,10 +195,6 @@ export default function ContactSection({ noThankYou }) {
               Thank you for your Interest in Codroon.
             </h2>
 
-            {/* Description */}
-            <p className={`w-full font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[18px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-[50px] px-4 sm:px-8 md:px-12 reveal-fade-up stagger-3 ${headerVisible ? 'reveal-visible' : ''}`}>
-              We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.
-            </p>
 
             {/* Start Project Button with glow */}
             <div className={`flex justify-center px-4 reveal-fade-up stagger-4 ${headerVisible ? 'reveal-visible' : ''}`}>

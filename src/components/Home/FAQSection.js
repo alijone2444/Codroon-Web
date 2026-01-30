@@ -155,7 +155,7 @@ export default function FAQSection() {
           <div className="absolute inset-0 bg-[#0F172A] opacity-[0.23] mix-blend-overlay"></div>
           <div className="relative z-10 text-center px-4 sm:px-6">
             <h2 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight sm:leading-snug md:leading-[100%] tracking-[0%] text-white mb-3 sm:mb-4 md:mb-[10px]">
-              Frequently Asked Questions
+              Questions, Answered
             </h2>
           </div>
         </div>

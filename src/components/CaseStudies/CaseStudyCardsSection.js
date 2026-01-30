@@ -3,53 +3,11 @@ import MarginWrapper from "@/components/wrappers/sectionWrapper";
 
 const caseStudies = [
   {
-    category: "Educational Platform for University Applications",
-    projectName: "Study Ninjaa",
-    website: "studyninjaa.com",
+    category: "AI-Powered Valuation and Dealroom Platform",
+    projectName: "Acquix AI",
+    website: "http://56.228.81.212/",
     description:
-      "StudyNINJAA is an innovative online platform that connects students with expert tutors to support their university application journey—whether it's for undergraduate programs, postgraduate admissions, or specialized fields. Tailored for students aiming for top institutions, StudyNINJAA offers personalized essay reviews, mock interviews, and one-on-one guidance to help applicants stand out.",
-  },
-  {
-    category: "AI-Powered Lead Generation Platform",
-    projectName: "Quicklead AI",
-    website: "http://ec2-18-217-51-53.us-east-2.compute.amazonaws.com/",
-    description:
-      "QuickLead AI is an AI-powered lead generation platform built for non-technical users. It includes B2B, B2C, and Admin dashboards with a very simple and clean UI. Users just enter a keyword and state/location, and the system instantly finds relevant leads. All results can be exported in CSV format. We handled the full development, including Requirement Gathering, UI/UX design, Frontend development, AI integration, dashboards, backend APIs, and AWS deployment.",
-  },
-  {
-    category: "Fan-Focused Web Platform",
-    projectName: "Swift Lore",
-    website: "https://www.swift-lore.com/",
-    description:
-      "Swift Lore is a modern, fan-focused web platform built using React, Tailwind CSS, and Firebase, designed to bring Taylor Swift's universe to life with a sleek 2025-ready design. The platform features interactive timelines, \"On This Day\" Swift events, and API-driven content to keep fans engaged. From exploring historical milestones to suggesting new entries and even donating to fan causes, Swift Lore blends fandom with functionality through a smooth, responsive UI and real-time database integration.",
-  },
-  {
-    category: "Marketing Agency Website",
-    projectName: "Brickly",
-    website: "https://brickly.agency/",
-    description:
-      "Brickly is a bold, energetic marketing agency website crafted with a 2025-ready design ethos. Developed using WordPress and Elementor, and designed in Figma, the site features a highly polished UI/UX aimed at converting visitors into leads. This project focuses on delivering a modern web presence for digital marketing professionals. From a high-converting \"Book a Strategy Call\" CTA to clear pricing plans and an engaging services overview, every element is geared toward action.",
-  },
-  {
-    category: "Cross-Platform Mobile App for Mental Health",
-    projectName: "Healvision",
-    website: "https://github.com/farwaa-sr/HealVision",
-    description:
-      "HealVision is a cross-platform mobile app developed to support individuals on their journey to recovery from Substance Use Disorders (SUDs). The app combines modern healthcare UX with AI-driven features to deliver personalized mental health support and therapy facilitation. Key Features: AI-Powered Chatbot, Interactive Quizzes for self-assessment, Appointment Scheduling, Separate Dashboards for therapists and patients, Health Tracking with mood journaling, Emotional Analysis on Messages, auto-generating therapist reports, Secure Firebase Integration for real-time data sync and privacy.",
-  },
-  {
-    category: "All-in-One Order Management App",
-    projectName: "Profound Aminos Mobile App",
-    website: "https://github.com/Codroon/Profound-Aminos-App/tree/master",
-    description:
-      "We developed a custom all-in-one order management app that centralizes multiple platforms into one seamless app. Key Features: WooCommerce – Real-time order management and updates. WordPress – Smooth sync with the client's website. Gorgias – Automatic ticket updates for better customer support handling. ReachShip – Live shipment tracking and notifications. Push Notifications – Instant alerts for orders, support tickets, and deliveries. The client no longer had to switch between multiple platforms. With this app, they could manage orders, support, and shipments in one dashboard.",
-  },
-  {
-    category: "AI-Powered RPG Storytelling Platform",
-    projectName: "Decipher Engine",
-    website: "https://decipher-beta.vercel.app/",
-    description:
-      "Developed a self-hosted AI-powered RPG storytelling platform where AI acts as a game master. Implemented multi-model text generation, dynamic story continuation, regeneration, and manual editing. Built a card-based system to manage characters, creatures, world elements, and chapters for long-term story consistency. Designed and delivered a full UI/UX workflow with a scalable frontend and modular backend architecture.",
+      "Acquix AI is an AI-powered valuation and secure dealroom platform built for modern M&A, investment, and corporate finance workflows. It enables teams to generate data-driven valuations, assess opportunities with AI scoring models, and collaborate securely within a confidential deal environment. Designed for enterprise-grade use, Acquix AI combines intelligent analysis, role-based access control, and streamlined deal management to reduce friction, improve decision accuracy, and accelerate high-stakes transactions.",
   },
   {
     category: "AI-Powered Audio Fingerprint Remover",
@@ -66,11 +24,53 @@ const caseStudies = [
       "Akaunting Cloud is a modern, open-source cloud accounting platform built for small businesses and freelancers. It enables users to manage invoices, expenses, payments, and financial reports from a single, intuitive dashboard. Designed for clarity and efficiency, Akaunting simplifies complex financial data with clean UI, real-time insights, and responsive layouts—making everyday accounting tasks faster and more accessible. Its flexible cloud architecture supports scalable growth while maintaining performance, security, and ease of use.",
   },
   {
-    category: "AI-Powered Valuation and Dealroom Platform",
-    projectName: "Acquix AI",
-    website: "http://56.228.81.212/",
+    category: "AI-Powered Lead Generation Platform",
+    projectName: "Quicklead AI",
+    website: "http://ec2-18-217-51-53.us-east-2.compute.amazonaws.com/",
     description:
-      "Acquix AI is an AI-powered valuation and secure dealroom platform built for modern M&A, investment, and corporate finance workflows. It enables teams to generate data-driven valuations, assess opportunities with AI scoring models, and collaborate securely within a confidential deal environment. Designed for enterprise-grade use, Acquix AI combines intelligent analysis, role-based access control, and streamlined deal management to reduce friction, improve decision accuracy, and accelerate high-stakes transactions.",
+      "QuickLead AI is an AI-powered lead generation platform built for non-technical users. It includes B2B, B2C, and Admin dashboards with a very simple and clean UI. Users just enter a keyword and state/location, and the system instantly finds relevant leads. All results can be exported in CSV format. We handled the full development, including Requirement Gathering, UI/UX design, Frontend development, AI integration, dashboards, backend APIs, and AWS deployment.",
+  },
+  {
+    category: "Educational Platform for University Applications",
+    projectName: "Study Ninjaa",
+    website: "studyninjaa.com",
+    description:
+      "StudyNINJAA is an innovative online platform that connects students with expert tutors to support their university application journey—whether it's for undergraduate programs, postgraduate admissions, or specialized fields. Tailored for students aiming for top institutions, StudyNINJAA offers personalized essay reviews, mock interviews, and one-on-one guidance to help applicants stand out.",
+  },
+  {
+    category: "AI-Powered RPG Storytelling Platform",
+    projectName: "Decipher Engine",
+    website: "https://decipher-beta.vercel.app/",
+    description:
+      "Developed a self-hosted AI-powered RPG storytelling platform where AI acts as a game master. Implemented multi-model text generation, dynamic story continuation, regeneration, and manual editing. Built a card-based system to manage characters, creatures, world elements, and chapters for long-term story consistency. Designed and delivered a full UI/UX workflow with a scalable frontend and modular backend architecture.",
+  },
+  {
+    category: "Fan-Focused Web Platform",
+    projectName: "Swift Lore",
+    website: "https://www.swift-lore.com/",
+    description:
+      "Swift Lore is a modern, fan-focused web platform built using React, Tailwind CSS, and Firebase, designed to bring Taylor Swift's universe to life with a sleek 2025-ready design. The platform features interactive timelines, \"On This Day\" Swift events, and API-driven content to keep fans engaged. From exploring historical milestones to suggesting new entries and even donating to fan causes, Swift Lore blends fandom with functionality through a smooth, responsive UI and real-time database integration.",
+  },
+  {
+    category: "Cross-Platform Mobile App for Mental Health",
+    projectName: "Healvision",
+    website: "https://github.com/farwaa-sr/HealVision",
+    description:
+      "HealVision is a cross-platform mobile app developed to support individuals on their journey to recovery from Substance Use Disorders (SUDs). The app combines modern healthcare UX with AI-driven features to deliver personalized mental health support and therapy facilitation. Key Features: AI-Powered Chatbot, Interactive Quizzes for self-assessment, Appointment Scheduling, Separate Dashboards for therapists and patients, Health Tracking with mood journaling, Emotional Analysis on Messages, auto-generating therapist reports, Secure Firebase Integration for real-time data sync and privacy.",
+  },
+  {
+    category: "All-in-One Order Management App",
+    projectName: "Profound Aminos Mobile App",
+    website: "https://github.com/Codroon/Profound-Aminos-App/tree/master",
+    description:
+      "We developed a custom all-in-one order management app that centralizes multiple platforms into one seamless app. Key Features: WooCommerce – Real-time order management and updates. WordPress – Smooth sync with the client's website. Gorgias – Automatic ticket updates for better customer support handling. ReachShip – Live shipment tracking and notifications. Push Notifications – Instant alerts for orders, support tickets, and deliveries. The client no longer had to switch between multiple platforms. With this app, they could manage orders, support, and shipments in one dashboard.",
+  },
+  {
+    category: "Marketing Agency Website",
+    projectName: "Brickly",
+    website: "https://brickly.agency/",
+    description:
+      "Brickly is a bold, energetic marketing agency website crafted with a 2025-ready design ethos. Developed using WordPress and Elementor, and designed in Figma, the site features a highly polished UI/UX aimed at converting visitors into leads. This project focuses on delivering a modern web presence for digital marketing professionals. From a high-converting \"Book a Strategy Call\" CTA to clear pricing plans and an engaging services overview, every element is geared toward action.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function CaseStudyCardsSection() {
 
   return (
     <MarginWrapper top={48} bottom={48}>
-      <div className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px]">
+      <div id="case-studies-grid" className="w-full max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[50px] scroll-mt-24">
         {/* Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-[50px] pb-12 sm:pb-16 md:pb-20 lg:pb-[100px]">
           {caseStudies.map((study, index) => {

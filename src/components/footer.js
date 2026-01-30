@@ -1,14 +1,26 @@
 // components/Footer.jsx
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { menuItems } from '@/constants/menuItems';
+
+// Custom Upwork Icon
+const UpworkIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z" />
+  </svg>
+);
+
+// Custom Fiverr Icon - Simple "f"
+const FiverrIcon = ({ className }) => (
+  <span className={`${className} flex items-center justify-center`} style={{ fontWeight: '800', fontSize: '1.5rem', fontFamily: 'sans-serif', lineHeight: 1 }}>f</span>
+);
 
 const Footer = () => {
   const socialLinks = [
-    { Icon: Facebook, href: '#', label: 'Facebook' },
-    { Icon: Twitter, href: '#', label: 'Twitter' },
-    { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { Icon: Linkedin, href: 'https://linkedin.com/company/codroon', label: 'LinkedIn' },
+    { Icon: UpworkIcon, href: 'https://upwork.com/agencies/codroon', label: 'Upwork' },
+    { Icon: FiverrIcon, href: 'https://fiverr.com/codroon', label: 'Fiverr' },
   ];
 
   return (
@@ -16,7 +28,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
         {/* Top Section: Logo, Navigation, Social Links */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 border-b border-gray-700 pb-6 sm:pb-8">
-          
+
           {/* Logo */}
           <div className="mb-4 sm:mb-6 lg:mb-0 flex justify-center lg:justify-start w-full lg:w-auto">
             <Image
@@ -65,10 +77,10 @@ const Footer = () => {
 
         {/* Bottom Section: Contact Info & Copyright */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center pt-6 sm:pt-8 text-white w-full">
-          
+
           {/* Contact Information */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 sm:gap-6 md:gap-[30px] w-full lg:w-auto border-b md:border-b-0 border-[#1E293B] pb-4 sm:pb-6 md:pb-[16px] lg:pb-0">
-            
+
             {/* Email */}
             <div className="flex items-center gap-2 sm:gap-[10px] w-full md:w-auto">
               <div className="hidden sm:block md:hidden">
@@ -103,7 +115,7 @@ const Footer = () => {
                 href="tel:+919991323306"
                 className="text-sm sm:text-base md:text-[18px] font-[400] font-heading leading-[140%] sm:leading-[150%] text-white hover:text-[#06D6A0] transition-colors duration-300 whitespace-nowrap"
               >
-               +92 334 0991483
+                +92 334 0991483
               </a>
             </div>
 
@@ -119,14 +131,14 @@ const Footer = () => {
                 <MapPin size={16} className="text-[#06D6A0] flex-shrink-0" />
               </div>
               <span className="text-sm sm:text-base md:text-[18px] font-[400] font-heading leading-[140%] sm:leading-[150%] text-white">
-                Somewhere In the World
+                Dallas, TX, USA
               </span>
             </div>
           </div>
 
           {/* Copyright */}
           <p className="text-sm sm:text-base md:text-[18px] font-[400] font-heading leading-[140%] sm:leading-[150%] text-white mt-4 sm:mt-6 md:mt-0 pt-4 sm:pt-6 lg:pt-0 border-t lg:border-t-0 border-[#1E293B] lg:border-none w-full lg:w-auto text-center lg:text-left">
-            © 2023 Codroon. All rights reserved.
+            © 2026 Codroon. All rights reserved.
           </p>
         </div>
       </div>

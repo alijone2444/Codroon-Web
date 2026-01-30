@@ -64,12 +64,12 @@ const IndustriesCTASection = () => {
 
         {/* Heading with fade-up animation */}
         <h2 className={`font-barlow font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[48px] leading-[110%] sm:leading-[100%] text-white text-center reveal-fade-up stagger-2 ${isVisible ? 'reveal-visible' : ''}`}>
-          Let us bring your ideas to life in the digital world.
+          Every industry has unique challenges. We build the technology to solve them.
         </h2>
 
         {/* Description with fade-up animation */}
         <p className={`font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[22px] leading-[140%] sm:leading-[150%] tracking-[-0.2%] sm:tracking-[-0.3%] md:tracking-[-0.6%] text-[#E6E6E6] text-center max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-full reveal-fade-up stagger-3 ${isVisible ? 'reveal-visible' : ''}`}>
-          No matter which industry you're in, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product.
+          No matter your industry, Codroon partners with you to design, build, and scale solutions that deliver measurable results. Our cross-functional teams work as one to bring clarity, speed, and alignment from concept to launch.
         </p>
 
         {/* Button with shine effect */}

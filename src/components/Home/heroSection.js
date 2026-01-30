@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "@/components/libs/typewriter";
+import LoopingTypewriter from "@/components/libs/loopingTypewriter";
 
 export default function HeroSection() {
   return (
@@ -18,7 +19,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[#0F172A] opacity-[0.23]"></div>
 
       {/* Content - Left Aligned */}
-      <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left px-4 sm:px-6 md:px-8 lg:px-12 w-full h-auto min-h-[686px] gap-6 sm:gap-8 md:gap-[50px] py-8 sm:py-0">
+      <div className="relative z-10 container mx-auto flex flex-col items-start justify-center text-left px-4 sm:px-6 md:px-8 lg:px-12 w-full h-auto min-h-[686px] gap-6 sm:gap-8 md:gap-[50px] pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-8 sm:pb-0">
         {/* Responsive Heading with Typewriter */}
         <h1
           className="font-heading font-semibold 
@@ -29,12 +30,19 @@ export default function HeroSection() {
                      bg-[length:200%_auto] animate-gradient 
                      max-w-[90vw] lg:max-w-[1200px] font-barlow animate-slide-in-left"
         >
-          <Typewriter text="Where Code Becomes Conscious" speed={50} />
+          <Typewriter text="Where Code Become Conscious" speed={50} />
         </h1>
 
-        {/* Subtitle text - slides in from left */}
+        {/* Subtitle text - slides in from left with looping typewriter on keywords */}
         <p className="text-lg sm:text-xl md:text-2xl lg:text-[32px] text-white font-normal font-montserrat max-w-[90vw] lg:max-w-[800px] animate-slide-in-left-delay-1">
-          Delivering AI-powered, SaaS-driven, and vibe-coded solutions that transform ideas into future-ready digital experiences.
+          Engineering AI-powered and SaaS products focused on{" "}
+          <LoopingTypewriter
+            words={["performance.", "scalability.", "growth."]}
+            speed={80}
+            deleteSpeed={50}
+            pauseTime={2000}
+            className="text-[#00E6A8] font-semibold"
+          />
         </p>
 
         {/* Buttons Container - Left aligned, one by one */}

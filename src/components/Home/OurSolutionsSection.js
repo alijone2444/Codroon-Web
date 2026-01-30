@@ -9,47 +9,47 @@ export default function OurSolutionsSection() {
     {
       icon: "/Images/brush.png",
       title: "UI/UX Design",
-      description: "At Codroon, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences."
+      description: "At Codroon, we design interfaces that are built to be used — not just admired. Our UI/UX process focuses on clarity, usability, and real user behavior, helping products convert better and scale faster. We combine user research, interaction design, and rapid prototyping to create experiences that feel intuitive from day one."
     },
     {
       icon: "/Images/puzzle.png",
       title: "Web Development",
-      description: "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
+      description: "We build fast, scalable, and secure web applications designed for real-world usage. From MVPs to production-grade SaaS platforms, our web development team focuses on clean architecture, performance, and long-term maintainability. At Codroon, we don't just ship features — we engineer systems that grow with your business."
     },
     {
       icon: "/Images/Icons/power.png",
       title: "Mobile App Development",
-      description: "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
+      description: "We develop high-performance mobile applications that users actually keep installed. Our team builds reliable iOS and Android apps with a focus on speed, stability, and seamless user experience. From idea validation to app store launch and beyond, Codroon handles the full mobile development lifecycle."
     },
     {
       icon: "/Images/brush.png",
-      title: "Project Management",
-      description: "At Codroon, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences."
+      title: "Vibe Coded Solutions",
+      description: "We build fast, cost-effective digital products using modern vibe-coding platforms that dramatically reduce development time without sacrificing quality. By leveraging tools like Lovable, Emergent Labs, Bolt, Base44, and Replit, we help teams move from idea to working product in days—not months."
     },
     {
       icon: "/Images/puzzle.png",
       title: "SEO",
-      description: "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
+      description: "We build SEO strategies that support real growth, not vanity metrics. Our approach focuses on technical SEO, performance, and content structure — ensuring your product is discoverable, fast, and conversion-ready. Codroon helps products rank sustainably by aligning SEO with business outcomes, not guesswork."
     },
     {
       icon: "/Images/Icons/power.png",
       title: "SaaS Development",
-      description: "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
+      description: "We specialize in building SaaS products that are designed to scale — technically and operationally. From early-stage MVPs to mature platforms, we engineer SaaS systems with performance, security, and maintainability in mind. Codroon handles the full SaaS development lifecycle."
     },
     {
       icon: "/Images/brush.png",
-      title: "Agentic AI",
-      description: "At Codroon, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences."
+      title: "Automations & Integrations",
+      description: "Manual processes slow teams down. We design and implement automations and integrations that eliminate repetitive work and keep systems in sync. From API integrations and workflow automation to internal tools and data pipelines, Codroon helps businesses operate more efficiently."
     },
     {
       icon: "/Images/puzzle.png",
       title: "Game Development",
-      description: "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
+      description: "We develop games with a strong focus on performance, stability, and player experience. From concept to release, our team builds engaging, well-optimized games across platforms. Codroon combines creative development with solid engineering practices to deliver games that scale and keep users engaged."
     },
     {
       icon: "/Images/Icons/power.png",
-      title: "Desktop Apps",
-      description: "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
+      title: "AIaaS (AI as a Service)",
+      description: "We help teams leverage AI without turning their product into an experiment. Our AIaaS solutions are designed to be practical, scalable, and production-ready from day one. Codroon builds and integrates AI-powered services such as intelligent automation, data analysis, and custom AI APIs."
     }
   ];
 
@@ -93,7 +93,7 @@ export default function OurSolutionsSection() {
   return (
     <MarginWrapper bottom={80} top={40}>
       <HorizontalMarginWrapper left={20} right={20} smLeft={40} smRight={40} mdLeft={60} mdRight={60} lgLeft={80} lgRight={80}>
-        <div ref={sectionRef} className="relative w-full max-w-[1596px] mx-auto scroll-fade-up">
+        <div id="our-solutions" ref={sectionRef} className="relative w-full max-w-[1596px] mx-auto scroll-fade-up scroll-mt-24">
           {/* Globe Background - Responsive with subtle rotation */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <Image

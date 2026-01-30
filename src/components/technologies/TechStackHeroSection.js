@@ -32,9 +32,6 @@ export default function TechStackHeroSection() {
           <Typewriter text="Powering Innovation With A Modern, Scalable Tech Stack" speed={50} />
         </h1>
 
-        <p className="font-barlow font-normal text-sm sm:text-base md:text-lg lg:text-[20px] leading-[140%] sm:leading-[150%] tracking-[-0.6%] text-white max-w-[90vw] lg:max-w-[800px] animate-slide-in-left-delay-1">
-          We use future-ready technologies that ensure faster development, higher performance, and seamless scalability.
-        </p>
 
         {/* Decorative animated line */}
         <div className={`h-1 bg-gradient-to-r from-[#52B069] to-transparent rounded-full transition-all duration-1000 ease-out ${isVisible ? 'w-24 sm:w-32 md:w-48 opacity-100' : 'w-0 opacity-0'}`} style={{ transitionDelay: '0.6s' }}></div>

@@ -36,8 +36,31 @@ export default function ProcessHeroSection() {
           At Codroon, we value transparency, collaboration, and delivering exceptional results.
         </p>
 
-        {/* Decorative animated line */}
-        <div className={`h-1 bg-gradient-to-r from-[#52B069] to-transparent rounded-full transition-all duration-1000 ease-out ${isVisible ? 'w-32 sm:w-48 md:w-64 opacity-100' : 'w-0 opacity-0'}`} style={{ transitionDelay: '0.6s' }}></div>
+        {/* Button Container - matching homepage style */}
+        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none animate-slide-in-left-delay-1">
+          <button
+            onClick={() => {
+              document.getElementById('process-steps')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="
+              ripple-button
+              relative inline-flex items-center justify-center cursor-pointer
+              bg-gradient-to-r from-[#52B069] to-[#3a8b4f] text-white rounded-full 
+              border-2 border-[#52B069]
+              px-4 sm:px-5 md:px-6 py-3 sm:py-3 
+              font-montserrat font-semibold 
+              text-base sm:text-lg md:text-[18px] 
+              leading-[100%] w-full sm:w-auto
+              transition-all duration-500 ease-out
+              hover:from-[#5ec878] hover:to-[#52B069]
+              hover:shadow-[0_0_35px_8px_rgba(82,176,105,0.5)]
+              hover:scale-[1.05] active:scale-[0.98]
+              animate-glow-pulse
+            "
+          >
+            <span className="relative z-10">Here's an overview of our typical process</span>
+          </button>
+        </div>
       </div>
     </section>
   );

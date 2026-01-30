@@ -1,39 +1,38 @@
 export const WhoWeAreSteps = [
-    {
-      number: "01",
-      title: "Design",
-      description:
-        "Once upon a time, in a world driven by technology, a group of talented designers came together with a shared vision. They wanted to design user experiences that inspired emotion and delight. Their mission: craft digital solutions that not only looked stunning but were deeply functional. Armed with creativity, innovation, and empathy, they began designing intuitive and user-friendly interfaces that would leave a lasting impression.",
-    },
-    {
-      number: "02",
-      title: "Engineering",
-      description:
-        "Meanwhile, a team of brilliant engineers was busy crafting the backbone of digital innovation. With their expertise in code and infrastructure, they ensured the seamless execution of each creation. Through meticulous testing and powerful frameworks, the engineers at Codetron built solutions that fused technical robustness with elegant design. Their work pushed the boundaries of what was possible.",
-    },
-    {
-      number: "03",
-      title: "Project Management",
-      description:
-        "In the midst of the creative and technical minds, a group of project managers emerged as the glue that held everything together. They orchestrated the workflow, managed timelines, and ensured clear communication across teams. With exceptional organizational skills and foresight, Codetron’s project managers kept the team’s vision in focus while they steered every project into smooth, on-time, and within-budget waters.",
-    },
-    {
-      number: "04",
-      title: "Collaboration",
-      description:
-        "At Codetron, these three departments came together to form a cohesive and dynamic force. They embraced the power of collaboration and knowledge-sharing, believing that the best outcomes arise from collective creativity. From brainstorming sessions to prototype testing, each team member contributed their unique strengths. United by the passion to create, they could deliver solutions that surpassed expectations.",
-    },
-    {
-      number: "05",
-      title: "Client-Centric Approach",
-      description:
-        "Codetron’s success was not solely measured by their technical prowess or design excellence, but by the satisfaction of their clients. They listened. They cared. Their client-centric approach meant every project was tailored to meet specific business objectives. By building relationships based on trust and clarity, Codetron became a reliable partner in their clients’ digital journey.",
-    },
-    {
-      number: "06",
-      title: "Driving Success",
-      description:
-        "With each project, Codetron’s reputation grew. Their portfolio expanded to include businesses of all sizes and industries. From startups to established enterprises, Codetron’s commitment to excellence set them apart. Their story is one of innovation, collaboration, and continuous growth — a story that reflects their unwavering commitment to helping their clients succeed in the digital world.",
-    },
-  ];
-  
+  {
+    number: "01",
+    title: "Design",
+    description:
+      "Our design team focuses on creating user experiences that are intuitive, engaging, and purpose-driven. We design digital interfaces that balance visual clarity with real-world usability, ensuring every interaction feels natural and effective. By combining user research, UX strategy, and UI design, we create products that not only look great but also drive engagement, retention, and business results.",
+  },
+  {
+    number: "02",
+    title: "Engineering",
+    description:
+      "Our engineers build the technical foundation that powers reliable, scalable digital products. Using modern frameworks, clean architecture, and best engineering practices, we turn ideas into production-ready systems. From frontend to backend and infrastructure, we focus on performance, security, and maintainability — ensuring your product is built to scale with confidence.",
+  },
+  {
+    number: "03",
+    title: "Project Management",
+    description:
+      "Strong delivery requires structure and clarity. Our project managers keep teams aligned, timelines predictable, and communication transparent throughout the project lifecycle. By managing scope, risks, and priorities, we ensure work moves efficiently while keeping your business goals at the center of every decision.",
+  },
+  {
+    number: "04",
+    title: "Collaboration",
+    description:
+      "Great products are built through collaboration. Designers, engineers, and project managers work closely together from day one, sharing context and aligning decisions across disciplines. This collaborative approach reduces friction, speeds up execution, and ensures every part of the product works together seamlessly.",
+  },
+  {
+    number: "05",
+    title: "Client-Centric Approach",
+    description:
+      "We believe the best products come from strong partnerships. We take time to understand your business, challenges, and goals before proposing solutions. By working closely with your team and maintaining open communication, we deliver solutions that are tailored, practical, and aligned with real business outcomes.",
+  },
+  {
+    number: "06",
+    title: "Driving Success",
+    description:
+      "Our success is measured by the success of our clients. From startups to established organizations, we help teams launch, scale, and improve digital products across industries. Through thoughtful design, solid engineering, and disciplined execution, Codroon delivers solutions that support long-term growth and measurable impact.",
+  },
+];
