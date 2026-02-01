@@ -64,25 +64,25 @@ export default function BlogDetailPage({ post }) {
                   return (
                     <div
                       key={index}
-                      className="bg-[#44915C] rounded-[15px] p-12 md:p-16 relative my-8"
+                      className="bg-[#44915C] rounded-[15px] p-6 sm:p-8 md:p-16 relative my-8 flex flex-col items-center md:block"
                     >
-                      <div className="absolute top-[50px] left-[50px] w-20 h-20 rounded-full flex items-center justify-center overflow-hidden">
+                      <div className="relative w-12 h-12 mb-4 md:mb-0 md:absolute md:top-[50px] md:left-[50px] md:w-20 md:h-20 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
                         <Image
                           src="/cordroon-icon.png"
                           alt="Codroon Logo"
                           width={80}
                           height={80}
-                          className="object-contain"
+                          className="object-contain w-full h-full"
                         />
                       </div>
-                      <div className="font-barlow font-extrabold text-xl text-[#1A1A1A] leading-[155%] mb-4 ml-[160px] max-w-[588px]">
+                      <div className="font-barlow font-extrabold text-lg sm:text-xl text-[#1A1A1A] leading-[155%] mb-4 ml-0 md:ml-[160px] max-w-[588px] text-center md:text-left">
                         <Typewriter text={item.quote} speed={30} />
                       </div>
-                      <div className="ml-[160px]">
-                        <p className="font-barlow font-extrabold text-lg text-[#44915C] mb-1">
+                      <div className="ml-0 md:ml-[160px] text-center md:text-left">
+                        <p className="font-barlow font-extrabold text-base sm:text-lg text-[#44915C] mb-1">
                           {item.author || 'By Codroon'}
                         </p>
-                        <p className="font-barlow font-normal text-base text-[#1A1A1A]">
+                        <p className="font-barlow font-normal text-sm sm:text-base text-[#1A1A1A]">
                           {item.role || 'Top Author'}
                         </p>
                       </div>

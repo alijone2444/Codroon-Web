@@ -46,7 +46,7 @@ export default function HeroSection() {
         </p>
 
         {/* Buttons Container - Left aligned, one by one */}
-        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
+        <div className="mt-40 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
           {/* View Solutions Button - First */}
           <Link
             href="/our-solutions"
