@@ -56,14 +56,7 @@ export default function WhyChooseSection() {
     <MarginWrapper top={60} bottom={60} smTop={80} smBottom={80} mdTop={96} mdBottom={96}>
       <div ref={sectionRef} className="w-full max-w-[1597px] mx-auto relative scroll-fade-up">
         {/* Text Container - Responsive with animations */}
-        <div
-          ref={titleRef}
-          className={`w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[120px] flex flex-col gap-4 sm:gap-6 md:gap-[14px] items-center reveal-fade-up ${isVisible ? 'reveal-visible' : ''}`}
-        >
-          <h2 className="w-full font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight sm:leading-snug md:leading-[100%] tracking-[0%] text-center text-white px-2 animate-gentle-pulse">
-            Why Choose Codroon?
-          </h2>
-        </div>
+
 
         {/* Solar System Area - Responsive with scale animation */}
         <div
