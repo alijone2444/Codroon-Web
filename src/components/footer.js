@@ -18,8 +18,8 @@ const FiverrIcon = ({ className }) => (
 
 const Footer = () => {
   const socialLinks = [
-    { Icon: Linkedin, href: 'https://linkedin.com/company/codroon', label: 'LinkedIn' },
-    { Icon: UpworkIcon, href: 'https://upwork.com/agencies/codroon', label: 'Upwork' },
+    { Icon: Linkedin, href: 'https://www.linkedin.com/company/codroon-pvt-ltd/', label: 'LinkedIn' },
+    { Icon: UpworkIcon, href: 'https://www.upwork.com/agencies/1974611255685052304/', label: 'Upwork' },
     { Icon: FiverrIcon, href: 'https://fiverr.com/codroon', label: 'Fiverr' },
   ];
 
