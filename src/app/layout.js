@@ -16,8 +16,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "My App",
-  description: "Next.js app with Tailwind and layout setup",
+  title: "Codroon",
+  description: "Codroon — digital solutions and software craftsmanship",
+  icons: {
+    icon: "/android-chrome-192x192.png",
+    apple: "/android-chrome-192x192.png",
+  },
 };
 
 export default function RootLayout({ children }) {
