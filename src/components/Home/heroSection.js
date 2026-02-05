@@ -49,7 +49,7 @@ export default function HeroSection() {
         <div className="mt-40 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6 w-full max-w-md sm:max-w-none">
           {/* View Solutions Button - First */}
           <Link
-            href="/our-solutions"
+            href="#our-solutions"
             className="
               ripple-button
               relative inline-flex items-center justify-center cursor-pointer
