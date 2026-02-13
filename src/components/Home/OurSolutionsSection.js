@@ -13,12 +13,12 @@ export default function OurSolutionsSection() {
     },
     {
       icon: "/Images/puzzle.png",
-      title: "Web Development",
+      title: "AI Powered Web Development",
       description: "We build fast, scalable, and secure web applications designed for real-world usage. From MVPs to production-grade SaaS platforms, our web development team focuses on clean architecture, performance, and long-term maintainability. At Codroon, we don't just ship features — we engineer systems that grow with your business."
     },
     {
       icon: "/Images/Icons/power.png",
-      title: "Mobile App Development",
+      title: "AI Powered Mobile App Development",
       description: "We develop high-performance mobile applications that users actually keep installed. Our team builds reliable iOS and Android apps with a focus on speed, stability, and seamless user experience. From idea validation to app store launch and beyond, Codroon handles the full mobile development lifecycle."
     },
     {
@@ -26,11 +26,7 @@ export default function OurSolutionsSection() {
       title: "Vibe Coded Solutions",
       description: "We build fast, cost-effective digital products using modern vibe-coding platforms that dramatically reduce development time without sacrificing quality. By leveraging tools like Lovable, Emergent Labs, Bolt, Base44, and Replit, we help teams move from idea to working product in days—not months."
     },
-    {
-      icon: "/Images/puzzle.png",
-      title: "SEO",
-      description: "We build SEO strategies that support real growth, not vanity metrics. Our approach focuses on technical SEO, performance, and content structure — ensuring your product is discoverable, fast, and conversion-ready. Codroon helps products rank sustainably by aligning SEO with business outcomes, not guesswork."
-    },
+
     {
       icon: "/Images/Icons/power.png",
       title: "SaaS Development",
@@ -41,11 +37,7 @@ export default function OurSolutionsSection() {
       title: "Automations & Integrations",
       description: "Manual processes slow teams down. We design and implement automations and integrations that eliminate repetitive work and keep systems in sync. From API integrations and workflow automation to internal tools and data pipelines, Codroon helps businesses operate more efficiently."
     },
-    {
-      icon: "/Images/puzzle.png",
-      title: "Game Development",
-      description: "We develop games with a strong focus on performance, stability, and player experience. From concept to release, our team builds engaging, well-optimized games across platforms. Codroon combines creative development with solid engineering practices to deliver games that scale and keep users engaged."
-    },
+
     {
       icon: "/Images/Icons/power.png",
       title: "AIaaS (AI as a Service)",

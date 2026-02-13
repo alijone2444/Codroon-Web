@@ -112,20 +112,21 @@ export default function CaseStudyCardsSection() {
               >
                 {/* Category Header */}
                 <div className="border-y border-white/10 py-6 sm:py-7 md:py-8 lg:py-[30px] px-4 sm:px-6">
-                  <h3 className="font-barlow font-medium text-sm sm:text-base md:text-lg lg:text-[20px] leading-[140%] sm:leading-[150%] text-[#98989A]">
+                  <h3 className="font-barlow font-medium text-sm sm:text-base md:text-lg lg:text-[20px] leading-[140%] sm:leading-[150%] text-[#98989A] line-clamp-1">
                     {study.category}
                   </h3>
                 </div>
 
                 {/* Image */}
-                <div className="flex justify-center py-4 sm:py-5 md:py-[20px] px-4 sm:px-6">
-                  <Image
-                    src={imagePath}
-                    alt={`${study.projectName} Preview`}
-                    width={698}
-                    height={423}
-                    className="rounded-[12px] object-cover w-full h-auto"
-                  />
+                <div className="py-4 sm:py-5 md:py-[20px] px-4 sm:px-6">
+                  <div className="relative w-full aspect-[698/423] rounded-[12px] overflow-hidden">
+                    <Image
+                      src={imagePath}
+                      alt={`${study.projectName} Preview`}
+                      fill
+                      className="rounded-[12px] object-cover"
+                    />
+                  </div>
                 </div>
 
                 {/* Project Info */}
@@ -134,7 +135,7 @@ export default function CaseStudyCardsSection() {
                     <h4 className="font-barlow font-medium text-lg sm:text-xl md:text-2xl lg:text-[24px] text-white leading-[140%] sm:leading-[150%] tracking-tight">
                       {study.projectName}
                     </h4>
-                    <p className="text-[#98989A] text-xs sm:text-sm md:text-base lg:text-[16px] font-barlow mt-2 sm:mt-[10px] break-all">
+                    <p className="text-[#98989A] text-xs sm:text-sm md:text-base lg:text-[16px] font-barlow mt-2 sm:mt-[10px] truncate">
                       {study.website}
                     </p>
                   </div>
@@ -152,7 +153,7 @@ export default function CaseStudyCardsSection() {
 
                 {/* Description */}
                 <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[18px] text-[#E6E6E6] leading-[140%] sm:leading-[150%]">
+                  <p className="font-inter text-sm sm:text-base md:text-lg lg:text-[18px] text-[#E6E6E6] leading-[140%] sm:leading-[150%] line-clamp-3">
                     {study.description}
                   </p>
                 </div>

@@ -5,36 +5,6 @@ import { useEffect, useRef, useState } from "react";
 
 const industries = [
   {
-    icon: "industry-item-1",
-    title: "Travel & Hospitality",
-    description:
-      "We help travel and hospitality brands build fast, reliable digital platforms for booking, operations, and customer engagement. Codroon modernizes legacy platforms, integrates third-party services, and delivers experiences that improve journeys for users while supporting long-term business growth.",
-  },
-  {
-    icon: "industry-item-2",
-    title: "Public Sector",
-    description:
-      "We build secure, accessible digital solutions for public sector organizations with complex requirements. Codroon partners with public sector teams to design platforms that improve service delivery, streamline processes, and support transparency at scale.",
-  },
-  {
-    icon: "industry-item-3",
-    title: "Retail, Commerce & Consumer Brands",
-    description:
-      "We help retail and consumer brands create digital platforms that convert and scale. Codroon works with teams to modernize systems, integrate services, and build solutions that support revenue growth and operational efficiency.",
-  },
-  {
-    icon: "industry-item-4",
-    title: "Energy, Infrastructure & Industrial Tech",
-    description:
-      "We build robust digital solutions for energy and industrial organizations operating in complex environments. Codroon delivers platforms and automation that improve visibility, streamline operations, and scale with evolving infrastructure needs.",
-  },
-  {
-    icon: "industry-item-5",
-    title: "eCommerce",
-    description:
-      "We develop high-performance eCommerce platforms designed for speed, scalability, and conversion. Codroon helps brands optimize storefronts, checkout flows, and backend systems to drive revenue and improve customer experience.",
-  },
-  {
     icon: "industry-item-6",
     title: "Startups",
     description:
@@ -42,15 +12,21 @@ const industries = [
   },
   {
     icon: "industry-item-7",
-    title: "Banking & Fintech",
+    title: "EdTech, Banking & Finance",
     description:
-      "We build secure, scalable digital solutions for banking and fintech organizations. Codroon supports financial teams with custom platforms and integrations designed for reliability, security, and long-term growth.",
+      "We build secure, scalable digital solutions for EdTech, banking, and financial organizations. Codroon supports these sectors with custom platforms and integrations designed for reliability, security, and long-term growth.",
   },
   {
-    icon: "industry-item-8",
-    title: "Gaming",
+    icon: "industry-item-5",
+    title: "AI Powered Ecommerce",
     description:
-      "We develop high-performance gaming systems with a focus on stability and player experience. Codroon works with gaming teams to build technology that supports engagement, growth, and production-ready performance.",
+      "We develop high-performance AI-powered eCommerce platforms designed for speed, scalability, and conversion. Codroon helps brands optimize storefronts, checkout flows, and backend systems to drive revenue and improve customer experience.",
+  },
+  {
+    icon: "industry-item-1",
+    title: "Travel & Hospitality",
+    description:
+      "We help travel and hospitality brands build fast, reliable digital platforms for booking, operations, and customer engagement. Codroon modernizes legacy platforms, integrates third-party services, and delivers experiences that improve journeys for users while supporting long-term business growth.",
   },
 ];
 
