@@ -7,11 +7,6 @@ import { useEffect, useRef, useState } from "react";
 export default function OurSolutionsSection() {
   const solutions = [
     {
-      icon: "/Images/brush.png",
-      title: "UI/UX Design",
-      description: "At Codroon, we design interfaces that are built to be used — not just admired. Our UI/UX process focuses on clarity, usability, and real user behavior, helping products convert better and scale faster. We combine user research, interaction design, and rapid prototyping to create experiences that feel intuitive from day one."
-    },
-    {
       icon: "/Images/puzzle.png",
       title: "AI Powered Web Development",
       description: "We build fast, scalable, and secure web applications designed for real-world usage. From MVPs to production-grade SaaS platforms, our web development team focuses on clean architecture, performance, and long-term maintainability. At Codroon, we don't just ship features — we engineer systems that grow with your business."
@@ -22,26 +17,39 @@ export default function OurSolutionsSection() {
       description: "We develop high-performance mobile applications that users actually keep installed. Our team builds reliable iOS and Android apps with a focus on speed, stability, and seamless user experience. From idea validation to app store launch and beyond, Codroon handles the full mobile development lifecycle."
     },
     {
-      icon: "/Images/brush.png",
-      title: "Vibe Coded Solutions",
-      description: "We build fast, cost-effective digital products using modern vibe-coding platforms that dramatically reduce development time without sacrificing quality. By leveraging tools like Lovable, Emergent Labs, Bolt, Base44, and Replit, we help teams move from idea to working product in days—not months."
+      icon: "/Images/puzzle.png",
+      title: "LLM Integrations",
+      description: "We integrate powerful Large Language Models into your systems to automate tasks, improve customer support, and enable smart AI-driven workflows tailored to your business needs."
     },
-
+    {
+      icon: "/Images/Icons/power.png",
+      title: "Agentic AI",
+      description: "We build intelligent Agentic AI systems that can think, plan, and act independently to automate complex processes, manage tools, and boost business efficiency."
+    },
     {
       icon: "/Images/Icons/power.png",
       title: "SaaS Development",
       description: "We specialize in building SaaS products that are designed to scale — technically and operationally. From early-stage MVPs to mature platforms, we engineer SaaS systems with performance, security, and maintainability in mind. Codroon handles the full SaaS development lifecycle."
     },
     {
+      icon: "/Images/Icons/power.png",
+      title: "AIaaS (AI as a Service)",
+      description: "We help teams leverage AI without turning their product into an experiment. Our AIaaS solutions are designed to be practical, scalable, and production-ready from day one. Codroon builds and integrates AI-powered services such as intelligent automation, data analysis, and custom AI APIs."
+    },
+    {
+      icon: "/Images/brush.png",
+      title: "Vibe Coded Solutions",
+      description: "We build fast, cost-effective digital products using modern vibe-coding platforms that dramatically reduce development time without sacrificing quality. By leveraging tools like Lovable, Emergent Labs, Bolt, Base44, and Replit, we help teams move from idea to working product in days—not months."
+    },
+    {
       icon: "/Images/brush.png",
       title: "Automations & Integrations",
       description: "Manual processes slow teams down. We design and implement automations and integrations that eliminate repetitive work and keep systems in sync. From API integrations and workflow automation to internal tools and data pipelines, Codroon helps businesses operate more efficiently."
     },
-
     {
-      icon: "/Images/Icons/power.png",
-      title: "AIaaS (AI as a Service)",
-      description: "We help teams leverage AI without turning their product into an experiment. Our AIaaS solutions are designed to be practical, scalable, and production-ready from day one. Codroon builds and integrates AI-powered services such as intelligent automation, data analysis, and custom AI APIs."
+      icon: "/Images/brush.png",
+      title: "UI/UX Design",
+      description: "At Codroon, we design interfaces that are built to be used — not just admired. Our UI/UX process focuses on clarity, usability, and real user behavior, helping products convert better and scale faster. We combine user research, interaction design, and rapid prototyping to create experiences that feel intuitive from day one."
     }
   ];
 

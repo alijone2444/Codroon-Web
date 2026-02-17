@@ -11,16 +11,40 @@ const industries = [
       "We help startups move from idea to production without unnecessary complexity. Codroon partners with founders to design and build scalable products that are maintainable, investor-ready, and built for growth.",
   },
   {
-    icon: "industry-item-7",
-    title: "EdTech, Banking & Finance",
+    icon: "industry-item-3",
+    title: "SMEs",
     description:
-      "We build secure, scalable digital solutions for EdTech, banking, and financial organizations. Codroon supports these sectors with custom platforms and integrations designed for reliability, security, and long-term growth.",
+      "We support small businesses in creating scalable, maintainable, and growth-ready tech products. Codroon helps founders move from idea to production without unnecessary complexity.",
+  },
+  {
+    icon: "industry-item-7",
+    title: "AI-Driven FinTech",
+    description:
+      "We partner with fintech founders to build smart, secure, investor-ready financial products. Codroon ensures these products are scalable, maintainable, and ready to grow with your business.",
+  },
+  {
+    icon: "industry-item-2",
+    title: "Telehealth, Healthcare",
+    description:
+      "We help healthcare innovators design and launch efficient, patient-focused digital solutions. Codroon works closely to make these solutions scalable, robust, and ready for real-world impact.",
   },
   {
     icon: "industry-item-5",
     title: "AI Powered Ecommerce",
     description:
       "We develop high-performance AI-powered eCommerce platforms designed for speed, scalability, and conversion. Codroon helps brands optimize storefronts, checkout flows, and backend systems to drive revenue and improve customer experience.",
+  },
+  {
+    icon: "industry-item-8",
+    title: "Testing and Deployment",
+    description:
+      "We ensure your products are thoroughly tested and smoothly deployed. Codroon handles the process end-to-end, delivering reliable, scalable, and production-ready solutions.",
+  },
+  {
+    icon: "industry-item-7",
+    title: "EdTech, E-Learning",
+    description:
+      "We help education startups turn ideas into engaging, scalable learning platforms. Codroon partners with founders to design and build solutions that are maintainable, investor-ready, and built for growth.",
   },
   {
     icon: "industry-item-1",

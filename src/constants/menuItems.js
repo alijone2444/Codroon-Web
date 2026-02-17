@@ -4,6 +4,7 @@ export const menuItems = [
   {
     name: 'Products',
     dropdown: [
+      { label: 'Codroon Ninja AI', href: '/codroon-ninja-ai' },
       { label: 'Technologies', href: '/technologies' },
       { label: 'Integrations', href: '/integrations' },
       { label: 'How We Work', href: '/process' },
