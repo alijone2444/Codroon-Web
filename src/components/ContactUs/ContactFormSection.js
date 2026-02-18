@@ -38,15 +38,20 @@ export default function ContactFormSection() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://submit-form.com/n0ZyQFoWu', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          contactReasons: formData.contactReasons.join(', '),
+          budget: `$${formData.budget}`,
+          message: formData.message,
+        }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setSubmitStatus('success');
@@ -60,7 +65,7 @@ export default function ContactFormSection() {
         });
       } else {
         setSubmitStatus('error');
-        console.error('Form submission error:', data.error);
+        console.error('Form submission failed');
       }
     } catch (error) {
       setSubmitStatus('error');
@@ -168,7 +173,7 @@ export default function ContactFormSection() {
             Why are you contacting us?
           </label>
           <div className="space-y-2 sm:space-y-3">
-            {['Web Design', 'Mobile App Design', 'Collaboration', 'Others'].map((reason) => (
+            {['AI Powered Mobile App Development', 'AI Powered Web Development', 'LLM Integrations', 'Agentic AI', 'SaaS Development', 'AIaaS (AI as a Service)', 'Vibe Coded Solutions', 'Automations & Integrations', 'UI/UX Design', 'Others'].map((reason) => (
               <label key={reason} className="flex items-center space-x-3 cursor-pointer py-1">
                 <input
                   type="checkbox"

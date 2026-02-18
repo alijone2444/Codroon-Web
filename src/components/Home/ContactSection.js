@@ -5,11 +5,20 @@ import { useState, useEffect, useRef } from "react";
 import { X, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import BudgetSlider from "../common/slider";
-import { menuItems } from "@/constants/menuItems";
 
 export default function ContactSection({ noThankYou }) {
-  const solutionsMenu = menuItems.find(item => item.name === 'Solutions');
-  const serviceOptions = solutionsMenu?.dropdown?.map(item => item.label) || [];
+  const serviceOptions = [
+    'AI Powered Mobile App Development',
+    'AI Powered Web Development',
+    'LLM Integrations',
+    'Agentic AI',
+    'SaaS Development',
+    'AIaaS (AI as a Service)',
+    'Vibe Coded Solutions',
+    'Automations & Integrations',
+    'UI/UX Design',
+    'Others',
+  ];
   const [selectedServices, setSelectedServices] = useState([]);
   const [budget, setBudget] = useState(3000);
   const [formData, setFormData] = useState({
@@ -75,16 +84,17 @@ export default function ContactSection({ noThankYou }) {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://submit-form.com/n0ZyQFoWu', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
-          fullName: formData.fullName,
+          name: formData.fullName,
           email: formData.email,
-          services: selectedServices,
-          budget: budget,
+          services: selectedServices.join(', '),
+          budget: `$${budget.toLocaleString()}`,
           message: formData.message,
         }),
       });
