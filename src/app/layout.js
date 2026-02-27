@@ -16,24 +16,34 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Codroon",
-  description: "Codroon — digital solutions and software craftsmanship",
+  metadataBase: new URL("https://codroon.com"),
+  title: "Custom Software Development Company | Codroon",
+  description:
+    "Codroon builds AI-powered web apps, SaaS platforms, and scalable software solutions. Engineering performance, scalability, and growth. Get started today.",
   icons: {
     icon: "/android-chrome-192x192.png",
     apple: "/android-chrome-192x192.png",
+  },
+  openGraph: {
+    title: "Custom Software Development Company | Codroon",
+    description:
+      "Codroon builds AI-powered web apps, SaaS platforms, and scalable software solutions. Engineering performance, scalability, and growth. Get started today.",
+    url: "https://codroon.com",
+    siteName: "Codroon",
+    type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body  className={`${barlow.variable} ${montserrat.variable} antialiased`}>
+      <body className={`${barlow.variable} ${montserrat.variable} antialiased`}>
         <Header />
         <main className="min-h-screen min-w-screen">
-        {children}
-        <RunFadeGlobally/>
+          {children}
+          <RunFadeGlobally />
         </main>
-        <Navbar/>
+        <Navbar />
       </body>
     </html>
   );

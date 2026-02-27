@@ -1,6 +1,33 @@
 import BlogDetailPage from '@/components/blogs/BlogDetailPage';
 import blogsData from '@/constants/blogs.json';
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const blog = blogsData.find((b) => b.slug === slug);
+
+  if (!blog) {
+    return {
+      title: "Blog Post | Codroon",
+      description:
+        "Read expert insights on software development, AI, and digital innovation on the Codroon blog.",
+    };
+  }
+
+  const firstParagraph = blog.content?.find((item) => item.type === "paragraph");
+  const descriptionText = firstParagraph?.text
+    ? firstParagraph.text.substring(0, 155).trim() + "..."
+    : `Read ${blog.title} on the Codroon blog. Expert insights on software development and AI.`;
+
+  return {
+    title: `${blog.title} | Codroon Blog`,
+    description: descriptionText,
+    openGraph: {
+      title: `${blog.title} | Codroon Blog`,
+      description: descriptionText,
+    },
+  };
+}
+
 // Helper function to add quote sections deterministically to content
 // Uses consistent selection based on content position (not random) to ensure same result on every load
 function addQuoteSections(content) {

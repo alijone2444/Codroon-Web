@@ -5,6 +5,17 @@ import ContactSection from '@/components/Home/ContactSection';
 import HorizontalMarginWrapper from '@/components/wrappers/horizontalmarginWrapper';
 import { processSteps } from '@/components/Process/constants';
 
+export const metadata = {
+  title: "Our Software Development Process | Codroon",
+  description:
+    "See how Codroon delivers exceptional results through a transparent, collaborative software development process. Learn our proven approach today.",
+  openGraph: {
+    title: "Our Software Development Process | Codroon",
+    description:
+      "See how Codroon delivers exceptional results through a transparent, collaborative software development process. Learn our proven approach today.",
+  },
+};
+
 export default function ProcessPage() {
   return (
     <div className="min-h-screen bg-[#0F172A]">

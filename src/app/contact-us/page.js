@@ -6,20 +6,31 @@ import FAQSection from '@/components/ContactUs/FAQSection';
 import ContactCTASection from '@/components/ContactUs/ContactCTASection';
 import HorizontalMarginWrapper from '@/components/wrappers/horizontalmarginWrapper';
 import MarginWrapper from '@/components/wrappers/sectionWrapper';
+
+export const metadata = {
+  title: "Contact Us | Get a Free Consultation | Codroon",
+  description:
+    "Get in touch with Codroon for custom software development, AI solutions, and digital product inquiries. Let's discuss your next project today.",
+  openGraph: {
+    title: "Contact Us | Get a Free Consultation | Codroon",
+    description:
+      "Get in touch with Codroon for custom software development, AI solutions, and digital product inquiries. Let's discuss your next project today.",
+  },
+};
 export default function ContactUsPage() {
   return (
     <div className="min-h-screen bg-[#0F172A]">
       <ContactUsHeroSection />
       <OperatingDaysSection />
       <HorizontalMarginWrapper left={50} right={50}>
-  <ContactSection noThankYou={true} />
+        <ContactSection noThankYou={true} />
 
-  </HorizontalMarginWrapper>
-        <FAQHeroSection />
-        <FAQSection />
-        
+      </HorizontalMarginWrapper>
+      <FAQHeroSection />
+      <FAQSection />
+
       <ContactCTASection />
-      
+
     </div>
   );
 }

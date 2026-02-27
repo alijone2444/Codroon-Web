@@ -3,6 +3,17 @@ import CaseStudyCardsSection from '@/components/CaseStudies/CaseStudyCardsSectio
 import CaseStudiesCTASection from '@/components/CaseStudies/CaseStudiesCTASection';
 import HorizontalMarginWrapper from '@/components/wrappers/horizontalmarginWrapper';
 
+export const metadata = {
+  title: "Software Case Studies & Digital Projects | Codroon",
+  description:
+    "Discover Codroon's portfolio of strategically crafted digital projects. See real results from our web, mobile, and AI development work. Explore now.",
+  openGraph: {
+    title: "Software Case Studies & Digital Projects | Codroon",
+    description:
+      "Discover Codroon's portfolio of strategically crafted digital projects. See real results from our web, mobile, and AI development work. Explore now.",
+  },
+};
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-[#0F172A]">
